@@ -5,9 +5,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Build a Form</title>
 </head>
+
 <body>
 	
-	<!-- Add your code here -->
+	<form action="/login" method="post">
+		<div class="form_group">
+			<label for="form_email">Email</label>
+			<input name="form_email" id="form_email" type="email" placeholder="me@example.com" role="text">
+		</div>
 
+		<div class="form_group">
+			<label for="form_password">Password</label>
+			<input name="form_password" id="form_password" type="password" role="text">
+		</div>
+
+		<button type="submit" role="button">Submit</button>
+	</form>
+	
 </body>
+
 </html>

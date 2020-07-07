@@ -23,8 +23,24 @@
 	</style>
 </head>
 <body>
+
+	<picture>
+		<source 
+			media="(min-width: 1200px)"
+			srcset="
+				assets/images/1200x900.png 1200w,
+				assets/images/1600x720.png 1600w"
+		>
+
+		<source srcset="assets/images/540x800.png">
 	
-	<!-- Add your code here -->
+		<img
+			src="assets/images/540x800.png"
+			width="540"
+			height="800"
+		
+		alt="placeholder image">
+	</picture>
 
 </body>
 </html>

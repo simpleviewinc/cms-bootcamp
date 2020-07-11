@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
 	<style>
 		*,
 		*::before,
-		*::after { box-sizing: border-box; }
+		*::after {
+			box-sizing: border-box;
+		}
 
 		html {
 			margin: 0;
@@ -22,22 +25,18 @@
 		}
 	</style>
 </head>
+
 <body>
-	
-	<img
-		src="assets/images/400x180.png"
-		height="400"
-		width="180"
 
-		srcset="
-			assets/images/800x360.png 2x,
-			assets/images/1200x540.png 3x,
-			assets/images/1600x720.png 4x,
-			assets/images/2000x900.png 5x
-			"
+	<picture>
+		<source media="(min-width: 2000px)" srcset="./assets/images/2000x900.png 2000w">
+		<source media="(min-width: 1600px)" srcset="./assets/images/1600x720.png 1600w">
+		<source media="(min-width: 1200px)" srcset="./assets/images/1200x540.png 1200w">
+		<source media="(min-width: 800px)" srcset="./assets/images/800x360.png 800w">
 
-		alt="placeholder image"
-	>
+		<img src="assets/images/400x180.png" height="400" width="180" alt="placeholder image">
+	</picture>
 
 </body>
+
 </html>

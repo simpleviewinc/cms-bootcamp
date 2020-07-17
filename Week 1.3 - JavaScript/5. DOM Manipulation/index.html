@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>DOM Manipulation</title>
-</head>
-<body>
-	
-	<script type="text/template">
-		<section>
-			<h2>Hello, world!</h2>
-			<p>This block as been inserted via JS, isn't that cool!</p>
-		</section>
-	</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <script type="text/template">
+      <section>
+      	<h2>Hello, world!</h2>
+      	<p>This block as been inserted via JS, isn't that cool!</p>
+      </section>
+    </script>
 
-	<main class="container">
-		<h1>Lorem Ipsum Dolor Sit Amet</h1>
-		<section>
-			<h2>More Jeff Goldblum</h2>
-			<p>Must go faster. Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists. You really think you can fly that thing? Checkmate... Life finds a way. Yes, Yes, without the oops! Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should.</p>
-		</section>
-	</main>
+    <main class="container">
+      <h1>Lorem Ipsum Dolor Sit Amet</h1>
+      <section>
+        <h2>More Jeff Goldblum</h2>
+        <p>
+          Must go faster. Yeah, but John, if The Pirates of the Caribbean breaks
+          down, the pirates don’t eat the tourists. You really think you can fly
+          that thing? Checkmate... Life finds a way. Yes, Yes, without the oops!
+          Yeah, but your scientists were so preoccupied with whether or not they
+          could, they didn't stop to think if they should.
+        </p>
+      </section>
+    </main>
 
-	<script>
-		// Add you code here
-	</script>
-
-</body>
+    <script>
+      // Add you code here
+      const tempText = document.querySelector("script[type='text/template']")
+        .innerHTML;
+      console.log(tempText);
+      const parent = document.querySelector(".container");
+      parent.innerHTML += tempText;
+    </script>
+  </body>
 </html>

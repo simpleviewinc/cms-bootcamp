@@ -14,10 +14,24 @@
 			max-width: 1200px;
 		}
 
+		.card {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
 		.card img {
 			display: block;
 			width: 100%;
 			height: auto;
+		}
+
+		.card>* {
+			display: flex;
+			flex-basis: 100%;
+		}
+
+		.card a {
+			align-self: flex-end;
 		}
 	</style>
 </head>

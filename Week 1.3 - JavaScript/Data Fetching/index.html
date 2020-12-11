@@ -10,7 +10,25 @@
 	<ul class="movies"></ul>
 	
 	<script>
-		// Add your code here
+		const url = 'https://ghibliapi.herokuapp.com/films';
+		let rootEl = document.querySelector('.movies');
+
+		async function displayTitles(){
+			const response = await fetch(url);
+			const data = await response.json();
+			
+			data.forEach(function(data){
+				const titles =  `<li>${data.title}</li>`;
+				rootEl.innerHTML += titles;
+			});
+		}
+
+		displayTitles();
+
+		function handleError(error){
+			console.error(error)
+		}
+
 	</script>
 
 </body>

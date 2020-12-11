@@ -23,21 +23,21 @@
 	</main>
 
 	<script>
+		const htmlToAppend = getTemplateScript();
+		const htmlFragment = fragmentFromString(htmlToAppend);
+		const rootEl = document.querySelector('.container');
+
 		function getTemplateScript() {
 			const templateScript = document.getElementsByTagName('script');
 			return templateScript[0].innerHTML;
 		}
 
-		const htmlToAppend = getTemplateScript();
 
 		function fragmentFromString(strHTML) {
 			return document.createRange().createContextualFragment(strHTML);
 		}
-
-		const htmlFragment = fragmentFromString(htmlToAppend);
-		const rootEl = document.querySelector('.container');
+		
 		rootEl.appendChild(htmlFragment);
-		console.log(typeof htmlFragment)
 	</script>
 
 </body>

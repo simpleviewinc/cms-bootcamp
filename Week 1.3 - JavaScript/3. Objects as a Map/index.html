@@ -8,24 +8,30 @@
 <body>
 	
 	<script>
-		let keyValArray = [
-			['date', 'October 6, 1986'],
-			['time', '21:13PM'],
-			['mood', 'Powerful, spirited...'],
-			['error', 'Error: invalid option selected'],
-		];
-
-		const map = new Map(keyValArray);
-		const date = map.get('date');
-		const time = map.get('time');
-		const mood = map.get('mood');
-		const error = map.get('error');
-
+		const date = getInformation('date');
+		const time = getInformation('time');
+		const mood = getInformation('mood');
+		const errorTrigger = getInformation('age');
 		console.log(date);
 		console.log(time);
 		console.log(mood);
-		console.log(error);
-	</script>
+		console.log('triggering an error of:', errorTrigger);
 
+		function getInformation(key) {
+			const object = {
+				date: 'October 6, 1986',
+				time: '21:13',
+				mood: 'Powerful, spirited...',
+			};
+
+			const map = new Map(Object.entries(object))
+			
+			if(map.has(key)) {
+				return map.get(key);
+			} else {
+				console.error("Error:Invalid option selected...");
+			}
+		}
+	</script>
 </body>
 </html>

@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Objects as a Map</title>
-</head>
-<body>
-	
-	<script>
-		const information = getInformation('date');
-		console.log(information);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects as a Map</title>
+  </head>
+  <body>
+    <script>
+      const information = getInformation("Try me");
+      console.log(information);
 
-		// Rewrite this function to replace the if/else logic with a map lookup.
-		function getInformation(key) {
-			let rtn;
+      // Rewrite this function to replace the if/else logic with a map lookup.
+      function getInformation(input) {
+        // Define Data
+        const data = {
+          date: "October 6, 1986",
+          time: "21:13 PM",
+          mood: "Powerful, spirited...",
+        };
 
-			if (key === 'date') {
-				rtn = 'October 6, 1986';
-			} else if (key === 'time') {
-				rtn = '21:13 PM';
-			} else if (key === 'mood') {
-				rtn = 'Powerful, spirited...';
-			} else {
-				rtn = 'Error: Invalid option selected...';
-			}
+        // Create an map instance of the object "data"
+        const map = new Map(Object.entries(data));
 
-			return rtn;
-		}
-	</script>
-
-</body>
+        // return the result of the input if it exists, else return error
+        return map.has(input)
+          ? map.get(input)
+          : "Error: Invalid option selected...";
+      }
+    </script>
+  </body>
 </html>

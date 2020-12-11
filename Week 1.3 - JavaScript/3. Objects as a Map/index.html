@@ -8,35 +8,23 @@
 <body>
 	
 	<script>
-		// const information = getInformation('date');
-		// console.log(information);
+		let keyValArray = [
+			['date', 'October 6, 1986'],
+			['time', '21:13PM'],
+			['mood', 'Powerful, spirited...'],
+			['error', 'Error: invalid option selected'],
+		];
 
-		// function getInformation(key) {
-		// 	let rtn;
+		const map = new Map(keyValArray);
+		const date = map.get('date');
+		const time = map.get('time');
+		const mood = map.get('mood');
+		const error = map.get('error');
 
-		// 	if (key === 'date') {
-		// 		rtn = 'October 6, 1986';
-		// 	} else if (key === 'time') {
-		// 		rtn = '21:13 PM';
-		// 	} else if (key === 'mood') {
-		// 		rtn = 'Powerful, spirited...';
-		// 	} else {
-		// 		rtn = 'Error: Invalid option selected...';
-		// 	}
-
-		// 	return rtn;
-		// }
-
-
-		const map = new Map();
-		const date = map.set('date', 'October 6, 1986');
-		const time = map.set('time', '21:13PM');
-		
-		function getMapData(rtn) {
-			map.get(rtn);
-		}
-		console.log(getMapData('date'));
-
+		console.log(date);
+		console.log(time);
+		console.log(mood);
+		console.log(error);
 	</script>
 
 </body>

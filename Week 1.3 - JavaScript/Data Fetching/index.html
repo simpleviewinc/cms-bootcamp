@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Data Fetching</title>
-</head>
-<body>
-	
-	<ul class="movies"></ul>
-	
-	<script>
-		// Add your code here
-	</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Fetching</title>
+  </head>
+  <body>
+    <ul class="movies"></ul>
 
-</body>
+    <script>
+      // Add your code here
+      const targetContainer = document.querySelector(".movies");
+
+      fetch("https://ghibliapi.herokuapp.com/films")
+        .then((data) => {
+          return data.json();
+        })
+        .then((movies) => {
+          // Loop through the values of the array and extract the title using destructuring
+          Object.values(movies).forEach(({ title }) => {
+            targetContainer.innerHTML += `<li>${title}</li>`;
+          });
+        })
+        .catch((err) => console.log(`Call failed! Err: ${err}`));
+    </script>
+  </body>
 </html>

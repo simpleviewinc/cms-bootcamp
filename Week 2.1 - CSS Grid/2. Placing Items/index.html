@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Placing Items</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placing Items</title>
 
-	<style>
-		.photo {
-			display: grid;
-			margin: 0 auto;
-			max-width: 800px;
-		}
+    <style>
+      .photo {
+        display: grid;
+        margin: 0 auto;
+        max-width: 800px;
+      }
 
-		.photo > * { mix-blend-mode: multiply; }
-	</style>
-</head>
-<body>
+      .photo > * {
+        mix-blend-mode: multiply;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      /* Add your code here */
+      .photo {
+        display: grid;
+        grid-template-areas: "stack";
+      }
+      .channel {
+        grid-area: stack;
+      }
+    </style>
 
-	<style>
-		/* Add your code here */
-	</style>
-
-	<div class="photo">
-		<img class="channel channel-cyan" src="./cyan.png" alt="cyan" />
-		<img class="channel channel-magenta" src="./magenta.png" alt="magenta" />
-		<img class="channel channel-yellow" src="./yellow.png" alt="yellow" />
-		<img class="channel channel-black" src="./black.png" alt="black" />
-	</div>
-	
-</body>
+    <div class="photo">
+      <img class="channel channel-cyan" src="./cyan.png" alt="cyan" />
+      <img class="channel channel-magenta" src="./magenta.png" alt="magenta" />
+      <img class="channel channel-yellow" src="./yellow.png" alt="yellow" />
+      <img class="channel channel-black" src="./black.png" alt="black" />
+    </div>
+  </body>
 </html>

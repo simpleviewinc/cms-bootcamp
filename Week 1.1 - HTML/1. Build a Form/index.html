@@ -1,13 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Build a Form</title>
-</head>
-<body>
-	
-	<!-- Add your code here -->
-
-</body>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build a Form</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="main">
+      <form class="form" action="./login/index.html" method="POST">
+        <div class="form__row">
+          <div class="form__col">
+            <label class="form__label" for="email">Email</label>
+            <input
+              class="form__input"
+              id="email"
+              type="email"
+              name="Email"
+              tabindex="0"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__col">
+            <label class="form__label" for="password">Password</label>
+            <input
+              class="form__input"
+              id="password"
+              type="password"
+              name="Password"
+              placeholder="password"
+              required
+            />
+          </div>
+        </div>
+        <div class="form__row form__row--submit">
+          <button type="submit" class="button button--primary form__button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
 </html>

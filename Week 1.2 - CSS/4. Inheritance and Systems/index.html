@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Inheritance and Systems</title>
-</head>
-<body>
-	
-	<style>
-		/* Add your CSS here */
-	</style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance and Systems</title>
+  </head>
+  <body>
+    <style>
+      .button {
+        appearance: none;
+        cursor: pointer;
+        border-radius: 4px;
+        border: none;
+        padding: 12px 32px;
+        margin: 0.5em;
+        background: #f5f5f5;
+        color: black;
+      }
 
-	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+      .button--primary {
+        background: #90cdf4;
+      }
 
-</body>
+      .button--link {
+        background: transparent;
+        padding: 0;
+        border-radius: 0;
+      }
+
+      .button--danger {
+        background: #feb2b2;
+      }
+    </style>
+
+    <!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
+    <button class="button">Default</button>
+    <button class="button button--primary">Primary</button>
+    <button class="button button--link">Link</button>
+    <button class="button button--danger">Danger</button>
+  </body>
 </html>

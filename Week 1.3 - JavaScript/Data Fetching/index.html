@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Data Fetching</title>
-</head>
-<body>
-	
-	<ul class="movies"></ul>
-	
-	<script>
-		// Add your code here
-	</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Fetching</title>
+  </head>
+  <body>
+    <ul class="movies"></ul>
 
-</body>
+    <script>
+      const moviesEl = document.querySelector(".movies");
+      const api = "https://ghibliapi.herokuapp.com/films/";
+
+      function handleError(err) {
+        console.error(err);
+      }
+
+      async function getMovies(callback, errorFn) {
+        const apiPromise = fetch(api);
+
+        apiPromise
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(response.statusText);
+            } else {
+              return response.json();
+            }
+          })
+          .then((data) => callback(data))
+          .catch((err) => errorFn(err));
+      }
+
+      function renderMovies(data) {
+        data.forEach((d) => {
+          let markup = `<li>${d.title}</li>`;
+
+          moviesEl.insertAdjacentHTML("beforeend", markup);
+        });
+      }
+
+      getMovies(renderMovies, handleError);
+    </script>
+  </body>
 </html>

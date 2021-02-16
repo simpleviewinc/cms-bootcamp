@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Map</title>
-</head>
-<body>
-	
-	<script>
-		const startingArray = ['Sergio', 'Keve', 'Kam', 'Bree', 'Blake'];
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <script>
+      const startingArray = ["Sergio", "Keve", "Kam", "Bree", "Blake"];
 
-		// Custom Code BEGIN 
-		// Modify the code in this block however you need to get the desired ending array.
-		// You must store your new array in the `endingArray` variable for it to log out properly.
-		let endingArray;
+      // Custom Code BEGIN
+      // Modify the code in this block however you need to get the desired ending array.
+      // You must store your new array in the `endingArray` variable for it to log out properly.
+      let endingArray = startingArray.map((item) => {
+        return {
+          name: item,
+        };
+      });
 
-		// Custom Code END
+      // Custom Code END
 
-		console.log(endingArray);
-	</script>
-
-</body>
+      console.log(endingArray);
+    </script>
+  </body>
 </html>

@@ -48,7 +48,41 @@
 <body>
 	
 	<style>
-		/* Add your code here */
+		.grid{
+			grid-template-areas: 
+				". . . . . ."
+				"h . . . . ."
+				". e . . . ."
+				". . l1 . . ."
+				". . . l2 . ."
+				". . . . o ."
+				". . . . . exc"
+				". . . . . .";
+		}
+
+		.letter{
+			position:sticky;
+			top:0;
+		}
+
+		.letter-h{
+			grid-area: h;
+		}
+		.letter-e{
+			grid-area: e;
+		}
+		.letter-l{
+			grid-area: l1;
+		}
+		.letter-l + .letter-l{
+			grid-area: l2;
+		}
+		.letter-o{
+			grid-area: o;
+		}
+		.letter-exc{
+			grid-area: exc;
+		}
 	</style>
 
 	<div class="grid">
@@ -57,49 +91,49 @@
 		<li class="letter letter-l">l</li>
 		<li class="letter letter-l">l</li>
 		<li class="letter letter-o">o</li>
-		<li class="letter letter-!">!</li>
+		<li class="letter letter-exc">!</li>
 
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>

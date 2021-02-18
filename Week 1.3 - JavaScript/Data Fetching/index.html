@@ -12,34 +12,39 @@
       const moviesEl = document.querySelector(".movies");
       const api = "https://ghibliapi.herokuapp.com/films/";
 
-      function handleError(err) {
-        console.error(err);
+      async function call(promise) {
+        let data;
+        let error;
+        let res;
+
+        try {
+          res = await promise;
+          data = await res.json();
+
+          if (!res.ok) {
+            throw Error(`${res.status}: ${res.statusText}`);
+          }
+        }
+        catch (err) {
+          error = err;
+        }
+
+        return [data, error];
       }
 
-      async function getMovies(callback, errorFn) {
-        const apiPromise = fetch(api);
+      async function getMovies() {
+        const [movies, err] = await call(fetch(api));
 
-        apiPromise
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(response.statusText);
-            } else {
-              return response.json();
-            }
-          })
-          .then((data) => callback(data))
-          .catch((err) => errorFn(err));
+        if (err) {
+          console.error(err);
+
+          return;
+        }
+
+        moviesEl.innerHTML = movies.map(item => `<li>${item.title}</li>`).join('');
       }
 
-      function renderMovies(data) {
-        data.forEach((d) => {
-          let markup = `<li>${d.title}</li>`;
-
-          moviesEl.insertAdjacentHTML("beforeend", markup);
-        });
-      }
-
-      getMovies(renderMovies, handleError);
+      getMovies();
     </script>
   </body>
 </html>

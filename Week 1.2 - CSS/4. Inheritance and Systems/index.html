@@ -6,16 +6,56 @@
 	<title>Inheritance and Systems</title>
 </head>
 <body>
-	
+
 	<style>
-		/* Add your CSS here */
+		button {
+			border-radius: 4px;
+			border: none;
+			padding: 12px 32px;
+			color: black;
+			transition: all .2s;
+		}
+		button:hover {
+			cursor: pointer;
+		}
+
+		.default {
+			background-color: #f5f5f5;
+		}
+		.default:hover {
+			background-color: lightgrey;
+		}
+
+		.primary {
+			background-color: #90CDF4;
+		}
+		.primary:hover {
+			background-color: deepskyblue;
+		}
+
+		.link_btn {
+			background-color: transparent;
+		}
+		.link_btn:hover {
+			color: blue;
+			text-decoration: underline;
+		}
+
+		.danger {
+			background-color: #FEB2B2;
+			font-weight: bold;
+			border-color: darkred;
+		}
+		.danger:hover {
+			background-color: red;
+		}
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+	<button class='default'>Default</button>
+	<button class='primary'>Primary &rarr; </button>
+	<button class='link_btn'>Link</button>
+	<button class='danger'>! Danger !</button>
 
 </body>
 </html>

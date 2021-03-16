@@ -22,6 +22,8 @@
 	<style>
 		/* Add 1 line to the CSS below to make the link clickable without changing the design */
 		.overlay {
+			pointer-events: none; /* This does it. */
+
 			position: absolute;
 			z-index: 1;
 			top: 0;
@@ -31,7 +33,7 @@
 			background-image: linear-gradient(to bottom, transparent, black);
 		}
 	</style>
-	
+
 	<div class="container">
 		<a href="https://simpleviewinc.com" target="_blank" rel="noopener">
 			<img src="https://via.placeholder.com/800x360" alt="A placeholder image" />

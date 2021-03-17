@@ -6,11 +6,29 @@
 	<title>Data Fetching</title>
 </head>
 <body>
-	
+
 	<ul class="movies"></ul>
-	
+
 	<script>
-		// Add your code here
+		const movieList = document.querySelector('.movies');
+
+		//Fetch the film
+		async function fetchFilms() {
+			const filmsJSON = await fetch('https://ghibliapi.herokuapp.com/films');
+			return await filmsJSON.json();
+		}
+
+		//Iterate through the array of objects and insert each movie title into the DOM.
+		async function populateMovieList() {
+			const filmsArr = await fetchFilms();
+
+			filmsArr.forEach(obj => {
+				const markup = `<li>${obj.title}</li>`;
+				movieList.insertAdjacentHTML('beforeend', markup);
+			});
+		}
+
+		populateMovieList();
 	</script>
 
 </body>

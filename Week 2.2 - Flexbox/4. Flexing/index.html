@@ -40,14 +40,20 @@
 	<style>
 		form {
 			/* Add any needed code here */
+			display: flex;
+			flex-wrap: wrap;
 		}
-		
+
 		form input {
 			/* All inputs should allowed to grow and shrink with a basis of 10ch */
+			flex: 1 1 10ch;
+			background-color: lightgrey; /* I added this background color so it's easier to see */
 		}
 
 		form [type="email"] {
 			/* This should grow 3 times faster than the other inputs with a basis of 30ch */
+			flex-grow: 3;
+			flex-basis: 30ch;
 		}
 	</style>
 
@@ -56,6 +62,6 @@
 		<input type="email" placeholder="Email Address">
 		<input type="submit" value="Subscribe">
 	</form>
-	
+
 </body>
 </html>

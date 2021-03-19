@@ -21,7 +21,7 @@
 			console.log(err);
 		}
 		
-		async function getMovies() {
+		async function fetchMovies() {
 			try {
 				data = await fetch(endpoint + queryFilms);
 				movieData = await data.json();
@@ -33,7 +33,7 @@
 
 		async function createMovieList() {
 			//Fetch movies from API
-			const movies = await getMovies();
+			const movies = await fetchMovies();
 
 			//For each movie create a list item with the movie's title and insert into the unordered movie list
 			const movieTitles = movies.forEach(movie => {

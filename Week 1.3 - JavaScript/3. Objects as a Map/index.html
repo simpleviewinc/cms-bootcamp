@@ -13,19 +13,41 @@
 
 		// Rewrite this function to replace the if/else logic with a map lookup.
 		function getInformation(key) {
-			let rtn;
+			let rtn = new Map();
 
-			if (key === 'date') {
-				rtn = 'October 6, 1986';
-			} else if (key === 'time') {
-				rtn = '21:13 PM';
-			} else if (key === 'mood') {
-				rtn = 'Powerful, spirited...';
-			} else {
-				rtn = 'Error: Invalid option selected...';
+			rtn = {
+				'date': 'October 6, 1986',
+				'time': '21:13 PM',
+				'mood': 'Powerful, spirited...'
 			}
 
-			return rtn;
+			return rtn[key] || 'Error: Invalid option selected...';
+
+
+
+			/*****map .set() and .get() methods*****/
+			//Done for extra practice and familiarity when working with JS maps - my own personal gain.
+
+			// rtn.set('date', 'October 6, 1986');
+			// rtn.set('time', '21:13 PM');
+			// rtn.set('mood', 'Powerful, spirited...');
+
+			// return rtn.get(key) ||'Error: Invalid option selected...';
+
+
+			/*****IF Statement*****/
+
+			// if (key === 'date') {
+			// 	rtn = 'October 6, 1986';
+			// } else if (key === 'time') {
+			// 	rtn = '21:13 PM';
+			// } else if (key === 'mood') {
+			// 	rtn = 'Powerful, spirited...';
+			// } else {
+			// 	rtn = 'Error: Invalid option selected...';
+			// }
+
+			
 		}
 	</script>
 

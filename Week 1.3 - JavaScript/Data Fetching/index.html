@@ -11,6 +11,38 @@
 	
 	<script>
 		// Add your code here
+		const movieList = document.querySelector(".movies");
+
+		const endpoint = "https://ghibliapi.herokuapp.com";
+		const queryFilms = "/films";
+
+		function handleError(err) {
+			console.log("Error!");
+			console.log(err);
+		}
+		
+		async function getMovies() {
+			try {
+				data = await fetch(endpoint + queryFilms);
+				movieData = await data.json();
+				return movieData;
+			} catch(err) {
+				handleError(err);
+			}
+		}
+
+		async function createMovieList() {
+			//Fetch movies from API
+			const movies = await getMovies();
+
+			//For each movie create a list item with the movie's title and insert into the unordered movie list
+			const movieTitles = movies.forEach(movie => {
+				const movieListHtml = `<li>${movie.title}</li>`;
+				movieList.insertAdjacentHTML("beforeend", movieListHtml)
+			});
+		}
+
+		createMovieList();
 	</script>
 
 </body>

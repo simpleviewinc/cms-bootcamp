@@ -13,8 +13,8 @@
 		// Add your code here
 		const movieList = document.querySelector(".movies");
 
-		const endpoint = "https://ghibliapi.herokuapp.com";
-		const queryFilms = "/films";
+		const baseEndpoint = "https://ghibliapi.herokuapp.com";
+		const moviesEndpoint = "https://ghibliapi.herokuapp.com/films";
 
 		function handleError(err) {
 			console.log("Error!");
@@ -23,7 +23,7 @@
 		
 		async function fetchMovies() {
 			try {
-				data = await fetch(endpoint + queryFilms);
+				data = await fetch(moviesEndpoint);
 				movieData = await data.json();
 				return movieData;
 			} catch(err) {
@@ -37,8 +37,8 @@
 
 			//For each movie create a list item with the movie's title and insert into the unordered movie list
 			const movieTitles = movies.forEach(movie => {
-				const movieListHtml = `<li>${movie.title}</li>`;
-				movieList.insertAdjacentHTML("beforeend", movieListHtml)
+				const titleListHtml = `<li>${movie.title}</li>`;
+				movieList.insertAdjacentHTML("beforeend", titleListHtml)
 			});
 		}
 

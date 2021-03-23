@@ -49,6 +49,40 @@
 	
 	<style>
 		/* Add your code here */
+		.letter-h {
+			grid-column: 1 / 2;
+			grid-row: 2;
+		}
+		.letter-e {
+			grid-column: 2 / 3;
+			grid-row: 3;
+		}
+		.letter-l {
+			grid-column: 3 / 4;
+			grid-row: 4;
+		}
+
+		/* Select the first element with class "letter-l" after the initial element with class "letter-l" */
+		.letter-l + .letter-l {
+			grid-column: 4 / 5;
+			grid-row: 5;
+		}
+		.letter-o {
+			grid-column: 5 / 6;
+			grid-row: 6;
+		}
+
+		/* escape character '\' needed to correctly select the class "letter-!" */
+		.letter-\! {
+			grid-column: 6 / -1;
+			grid-row: 7;
+		}
+
+		/* Elements with class "letter" will maintain their position, but will stick to the top of the page as the page scrolls down */
+		.letter {
+			position: sticky;
+			top: 0;
+		}
 	</style>
 
 	<div class="grid">
@@ -64,42 +98,37 @@
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>

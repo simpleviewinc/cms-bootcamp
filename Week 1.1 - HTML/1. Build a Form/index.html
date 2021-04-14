@@ -8,14 +8,16 @@
 <body>
 	
 	<form method="post" action="/login/" aria-label="Login Form">
-		<label>
+		<label for="email">
 			Email Address
-			<input type="email" name="email" />
 		</label>
-		<label>
+		<input type="email" name="email" id="email">
+
+		<label for="password">
 			Password
-			<input type="password" name="password" />
 		</label>
+		<input type="password" name="password" id="password">
+
 		<button type="submit">Login</button>
 	</form>
 

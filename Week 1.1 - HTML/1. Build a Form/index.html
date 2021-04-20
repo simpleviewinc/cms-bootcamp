@@ -6,14 +6,12 @@
 	<title>Build a Form</title>
 </head>
 <body>
-	<form method="GET" action="/">
-		<label for="fname">Name</label>
-		<input type="text" name="fname" placeholder="Enter Name" required>
+	<form method="POST" action="/login/">
 		<label for="email">Email Address</label>
-		<input type="email" name="email" placeholder="Enter Email" required>
+		<input type="email" name="email" placeholder="Enter Email" tabindex=1 required >
 		<label for="pass">Password</label>
-		<input type="password" name="pass" placeholder="Enter Password" required>
-		<button type="submit" name="submit">Submit</button>
+		<input type="password" name="pass" placeholder="Enter Password" tabindex=2 required>
+		<button type="submit" name="submit" tabindex=3>Submit</button>
 	</form>
 
 </body>

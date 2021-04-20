@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Create a Responsive Image - Aspect Ratio</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create a Responsive Image - Aspect Ratio</title>
 
-	<style>
-		*,
-		*::before,
-		*::after { box-sizing: border-box; }
+		<style>
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
 
-		html {
-			margin: 0;
-			padding: 0;
-		}
+			html {
+				margin: 0;
+				padding: 0;
+			}
 
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
-		}
-	</style>
-</head>
-<body>
-	
-	<picture>
-		<source
-			srcset="https://via.placeholder.com/1600x720"
-			media="(min-width: 1024px)"
-			width="1600"
-			height="720"
-		/>
-		<source
-			srcset="https://via.placeholder.com/1200x900"
-			media="(min-width: 640px)"
-			width="1200"
-			height="900"
-		/>
-		<img
-			src="https://via.placeholder.com/540x800"
-			width="540"
-			height="800"
-			alt="Placeholder Image"
-		/>
-	</picture>
-
-</body>
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<picture>
+			<source
+				srcset="https://via.placeholder.com/1600x720"
+				media="(min-width: 1024px)"
+				width="1600"
+				height="720"
+			/>
+			<source
+				srcset="https://via.placeholder.com/1200x900"
+				media="(min-width: 640px)"
+				width="1200"
+				height="900"
+			/>
+			<img
+				src="https://via.placeholder.com/540x800"
+				width="540"
+				height="800"
+				alt="Placeholder Image"
+			/>
+		</picture>
+	</body>
 </html>

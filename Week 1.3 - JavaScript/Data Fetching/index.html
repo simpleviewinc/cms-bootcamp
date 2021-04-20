@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Fetching</title>
-  </head>
-  <body>
-    <ul class="movies"></ul>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Data Fetching</title>
+	</head>
+	<body>
+		<ul class="movies"></ul>
 
-    <script>
-      // Add your code here
-      let loading = true
-      const targetEl = document.querySelector('.movies')
-      const errorMessageEl = document.createElement('div')
-      errorMessageEl.classList.add('error-message')
-      targetEl.insertAdjacentElement('beforebegin', errorMessageEl)
-      const baseUrl = 'https://ghibliapi.herokuapp.com'
-      const path = '/films'
+		<script>
+			// Add your code here
+			let loading = true;
+			const targetEl = document.querySelector('.movies');
+			const errorMessageEl = document.createElement('div');
+			errorMessageEl.classList.add('error-message');
+			targetEl.insertAdjacentElement('beforebegin', errorMessageEl);
+			const baseUrl = 'https://ghibliapi.herokuapp.com';
+			const path = '/films';
 
-      targetEl.insertAdjacentHTML(
-        'afterbegin',
-        '<li class="loader">Loading...</li>'
-      )
+			targetEl.insertAdjacentHTML(
+				'afterbegin',
+				'<li class="loader">Loading...</li>',
+			);
 
-      function setLoading(isLoading) {
-        targetEl.setAttribute('aria-busy', isLoading)
-        errorMessageEl.setAttribute('aria-busy', isLoading)
-        loading = isLoading
+			function setLoading(isLoading) {
+				targetEl.setAttribute('aria-busy', isLoading);
+				errorMessageEl.setAttribute('aria-busy', isLoading);
+				loading = isLoading;
 
-        if (!isLoading) {
-          const loaders = document.querySelectorAll('.loader')
-          loaders.forEach((loader) => loader.remove())
-        }
-      }
+				if (!isLoading) {
+					const loaders = document.querySelectorAll('.loader');
+					loaders.forEach((loader) => loader.remove());
+				}
+			}
 
-      function handleError(error) {
-        console.error(error)
-        const html = '<p>Failed to fetch movies</p>'
-        errorMessageEl.insertAdjacentHTML('afterbegin', html)
-        setLoading(false)
-      }
+			function handleError(error) {
+				console.error(error);
+				const html = '<p>Failed to fetch movies</p>';
+				errorMessageEl.insertAdjacentHTML('afterbegin', html);
+				setLoading(false);
+			}
 
-      async function init() {
-        setLoading(true)
-        const response = await fetch(`${baseUrl}${path}`)
-        const data = await response.json()
-        const html = data.map((entry) => `<li>${entry.title}</li>`).join('')
-        targetEl.insertAdjacentHTML('afterbegin', html)
-        setLoading(false)
-      }
+			async function init() {
+				setLoading(true);
+				const response = await fetch(`${baseUrl}${path}`);
+				const data = await response.json();
+				const html = data
+					.map((entry) => `<li>${entry.title}</li>`)
+					.join('');
+				targetEl.insertAdjacentHTML('afterbegin', html);
+				setLoading(false);
+			}
 
-      init().catch(handleError)
-    </script>
-  </body>
+			init().catch(handleError);
+		</script>
+	</body>
 </html>
-

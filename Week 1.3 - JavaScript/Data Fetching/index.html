@@ -11,6 +11,20 @@
 	
 	<script>
 		// Add your code here
+		const movieListContainer = document.querySelector(".movies");
+		(async function getMovies(){
+			const movies = await fetch("https://ghibliapi.herokuapp.com/films")
+				.then(res => res.json())
+				.catch(handleError);
+			const moviesHtml = movies.map(mov => `<li data-id=${mov.id}>${mov.title}</li>`).join("");
+			movieListContainer.innerHTML = moviesHtml;
+		})();
+
+		function handleError(err){
+			console.log(`Error: ${err}`);
+			const errHtml = `<p>Ouch! Something went wrong...</p>`;
+			movieListContainer.insertAdjacentHTML("beforebegin", errHtml);
+		}
 	</script>
 
 </body>

@@ -20,7 +20,10 @@
 		}
 
 		// Add your code here to make clicking the button run the increment function
-		document.querySelector('[data-action]').addEventListener('click', increment);
+		const incrementBtn = document.querySelector('[data-action]');
+		//I feel I would rather put incrementBtn under line 14 to keep all selectors together,
+		// but for this exercise I kept it in the working area
+		incrementBtn.addEventListener('click', increment);
 	</script>
 
 </body>

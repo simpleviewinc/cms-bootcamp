@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
 			max-width: 776px;
 		}
 
-		.grid > * {
+		.grid>* {
 			grid-column: span 1;
 			grid-row: span 1;
 			display: flex;
@@ -45,10 +46,48 @@
 		}
 	</style>
 </head>
+
 <body>
-	
+
 	<style>
 		/* Add your code here */
+		.letter {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+		}
+
+		.letter-h {
+			grid-column: 1 / span 1;
+			grid-row: 2 / span 1;
+		}
+
+		.letter-e {
+			grid-column: 2 / span 1;
+			grid-row: 3 / span 1;
+		}
+
+		.letter-l {
+			grid-column: 3 / span 1;
+			grid-row: 4 / span 1;
+		}
+
+
+		.letter-l:nth-of-type(2n) {
+			grid-column: 4 / span 1;
+			grid-row: 5 / span 1;
+		}
+
+
+		.letter-o {
+			grid-column: 5 / span 1;
+			grid-row: 6 / span 1;
+		}
+
+		.letter-\! {
+			grid-column: 6 / span 1;
+			grid-row: 7 / span 1;
+		}
 	</style>
 
 	<div class="grid">
@@ -64,42 +103,42 @@
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
@@ -109,4 +148,5 @@
 	</div>
 
 </body>
+
 </html>

@@ -3,9 +3,9 @@
 Create the needed CSS to make a system of buttons that could be used in different contexts.
 
 Each button should have the following:
-- [ ] Border Radius of 4px
-- [ ] Padding of 12px above and below with 32px of padding on the sides
-- [ ] Text color should be black
+- [x] Border Radius of 4px
+- [x] Padding of 12px above and below with 32px of padding on the sides
+- [x] Text color should be black
 
 We need buttons for the following use cases:
 - A Default button style for general use around the site
@@ -15,10 +15,10 @@ We need buttons for the following use cases:
 
 | Type    | Color          |
 |---------|----------------|
-| Default | `#f5f5f5`      |
-| Primary | `#90CDF4`      |
-| Link    | `transparent`  |
-| Danger  | `#FEB2B2`      |
+| Default | `#f5f5f5`      | X
+| Primary | `#90CDF4`      | X
+| Link    | `transparent`  | X
+| Danger  | `#FEB2B2`      | X
 
 Your CSS should make sufficient use of inheritance and the cascade in order to keep things tidy and simple. The class names you use should also make it clear to someone reading your code what they do and how they work.
 

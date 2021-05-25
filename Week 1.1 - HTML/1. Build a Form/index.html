@@ -6,7 +6,17 @@
 	<title>Build a Form</title>
 </head>
 <body>
-	
+	<form action='/login/' method="POST">
+		<div class="input">
+			<label aria-label="Email">Email:</label>
+			<input type="text" name="input-email" placeholder="test@email.com" required>
+			<label aria-label="Password">Password:</label>
+			<input type="text" name="input-password" placeholder=" *** " required>
+		</div>
+		<div class="button">
+			<button aria-label="Submit Button">Submit</button>
+		</div>
+	</form>
 	<!-- Add your code here -->
 
 </body>

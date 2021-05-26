@@ -11,6 +11,24 @@
 	
 	<script>
 		// Add your code here
+		const movieList = document.querySelector('.movies')
+		
+		const populateList = async (list) => {
+
+			const data = await fetch('https://ghibliapi.herokuapp.com/films');
+
+			const moveiList = await data.json()
+
+			for(let { title } of moveiList) {
+				const newListItem = document.createElement('li')
+				newListItem.innerText = title;
+				list.appendChild(newListItem)
+			}
+		}
+
+		populateList(movieList)
+		// window.addEventListener('DOMContentLoaded', updateList)
+
 	</script>
 
 </body>

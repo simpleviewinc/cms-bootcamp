@@ -8,14 +8,38 @@
 <body>
 	
 	<style>
+		button {
+			border-radius: 4px;
+			padding: 12px 32px;
+			color: black;
+			font-weight: 700;
+			border-radius: 25px;
+		}
+		.btn-default{
+			background: #f5f5f5;
+		}
+		.btn-primary{
+			background: #90CDF4;
+		}
+		.btn-link{
+			background: transparent;
+		}
+		.btn-danger{
+			background: #FEB2B2;
+		}
+		.btn-danger:hover{
+			background: #e70808;
+			font-size: 18px;
+			
+		}
 		/* Add your CSS here */
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+	<button class="btn-default" data-hover="CLICK ME">NXT</button>
+	<button class="btn-primary">Select</button>
+	<button class="btn-link">Link</button>
+	<button class="btn-danger">Do Not Push</button>
 
 </body>
 </html>

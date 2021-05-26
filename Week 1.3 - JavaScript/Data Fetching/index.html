@@ -11,23 +11,26 @@
 	
 	<script>
 		// Add your code here
-		const movieList = document.querySelector('.movies')
+		const getData = async url => {
+			const data = await fetch(url);
+			const dataList = await data.json();
+			return dataList;
+		}
 		
-		const populateList = async (list) => {
-
-			const data = await fetch('https://ghibliapi.herokuapp.com/films');
-
-			const moveiList = await data.json()
-
-			for(let { title } of moveiList) {
-				const newListItem = document.createElement('li')
-				newListItem.innerText = title;
-				list.appendChild(newListItem)
+		const populateList = async (list, data) => {
+			for(let { title } of data) {
+				const newListItem = document.createElement('li');
+				newListItem.textContent = title;
+				list.appendChild(newListItem);
 			}
 		}
 
-		populateList(movieList)
-		// window.addEventListener('DOMContentLoaded', updateList)
+		const movieElement = document.querySelector('.movies');
+
+		(async () => {
+			const movieData = await getData('https://ghibliapi.herokuapp.com/films');
+			populateList(movieElement, movieData);
+		})();
 
 	</script>
 

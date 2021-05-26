@@ -23,7 +23,15 @@
 	</main>
 
 	<script>
-		// Add you code here
+
+		const template = document
+								.querySelector('[type="text/template"]')
+								.innerHTML;
+
+		const container = document.querySelector('.container');
+
+		container.insertAdjacentHTML('beforeend', template);
+
 	</script>
 
 </body>

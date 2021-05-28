@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Data Fetching</title>
 </head>
+
 <body>
-	
+
 	<ul class="movies"></ul>
-	
+
 	<script>
-		// Add your code here
-		const getData = async url => {
-			const data = await fetch(url);
-			const dataList = await data.json();
-			return dataList;
-		}
-		
-		const populateList = async (list, data) => {
-			for(let { title } of data) {
+
+		const movieUrl = 'https://ghibliapi.herokuapp.com/films';
+		const movieListEl = document.querySelector('.movies');
+
+		const populateList = (listRoot, list) => {
+			for (let item of list) {
 				const newListItem = document.createElement('li');
-				newListItem.textContent = title;
-				list.appendChild(newListItem);
+				newListItem.textContent = item;
+				listRoot.appendChild(newListItem);
 			}
 		}
 
-		const movieElement = document.querySelector('.movies');
-
 		(async () => {
-			const movieData = await getData('https://ghibliapi.herokuapp.com/films');
-			populateList(movieElement, movieData);
+			const movieData = await (await fetch(movieUrl)).json();
+			const movieTitles = movieData.map(({ title }) => title);
+			populateList(movieListEl, movieTitles);
 		})();
 
 	</script>
 
 </body>
+
 </html>

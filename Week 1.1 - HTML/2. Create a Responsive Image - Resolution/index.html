@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
 	<style>
 		*,
 		*::before,
-		*::after { box-sizing: border-box; }
+		*::after {
+			box-sizing: border-box;
+		}
 
 		html {
 			margin: 0;
@@ -22,18 +25,17 @@
 		}
 	</style>
 </head>
-<body>
-	<img
-	src="https://via.placeholder.com/400x180"
-	alt="placeholder photo"
-	width="400"
-	height="180"
 
-	srcset="https://via.placeholder.com/2000x900 1800w,
-					https://via.placeholder.com/1600x720 1440w,
-					https://via.placeholder.com/1200x540 1024w,
-					https://via.placeholder.com/800x360 640w"
-	>
+<body>
+
+	<img srcset="https://via.placeholder.com/2000x900 1800w,
+	https://via.placeholder.com/1600x720 1440w,
+	https://via.placeholder.com/1200x540 1024w,
+	https://via.placeholder.com/800x360 640w" sizes="(min-width: 1800px) 2000px,
+			(min-width: 1440px) 1600px,
+			(min-width: 1024px) 1200px,
+			(min-with: 640px) 800px" src="https://via.placeholder.com/400x180" alt="placeholder photo" width="400" height="180">
 
 </body>
+
 </html>

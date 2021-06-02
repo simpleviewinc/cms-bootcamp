@@ -13,11 +13,16 @@
 		// Custom Code BEGIN 
 		// Modify the code in this block however you need to get the desired ending array.
 		// You must store your new array in the `endingArray` variable for it to log out properly.
-		let endingArray;
-
+		let endingArrayEven = startingArray.filter((e, index) => {
+			return index % 2;
+		});
+		let endingArrayOdd = startingArray.filter((e, index) => {
+			return index % 2 === 0;
+		});
 		// Custom Code END
 
-		console.log(endingArray);
+		console.log("evenArray", endingArrayEven);
+		console.log("oddArray", endingArrayOdd);
 	</script>
 
 </body>

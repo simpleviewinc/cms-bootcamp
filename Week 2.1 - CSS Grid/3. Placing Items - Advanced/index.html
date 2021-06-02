@@ -48,7 +48,31 @@
 <body>
 	
 	<style>
-		/* Add your code here */
+		/* .grid {
+			grid-template-areas: 
+			"......"
+			"letter....."
+			".letter...."
+			"..letter..."
+			"...letter.."
+			"....letter."
+			".....letter"
+			;
+		}
+		.letter {
+			grid-area: letter;
+		} */
+		.letter-h { grid-area: 2 / 1; }
+		.letter-e { grid-area: 3 / 2; }
+		.letter-l { grid-area: 4 / 3; }
+		.letter-l + .letter-l { grid-area: 5 / 4; }
+		.letter-o { grid-area: 6 / 5; }
+		.letter-\! { grid-area: 7 / 6; }
+
+		.letter {
+			position: sticky;
+			top: 0;
+		}
 	</style>
 
 	<div class="grid">
@@ -64,42 +88,37 @@
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>

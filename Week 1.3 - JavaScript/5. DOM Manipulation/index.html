@@ -24,6 +24,12 @@
 
 	<script>
 		// Add you code here
+		let addChunk = document.querySelector('script[type="text/template"]').innerHTML;
+		let chunk = document.querySelector('main[class="container"]').innerHTML;
+		newChunk = chunk + addChunk;
+		console.log(newChunk);
+		chunk = newChunk.innerHTML;
+		document.body.append(addChunk);
 	</script>
 
 </body>

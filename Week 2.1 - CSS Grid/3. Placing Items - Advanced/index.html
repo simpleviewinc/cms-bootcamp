@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
 			max-width: 776px;
 		}
 
-		.grid > * {
+		.grid>* {
 			grid-column: span 1;
 			grid-row: span 1;
 			display: flex;
@@ -37,6 +38,8 @@
 			grid-row: 1;
 			border-color: tomato;
 			background-color: lightcoral;
+			position: sticky;
+			top: 0;
 		}
 
 		.placeholder {
@@ -45,10 +48,39 @@
 		}
 	</style>
 </head>
+
 <body>
-	
+
 	<style>
 		/* Add your code here */
+		.letter-h {
+			grid-row: 2 / 3;
+		}
+
+		.letter-e {
+			grid-row: 3 / 4;
+			grid-column: 2 / 3;
+		}
+
+		.letter-l {
+			grid-row: 4 / 5;
+			grid-column: 3 / 4;
+		}
+
+		.letter-l:nth-child(4) {
+			grid-row: 5 / 6;
+			grid-column: 4 / 5;
+		}
+
+		.letter-o {
+			grid-row: 6 / 7;
+			grid-column: 5 / 6;
+		}
+
+		[class="letter letter-!"] {
+			grid-row: 7 / 8;
+			grid-column: 6 / 7;
+		}
 	</style>
 
 	<div class="grid">
@@ -64,42 +96,37 @@
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
@@ -109,4 +136,5 @@
 	</div>
 
 </body>
+
 </html>

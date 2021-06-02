@@ -11,6 +11,32 @@
 	
 	<script>
 		// Add your code here
+		const baseEndpoint = 'https://ghibliapi.herokuapp.com';
+		const moviesEndpoint = `${baseEndpoint}/films`;
+		const moviesEl = document.querySelector('.movies');
+
+		
+		
+		async function displayMovies(movies){
+			moviesEl.textContent = '  Loading...  '
+			const apiResponse = await fetch(`${moviesEndpoint}`);
+			const fetched = await apiResponse.json();
+			/*CHECK API FETCH/RESPONSE*/
+			console.log(apiResponse);
+			console.log(fetched);
+			//LOOP FOR MOVIE TITLE LIST
+			for(i=0; i<fetched.length; i++){
+				document.write('<li>'+fetched[i].title+'</li>');
+			};
+		}
+
+		function handleError(err){
+			console.log('Problem fetching...');
+			console.log(err);
+			moviesEl.textContent = `Something went wrong:${err}`
+		}
+
+		displayMovies();
 	</script>
 
 </body>

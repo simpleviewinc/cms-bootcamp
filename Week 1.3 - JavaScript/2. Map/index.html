@@ -13,11 +13,12 @@
 		// Custom Code BEGIN 
 		// Modify the code in this block however you need to get the desired ending array.
 		// You must store your new array in the `endingArray` variable for it to log out properly.
-		let endingArray;
+		let endingArray = startingArray.map((e, index) => ({name: e}));
+		let endingArray2 = startingArray.map((e, index) => ({name: e, id: index + 1}));
 
 		// Custom Code END
-
-		console.log(endingArray);
+		console.log("name:array[]", endingArray);
+		console.log("name:array[] + id:array[#]", endingArray2);
 	</script>
 
 </body>

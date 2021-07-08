@@ -17,12 +17,19 @@
 <body>
 	
 	<style>
-		/* Modify the CSS below to add the desired hover effect and animation */
 		.box {
 			width: 100px;
 			height: 100px;
 			background-color: rebeccapurple;
+			padding: 0;
+			transition: padding 2s
 		}
+
+		.box:hover {
+			padding: 100px;
+			transition: padding 1.6s
+		}
+
 	</style>
 
 	<div class="box"></div>

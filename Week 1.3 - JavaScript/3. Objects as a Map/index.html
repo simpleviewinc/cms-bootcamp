@@ -8,25 +8,24 @@
 <body>
 	
 	<script>
+		const map = new Map();
+		map.set('date', 'October 6, 1986');
+		map.set('time', '21:13 PM');
+		map.set('mood', 'Powerful, spirited...')
+
+		const getInformation = key => {
+			if(map.get(key) !==undefined) {
+				return map.get(key)
+			} else {
+				return 'Sorry, that key does not exist.'
+			}
+		}
+
 		const information = getInformation('date');
 		console.log(information);
 
-		// Rewrite this function to replace the if/else logic with a map lookup.
-		function getInformation(key) {
-			let rtn;
-
-			if (key === 'date') {
-				rtn = 'October 6, 1986';
-			} else if (key === 'time') {
-				rtn = '21:13 PM';
-			} else if (key === 'mood') {
-				rtn = 'Powerful, spirited...';
-			} else {
-				rtn = 'Error: Invalid option selected...';
-			}
-
-			return rtn;
-		}
+		// Test undefined error handling
+		console.log(getInformation('stuff'))
 	</script>
 
 </body>

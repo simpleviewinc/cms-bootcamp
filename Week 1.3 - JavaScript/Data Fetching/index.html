@@ -4,13 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Data Fetching</title>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
 	
-	<ul class="movies"></ul>
+	<ul class="movies"></ul> 
 	
 	<script>
-		// Add your code here
+		const movies = document.querySelector('.movies');
+		console.log(movies);
+		axios.get('https://ghibliapi.herokuapp.com/films').then(res => res.data.map(data => movies.innerHTML += `<li>${data.title}</li>`))
+
 	</script>
 
 </body>

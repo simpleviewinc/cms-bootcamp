@@ -11,6 +11,24 @@
 	
 	<script>
 		// Add your code here
+        function handleError(err) {
+            console.log(err)
+        }
+
+        const ulEl = document.querySelector('.movies')
+        const endpoint = `https://ghibliapi.herokuapp.com/films/?fields=title`
+
+        async function fetchMovies() {
+            const response = await fetch(endpoint);
+            const data = await response.json()
+            for (let i = 0; i < data.length; i++) {
+                const liEl = document.createElement('li')
+                liEl.textContent = data[i].title
+                ulEl.appendChild(liEl)
+            }
+        }
+
+        fetchMovies().catch(handleError);
 	</script>
 
 </body>

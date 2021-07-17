@@ -7,25 +7,23 @@
 </head>
 <body>
 	
-	<script>
+	<script>  
+        const infoMap = new Map([
+            ['date', 'October 6, 1986'],
+            ['time', '21:13 PM'],
+            ['mood', 'Powerful, spirited...'],
+        ]);
+        console.log(infoMap)
+        
 		const information = getInformation('date');
 		console.log(information);
-
 		// Rewrite this function to replace the if/else logic with a map lookup.
 		function getInformation(key) {
-			let rtn;
-
-			if (key === 'date') {
-				rtn = 'October 6, 1986';
-			} else if (key === 'time') {
-				rtn = '21:13 PM';
-			} else if (key === 'mood') {
-				rtn = 'Powerful, spirited...';
-			} else {
-				rtn = 'Error: Invalid option selected...';
-			}
-
-			return rtn;
+            if (infoMap.has(key)) {
+                return infoMap.get(key)
+            } else {
+                return 'Error: Invalid option selected...';
+            }
 		}
 	</script>
 

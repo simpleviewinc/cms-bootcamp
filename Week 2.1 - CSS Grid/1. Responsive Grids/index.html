@@ -17,6 +17,7 @@
 		}
 
 		.cards {
+			display: grid;
 			gap: 16px;
 			margin: 0 auto;
 			padding: 0 20px;
@@ -29,7 +30,10 @@
 	<style>
 		.cards {
 			/* Add your code here */
+			grid-template-columns: repeat(auto-fill, minmax(280px, min-content));
 		}
+
+		.card { background-color: salmon; }
 	</style>
 	
 	<section class="cards">

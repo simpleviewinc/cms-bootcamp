@@ -9,13 +9,25 @@
 	
 	<style>
 		/* Add your CSS here */
+		button {
+			border-radius: 4px;
+			padding: 12px 32px;
+			color: black;
+			border: 0; /* not mentioned, but Chrome added one and I didn't like it :) */
+		}
+
+		.btn-default { background-color: #f5f5f5; }
+		.btn-primary { background-color: #90cdf4; }
+		.btn-link { background-color: transparent; }
+		.btn-danger { background-color: #feb2b2; }
+
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+	<button class="btn-default">Default</button>
+	<button class="btn-primary">Primary</button>
+	<button class="btn-link">Link</button>
+	<button class="btn-danger">Danger</button>
 
 </body>
 </html>

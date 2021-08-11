@@ -11,6 +11,23 @@
 	
 	<script>
 		// Add your code here
+		const container = document.querySelector(".movies");
+
+		// ref: https://www.geeksforgeeks.org/how-to-use-the-javascript-fetch-api-to-get-data/
+		async function getMovies() {
+			const res = await fetch('https://ghibliapi.herokuapp.com/films');
+			const data = await res.json();
+
+			for(var i = 0; i < data.length; i++) {
+				const movie = data[i];
+				const li = document.createElement("li");
+				li.innerText = movie.title;
+
+				container.appendChild(li);
+			}
+		}
+
+		getMovies();
 	</script>
 
 </body>

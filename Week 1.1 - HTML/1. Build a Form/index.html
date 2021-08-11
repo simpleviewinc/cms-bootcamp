@@ -4,10 +4,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Build a Form</title>
+	
+	<style>
+		input:focus {
+			outline: 2px solid royalblue;
+			box-shadow: 1px 1px 8px 1px royalblue;
+		}
+	</style>
 </head>
 <body>
 	
 	<!-- Add your code here -->
+	<form method="post" action="/login/">
+		<label for="email">Email:</label>
+		<input name="email" type="email" id="email" placeholder="name@email.com" required />
+		<label for="password">Password:</label>
+		<input name="password" type="password" id="password" required/>
+		<button type="submit">Sign In</button>
+	</form>
 
 </body>
 </html>

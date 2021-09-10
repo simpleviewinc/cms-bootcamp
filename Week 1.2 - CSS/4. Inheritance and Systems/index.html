@@ -9,13 +9,90 @@
 	
 	<style>
 		/* Add your CSS here */
+        /*Common styling for all the buttons as per the requirement that
+        Each button should have the following:
+        - [ ] Border Radius of 4px
+        - [ ] Padding of 12px above and below with 32px of padding on the sides
+        - [ ] Text color should be black*/
+        .button {
+            display: block;
+            width: 100%;
+            max-width: 150px;
+            border-radius: 4px;
+            color: #000;
+            padding: 12px 32px;
+            margin: 0 0 30px;
+            cursor: pointer;
+            font-weight: 800;
+        }
+        
+        .btnBlock {
+            border-bottom: 1px solid #000;
+        }
+        
+        .button:hover{
+            opacity: 0.8;
+        }
+        
+        .buttonText {
+            font-style: italic;
+        }
+        
+        /*Default button background color - A Default button style for general use around the site*/
+        .buttonDefault {
+            background: #f5f5f5;
+        }
+        
+        /*Primary button background color - A Primary button style used to directing a users attention to the action we want them to take*/
+        .buttonPrimary {
+            background: #90CDF4;
+        }
+        
+        /*Link button background color - A Link button style that doesn't appear to have any of the typical button chrome and is just text*/
+        a.linkButton {
+            background: transparent;
+            text-decoration: none;
+            margin: 0 0 30px;
+            padding: 3px 32px;
+            display: inline-block;
+            color: #000;
+            font-weight: bold;
+        }
+        
+        a.linkButton:hover {
+            text-decoration: underline;
+        }
+        
+        /*Danger button background color - A Danger button style that indicates that clicking it will cause a destructive action*/
+        .buttonDanger {
+            background: #FEB2B2;
+        }
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+    <!--Default button elements-->
+    <div class="btnBlock defaultBtnBlock">
+        <p class="buttonText">A Default button style for general use around the site</p>
+        <button class="button buttonDefault">Default</button>
+    </div>
+    
+    <!--Primary button elements-->
+    <div class="btnBlock primaryBtnBlock">
+        <p class="buttonText">A Primary button style used to directing a users attention to the action we want them to take</p>
+        <button class="button buttonPrimary">Primary</button>
+    </div>
+    
+    <!--Link button style elements-->
+    <div class="btnBlock linkBtnBlock">
+        <p class="buttonText">A Link button style that doesn't appear to have any of the typical button chrome and is just text</p>
+        <a class ="linkButton" href="https://www.google.co.uk/">Link Button</a>
+    </div>
+    
+    <!--Danger button elements-->
+    <div class="btnBlock dangerBtnBlock">
+        <p class="buttonText">A Danger button style that indicates that clicking it will cause a destructive action</p>
+        <button class="button buttonDanger">Danger</button>
+    </div>
 
 </body>
 </html>

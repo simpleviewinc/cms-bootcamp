@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Map</title>
 </head>
+
 <body>
-	
+
 	<script>
 		const startingArray = ['Sergio', 'Keve', 'Kam', 'Bree', 'Blake'];
 
@@ -16,9 +18,14 @@
 		let endingArray;
 
 		// Custom Code END
-
+		endingArray = startingArray.map(function (person) {
+			return {
+				name: `${person}`,
+			}
+		})
 		console.log(endingArray);
 	</script>
 
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
 			max-width: 776px;
 		}
 
-		.grid > * {
+		.grid>* {
 			grid-column: span 1;
 			grid-row: span 1;
 			display: flex;
@@ -38,17 +39,47 @@
 			border-color: tomato;
 			background-color: lightcoral;
 		}
-
-		.placeholder {
-			border-color: mediumslateblue;
-			background-color: lightcyan;
-		}
 	</style>
 </head>
+
 <body>
-	
+
 	<style>
 		/* Add your code here */
+		.letter {
+			top: 0;
+			position: sticky;
+		}
+
+		.letter-h {
+			grid-column: 1;
+			grid-row: 2;
+		}
+
+		.letter-e {
+			grid-column: 2;
+			grid-row: 3;
+		}
+
+		.letter-l {
+			grid-column: 3;
+			grid-row: 4;
+		}
+
+		.letter-l+.letter-l {
+			grid-column: 4;
+			grid-row: 5;
+		}
+
+		.letter-o {
+			grid-column: 5;
+			grid-row: 6;
+		}
+
+		.letter-ex-mark {
+			grid-column: 6;
+			grid-row: 7;
+		}
 	</style>
 
 	<div class="grid">
@@ -57,49 +88,43 @@
 		<li class="letter letter-l">l</li>
 		<li class="letter letter-l">l</li>
 		<li class="letter letter-o">o</li>
-		<li class="letter letter-!">!</li>
+		<li class="letter letter-ex-mark">!</li>
 
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
@@ -109,4 +134,5 @@
 	</div>
 
 </body>
+
 </html>

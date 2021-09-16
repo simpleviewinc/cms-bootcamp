@@ -11,6 +11,26 @@
 	
 	<script>
 		// Add your code here
+        //MR
+        //api url
+        const apiUrl = "https://ghibliapi.herokuapp.com/films";
+        const listItems = document.querySelector('ul.movies');
+        
+        //fetch function to get the json data and iterate it display the titles
+        fetch(apiUrl).then(response => {
+            try{
+                return response.json();
+                console.log(data);
+            } catch(error){
+                console.log('error');
+            }
+            
+        }).then((moviesTitles) => {
+                moviesTitles.forEach(({ title }) => {
+                listItems.innerHTML += `<li>${title}</li>`
+            });
+        });
+        
 	</script>
 
 </body>

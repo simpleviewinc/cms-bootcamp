@@ -26,18 +26,6 @@
             font-weight: 800;
         }
         
-        .btnBlock {
-            border-bottom: 1px solid #000;
-        }
-        
-        .button:hover{
-            opacity: 0.8;
-        }
-        
-        .buttonText {
-            font-style: italic;
-        }
-        
         /*Default button background color - A Default button style for general use around the site*/
         .buttonDefault {
             background: #f5f5f5;
@@ -49,19 +37,10 @@
         }
         
         /*Link button background color - A Link button style that doesn't appear to have any of the typical button chrome and is just text*/
-        a.linkButton {
-            background: transparent;
-            text-decoration: none;
-            margin: 0 0 30px;
-            padding: 3px 32px;
-            display: inline-block;
-            color: #000;
-            font-weight: bold;
-        }
-        
-        a.linkButton:hover {
-            text-decoration: underline;
-        }
+        .buttonLink {
+			background-color: transparent;
+			border: none;
+		}
         
         /*Danger button background color - A Danger button style that indicates that clicking it will cause a destructive action*/
         .buttonDanger {
@@ -71,28 +50,16 @@
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
     <!--Default button elements-->
-    <div class="btnBlock defaultBtnBlock">
-        <p class="buttonText">A Default button style for general use around the site</p>
-        <button class="button buttonDefault">Default</button>
-    </div>
+    <button class="button buttonDefault">Default</button>
     
     <!--Primary button elements-->
-    <div class="btnBlock primaryBtnBlock">
-        <p class="buttonText">A Primary button style used to directing a users attention to the action we want them to take</p>
-        <button class="button buttonPrimary">Primary</button>
-    </div>
+    <button class="button buttonPrimary">Primary</button>
     
     <!--Link button style elements-->
-    <div class="btnBlock linkBtnBlock">
-        <p class="buttonText">A Link button style that doesn't appear to have any of the typical button chrome and is just text</p>
-        <a class ="linkButton" href="https://www.google.co.uk/">Link Button</a>
-    </div>
+    <button class="button buttonLink">Link</button>
     
     <!--Danger button elements-->
-    <div class="btnBlock dangerBtnBlock">
-        <p class="buttonText">A Danger button style that indicates that clicking it will cause a destructive action</p>
-        <button class="button buttonDanger">Danger</button>
-    </div>
+    <button class="button buttonDanger">Danger</button>
 
 </body>
 </html>

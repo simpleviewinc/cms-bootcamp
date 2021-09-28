@@ -29,20 +29,25 @@
 		}*/
         
         //MR Rewritten the logic using map lookup
-        const information = new Map([
+        const mapping = new Map([
             ['date','October 6, 1986'],
             ['time','21.13 PM'],
             ['mood','Powerful, spirited...'],
         ]);
-        const keyInformation = 'date';
-        const getInformation = information.get(keyInformation);
-        const checkInformation = information.has(keyInformation);
-		if(checkInformation == true){
-           console.log(getInformation);
-           }
-        else {
-            console.log('Error: Invalid option selected...');
+        
+        const getInformation = keyInfo => {
+            if(mapping.has(keyInfo) === true) {
+                return mapping.get(keyInfo)
+            } else {
+                return 'Error: Invalid option selected...'
+            }
         }
+        
+        const information = getInformation('date');
+        //correct selection
+        console.log(information);
+        //error selection
+        console.log(getInformation('venue'));
 	</script>
 
 </body>

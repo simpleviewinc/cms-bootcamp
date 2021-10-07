@@ -8,14 +8,38 @@
 <body>
 	
 	<style>
-		/* Add your CSS here */
+		button {
+			border-radius: 4px;
+			padding: 12px 32px;
+			color: black;
+		}
+
+		button:hover {
+			cursor: pointer;
+		}
+
+		.default-btn {
+			background-color: #f5f5f5;
+		}
+
+		.primary-btn {
+			background-color: #90CDF4;
+		}
+
+		.link-btn {
+			background-color: transparent;
+		}
+
+		.danger-btn {
+			background-color: #FEB2B2;
+		}
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+	<button class="default-btn">Default</button>
+	<button class="primary-btn">Primary</button>
+	<button class="link-btn">Link</button>
+	<button class="danger-btn">Danger</button>
 
 </body>
 </html>

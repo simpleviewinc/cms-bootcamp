@@ -3,9 +3,9 @@
 Create the needed CSS to make a system of buttons that could be used in different contexts.
 
 Each button should have the following:
-- [ ] Border Radius of 4px
-- [ ] Padding of 12px above and below with 32px of padding on the sides
-- [ ] Text color should be black
+- [x] Border Radius of 4px
+- [x] Padding of 12px above and below with 32px of padding on the sides
+- [x] Text color should be black
 
 We need buttons for the following use cases:
 - A Default button style for general use around the site

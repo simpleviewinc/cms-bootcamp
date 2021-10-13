@@ -76,7 +76,7 @@ Flexbox, like CSS Grid, is an invaluable tool when building components or layout
 1. Create responsive form layout
 
 ### Collections
-It's time to go over some Simpleview specific tools. In this module, you'll learn about our Collections system which is the bread-and-butter of our CMS.
+It's time to go over some Simpleview specific tools. In this module, you'll learn about our Collections system which is the bread-and-butter of our CMS. This exercise should give you a walk through of the evolution of how Collections have been built over the years in order to demonstrate how all it's complex systems fit together and the problems they were trying to solve.
 
 All work will be done in a fresh instance of the Base Client specific to the trainee.
 

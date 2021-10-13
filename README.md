@@ -85,7 +85,7 @@ All work will be done in a fresh instance of the Base Client specific to the tra
 **Course:** Hands-on, 1-1 time with your Lead/teammates
 
 **Assessments:**
-1. Create a clone of the Cards, 3-Across collection without using Collection Helper or CCL
-1. Recreate clone of Cards, 3-Across using Collection Helper
-1. Recreate clone of Cards, 3-Across using Collection Helper and CCL; change fonts, colors, image aspect ratio
+1. Make your own version of the Cards, 3-Across collection without using Collection Helper or CCL
+1. Rebuild your version of Cards, 3-Across using Collection Helper
+1. Rebuild your version of Cards, 3-Across using Collection Helper and CCL; change fonts, colors, image aspect ratio
 1. Add title and view all link support to widget from #3, update template to support the new fields

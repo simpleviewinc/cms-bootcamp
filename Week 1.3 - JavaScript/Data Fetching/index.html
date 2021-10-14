@@ -11,6 +11,32 @@
 	
 	<script>
 		// Add your code here
+
+
+		async function fetchAllMovies(url) {
+			const response = await fetch(url, {
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			return response.json();
+		}
+
+		fetchAllMovies('https://ghibliapi.herokuapp.com/films')
+			.then(movies => {
+				let movieListStr = '';
+				
+				movies.forEach(movie => {
+					let titleStr = `<li class='movie'>${movie.title}</li>`
+					movieListStr += titleStr
+				})
+
+				const docFrag = document.createRange().createContextualFragment(movieListStr);
+				const ulEl = document.querySelector('.movies');
+
+				ulEl.append(docFrag);
+			});
+
 	</script>
 
 </body>

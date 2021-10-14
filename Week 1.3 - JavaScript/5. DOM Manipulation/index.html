@@ -24,6 +24,11 @@
 
 	<script>
 		// Add you code here
+		const textTemplateHTML = document.querySelector("script[type='text/template']");
+		const containerEl = document.querySelector('.container');
+		const frag = document.createRange().createContextualFragment(textTemplateHTML.innerHTML);
+		containerEl.append(frag);
+
 	</script>
 
 </body>

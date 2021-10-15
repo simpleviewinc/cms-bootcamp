@@ -30,7 +30,7 @@
 		.cards {
 			/* Add your code here */
 			display: grid;
-			grid-template-columns: repeat(auto-fill, 280px);
+			grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 			justify-content: center;
 		}
 
@@ -39,7 +39,7 @@
 		}
 
 		.card img {
-			width: 280px;
+			width: 100%;
 		}
 
 		.card p, .card h2, .card a {

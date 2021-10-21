@@ -9,7 +9,7 @@ Each button should have the following:
 
 We need buttons for the following use cases:
 - A Default button style for general use around the site
-- A Primary button style used to directing a users attention to the action we want them to take
+- A Primary button style used to direct a user's attention to the action we want them to take
 - A Link button style that doesn't appear to have any of the typical button chrome and is just text
 - A Danger button style that indicates that clicking it will cause a destructive action
 

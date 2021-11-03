@@ -76,7 +76,13 @@ Flexbox, like CSS Grid, is an invaluable tool when building components or layout
 1. Create responsive form layout
 
 ### Collections
-It's time to go over some Simpleview specific tools. In this module, you'll learn about our Collections system which is the bread-and-butter of our CMS.
+It's time to go over some Simpleview specific tools. In this module, you'll learn about our Collections system which is the bread-and-butter of our CMS. This exercise should give you a walk through of the evolution of how Collections have been built over the years in order to demonstrate how all it's complex systems fit together and the problems they were trying to solve.
+
+In this section you'll learn about:
+
+- **Collections**: A system that can hydrate a template with data from different sources.
+- **Collection Helper**: A system that normalizes data regardless of source to make template management simpler as well as providing hooks for various expected features.
+- **Core Collection Library (CCL)**: A library of classes of widgets that are theme-able and extendable.
 
 All work will be done in a fresh instance of the Base Client specific to the trainee.
 
@@ -85,7 +91,7 @@ All work will be done in a fresh instance of the Base Client specific to the tra
 **Course:** Hands-on, 1-1 time with your Lead/teammates
 
 **Assessments:**
-1. Create a clone of the Cards, 3-Across collection without using Collection Helper or CCL
-1. Recreate clone of Cards, 3-Across using Collection Helper
-1. Recreate clone of Cards, 3-Across using Collection Helper and CCL; change fonts, colors, image aspect ratio
+1. Make your own version of the Cards, 3-Across collection without using Collection Helper or CCL
+1. Rebuild your version of Cards, 3-Across using Collection Helper
+1. Rebuild your version of Cards, 3-Across as a CCL widget using Collection Helper; include a change to the image aspect ratio and some styling changes to the fonts and colors
 1. Add title and view all link support to widget from #3, update template to support the new fields

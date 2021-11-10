@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Inheritance and Systems</title>
 </head>
+
 <body>
-	
+
 	<style>
+		.btn {
+			border-radius: 4px;
+			padding: 12px 32px;
+		}
+		.default {
+			background: #f5f5f5
+		}
+		.primary {
+			background: #90CDF4;
+		}
+		.primary:hover {
+			background: rgba(86, 160, 230, 80%);
+		}
+		.link {
+			background: transparent;
+			border: none;
+		}
+		.danger {
+			background: #FEB2B2;
+		}
+		.danger:hover {
+			background: #f73030c9
+		}
+
 		/* Add your CSS here */
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+	<button class='btn'>Default</button>
+	<button class='btn primary'>Primary</button>
+	<button class='btn link'>Link</button>
+	<button class='btn danger'>Danger</button>
 
 </body>
+
 </html>
+

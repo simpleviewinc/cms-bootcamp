@@ -12,6 +12,7 @@
 	<ul class="movies"></ul>
 
 	<script>
+		// Add your code here
 		const handleError = (err) => console.log(err);
 		const movies = document.querySelector('.movies')
 		const endpoint = `https://ghibliapi.herokuapp.com/films`;
@@ -33,14 +34,10 @@
 				let htmlSegment = `<li>${title.title}</li>`
 				html += htmlSegment
 			})
-
 			let movies = document.querySelector('.movies')
 			movies.innerHTML = html
 		}
 		renderFilms();
-
-
-		// Add your code here
 	</script>
 
 </body>

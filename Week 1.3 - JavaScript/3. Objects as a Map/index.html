@@ -10,14 +10,19 @@
 <body>
 
 	<script>
-		const getInformation = new Map();
-		getInformation
-			.set('date', 'October 6, 1986')
-			.set('time', '21:13 PM')
-			.set('mood', 'Powerful, spirited...')
 
-		const information = getInformation.get('date');
+const information = getInformation('date') || 'Error: Invalid option selected...';
 		console.log(information);
+		
+		function getInformation(key) {
+			return {
+				date: "October 6, 1986",
+				time: '21:13 PM',
+				mood: 'Powerful, spirited...'
+			} [key]
+
+		};
+	
 
 		// Rewrite this function to replace the if/else logic with a map lookup.
 		// function getInformation(key) {

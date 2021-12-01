@@ -8,14 +8,63 @@
 <body>
 	
 	<style>
-		/* Add your CSS here */
+		button {
+			border-radius: 4px;
+			padding: 12px;
+			color: black;
+		}
+
+		.default {
+			transition: all .2s;
+			cursor: pointer;
+		}
+
+		.default:hover {
+			color: #f5f5f5;
+			background-color: black;
+		}
+		.primary {
+			color: #fff;
+			background-color: #90CDF4;
+			transition: all .2s;
+		}
+
+		.primary:hover {
+			background-color: #3ab3ff;
+			color: #fff;
+			cursor: pointer;
+		}
+		.link {
+			border: transparent;
+			color: blue;
+			background-color: transparent;
+		}
+		.link:hover {
+			text-decoration: underline;
+			color: black;
+			cursor: pointer;
+		}
+		.danger {
+			color: #fff;
+			background-color: #FEB2B2;
+			text-transform: uppercase;
+			font-weight: bolder;
+			transition: all .2s;
+		}
+		.danger:hover {
+			background-color: #ff0000;
+			transform: scale(1.05);
+			cursor: pointer;
+		}
+
+
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+	<button type="button" class="default">Default</button>
+	<button type="button" class="primary">Primary</button>
+	<button type="button" class="link">Link</button>
+	<button type="button" class="danger">Danger</button>
 
 </body>
 </html>

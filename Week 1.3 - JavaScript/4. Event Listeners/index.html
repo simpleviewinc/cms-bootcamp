@@ -8,7 +8,7 @@
 <body>
 	
 	<h1 data-counter>0</h1>
-	<button data-action="increment-counter">+1</button>
+	<button class="upButton" data-action="increment-counter">+1</button>
 	
 	<script>
 		const counterEl = document.querySelector('[data-counter]');
@@ -20,6 +20,10 @@
 		}
 
 		// Add your code here to make clicking the button run the increment function
+		const upButton = document.querySelector('.upButton');
+
+		upButton.addEventListener('click', increment)
+
 	</script>
 
 </body>

@@ -10,7 +10,21 @@
 	<ul class="movies"></ul>
 	
 	<script>
-		// Add your code here
+		async function fetchMovie() {
+			const response = await fetch('https://ghibliapi.herokuapp.com/films', {
+				headers: {
+					Accept: 'application/json',
+
+				}
+			});
+			const movies = await response.json();
+			return movies;
+			console.log(response);
+		}
+
+		fetchMovie();
+
+		
 	</script>
 
 </body>

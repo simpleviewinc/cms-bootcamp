@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,29 @@
 			max-width: 800px;
 		}
 
-		.photo > * { mix-blend-mode: multiply; }
+		.photo>* {
+			mix-blend-mode: multiply;
+		}
 	</style>
 </head>
+
 <body>
 
 	<style>
 		/* Add your code here */
+		.channel {
+			grid-area: 1/1/2/2;
+		}
+
+		/* The below code works too, but it takes more lines and isn't necessary since we only have one slot for all pictures */
+
+		/* .photo {
+			grid-template-areas: "mainSlot";
+		}
+
+		.channel {
+			grid-area: mainSlot;
+		} */
 	</style>
 
 	<div class="photo">
@@ -27,6 +44,7 @@
 		<img class="channel channel-yellow" src="./yellow.png" alt="yellow" />
 		<img class="channel channel-black" src="./black.png" alt="black" />
 	</div>
-	
+
 </body>
+
 </html>

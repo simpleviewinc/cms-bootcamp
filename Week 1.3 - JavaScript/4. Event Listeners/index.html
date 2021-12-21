@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Event Listeners</title>
 </head>
+
 <body>
-	
+
 	<h1 data-counter>0</h1>
 	<button data-action="increment-counter">+1</button>
-	
+
 	<script>
 		const counterEl = document.querySelector('[data-counter]');
 		let counter = 0;
@@ -20,7 +22,10 @@
 		}
 
 		// Add your code here to make clicking the button run the increment function
+		const counterButton = document.querySelector("[data-action=increment-counter]")
+		counterButton.addEventListener("click", increment)
 	</script>
 
 </body>
+
 </html>

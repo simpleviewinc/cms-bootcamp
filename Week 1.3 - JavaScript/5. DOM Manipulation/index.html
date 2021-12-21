@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>DOM Manipulation</title>
 </head>
+
 <body>
-	
+
 	<script type="text/template">
 		<section>
 			<h2>Hello, world!</h2>
@@ -18,13 +20,23 @@
 		<h1>Lorem Ipsum Dolor Sit Amet</h1>
 		<section>
 			<h2>More Jeff Goldblum</h2>
-			<p>Must go faster. Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists. You really think you can fly that thing? Checkmate... Life finds a way. Yes, Yes, without the oops! Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should.</p>
+			<p>Must go faster. Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the
+				tourists. You really think you can fly that thing? Checkmate... Life finds a way. Yes, Yes, without the
+				oops! Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to
+				think if they should.</p>
 		</section>
 	</main>
 
 	<script>
 		// Add you code here
+
+		// Line 34 is a less clean version. .firstChild.textContent turns it into a string, but innerHTML also turns it into a string and is less convoluted since innerHTML gets/sets what's nested inside of the targeted element
+		// var textTemplate = document.querySelector("script").firstChild.textContent
+		var textTemplate = document.querySelector("script").innerHTML
+		var container = document.querySelector(".container")
+		container.insertAdjacentHTML("beforeend", textTemplate)
 	</script>
 
 </body>
+
 </html>

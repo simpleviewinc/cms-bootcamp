@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
 	<style>
 		*,
 		*::before,
-		*::after { box-sizing: border-box; }
+		*::after {
+			box-sizing: border-box;
+		}
 
 		body {
 			display: grid;
@@ -35,19 +38,24 @@
 		}
 	</style>
 </head>
+
 <body>
 
 	<style>
 		form {
 			/* Add any needed code here */
+			display: flex;
+			flex-wrap: wrap;
 		}
-		
+
 		form input {
 			/* All inputs should allowed to grow and shrink with a basis of 10ch */
+			flex: 1 1 10ch;
 		}
 
 		form [type="email"] {
 			/* This should grow 3 times faster than the other inputs with a basis of 30ch */
+			flex: 3 1 30ch
 		}
 	</style>
 
@@ -56,6 +64,7 @@
 		<input type="email" placeholder="Email Address">
 		<input type="submit" value="Subscribe">
 	</form>
-	
+
 </body>
+
 </html>

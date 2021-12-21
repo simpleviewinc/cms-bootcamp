@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Data Fetching</title>
 </head>
+
 <body>
-	
+
 	<ul class="movies"></ul>
-	
+
 	<script>
 		// Add your code here
+		const url = `https://ghibliapi.herokuapp.com/films`
+		const list = document.querySelector(".movies")
+
+
+
+		function populateList(film) {
+			const filmTitle = film.title
+			const li = document.createElement('li')
+			li.textContent = filmTitle
+			list.append(li)
+		}
+
+
+		async function displayMovieTitles() {
+			const response = await fetch(url)
+			console.log(response)
+			const data = await response.json()
+			console.log(data)
+			data.forEach(populateList)
+		}
+
+		displayMovieTitles().catch((err) => console.error(err))
 	</script>
 
 </body>
+
 </html>

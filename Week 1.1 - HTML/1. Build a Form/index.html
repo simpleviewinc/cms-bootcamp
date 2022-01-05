@@ -7,7 +7,33 @@
 </head>
 <body>
 	
-	<!-- Add your code here -->
+	<main>
+		<form action="/login/" method="post">
+		  <ul>
+			<li>
+			  <label for="email">Email</label>
+			  <input
+				type="email"
+				name="email"
+				id="email"
+				required
+				placeholder="me@youremail.com"
+			  />
+			</li>
+			<li>
+			  <label for="password">Password</label>
+			  <input
+				type="password"
+				name="password"
+				id="password"
+				required
+				placeholder="*****"
+			  />
+			</li>
+			<li><button type="submit">Login</button></li>
+		  </ul>
+		</form>
+	  </main>
 
 </body>
 </html>

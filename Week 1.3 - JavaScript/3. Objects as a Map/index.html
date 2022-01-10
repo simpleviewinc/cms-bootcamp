@@ -13,17 +13,13 @@
 
 		// Rewrite this function to replace the if/else logic with a map lookup.
 		function getInformation(key) {
-			let rtn;
+			
+			const infoMap = new Map();
+			infoMap.set('date', 'October 6, 1986');
+			infoMap.set('time', '21:13 PM');
+			infoMap.set('mood', 'Powerful, spirited...');
 
-			if (key === 'date') {
-				rtn = 'October 6, 1986';
-			} else if (key === 'time') {
-				rtn = '21:13 PM';
-			} else if (key === 'mood') {
-				rtn = 'Powerful, spirited...';
-			} else {
-				rtn = 'Error: Invalid option selected...';
-			}
+			let rtn = infoMap.has(key) ? infoMap.get(key) : 'Error: Invalid option selected...try again.';
 
 			return rtn;
 		}

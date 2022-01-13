@@ -11,6 +11,20 @@
 	
 	<script>
 		// Add your code here
+		async function getMovies() {
+			let res = await fetch(`https://ghibliapi.herokuapp.com/films`);
+			let data = await res.json();
+			return data
+				.map((movie) => `<li>${movie.title}</li>`)
+				.join('');
+		}
+
+		async function retrieveAndDisplay() {
+			const list = document.querySelector('.movies');
+			list.insertAdjacentHTML('afterbegin', await getMovies());
+		}
+
+		retrieveAndDisplay();
 	</script>
 
 </body>

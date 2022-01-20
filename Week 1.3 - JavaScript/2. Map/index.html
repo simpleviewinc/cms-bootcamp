@@ -16,6 +16,13 @@
 		let endingArray;
 
 		// Custom Code END
+		endingArray = startingArray.map(item => {
+			nameObject = { name: item }
+			return nameObject;
+		});
+
+		// endingArray = startingArray.map(item => ({ name: item }));
+		
 
 		console.log(endingArray);
 	</script>

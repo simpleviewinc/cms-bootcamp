@@ -7,13 +7,13 @@
 </head>
 <body>
 	
-	<form>
-		<label> Name </label>
-		<input>
-		<label> Email </label>
-		<input>
-		<label> Password </label>
-		<input>
+	<form action="/login/" method="POST">
+		<label for ="name"> Name </label>
+		<input name="name" id="name" type="text">
+		<label for ="email" > Email </label>
+		<input name="email" type="email">
+		<label for ="password"> Password </label>
+		<input name="password" id="password" required>
 		<button> Sign Up </button>
 	</form>
 

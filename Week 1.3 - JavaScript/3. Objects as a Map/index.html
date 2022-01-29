@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -8,26 +8,65 @@
 <body>
 	
 	<script>
-		const information = getInformation('date');
-		console.log(information);
+
+
+	function getInformation (keyvalue)	{	
+		let myMap = new Map( [ [ 'date', 'October 6, 1986'], ['time', '21:13 PM'], ['mood', 'Powerful, spirited...'] ]);
+
+		
+
+		myMap.set('date', 'October 6, 1986');
+		myMap.set('time', '21:13 PM');
+		myMap.set('mood', 'Powerful, spirited...');
+
+		console.log(myMap);		
+
+			
+		let date = myMap.get('date');
+		let time = myMap.get('time');
+		let mood = myMap.get('mood');
+
+		let rtn = myMap.has(keyvalue) ? myMap.get(keyvalue) : 'Error: Invalid option selected...';
+
+		return rtn;
+	};
+
+	getInformation();
+	
+
+	
+
+
+		// const information = getInformation('date');
+		// const keys = ['date: October 6, 1986', 'time: 21:13', 'mood: Powerful, spirted...', 'Error: Invalid option selected...' ];
+		// console.log(information);
 
 		// Rewrite this function to replace the if/else logic with a map lookup.
-		function getInformation(key) {
-			let rtn;
+		
+		
+		// function getInformation(key){
+		// 	return `${key}`;
+		// }
 
-			if (key === 'date') {
-				rtn = 'October 6, 1986';
-			} else if (key === 'time') {
-				rtn = '21:13 PM';
-			} else if (key === 'mood') {
-				rtn = 'Powerful, spirited...';
-			} else {
-				rtn = 'Error: Invalid option selected...';
-			}
+		// const information = keys.map(getInformation);
 
-			return rtn;
-		}
+		// console.log(information)
+				// 	let rtn;
+
+// 	if (key === 'date') {
+// 		rtn = 'October 6, 1986';
+// 	} else if (key === 'time') {
+// 		rtn = '21:13 PM';
+// 	} else if (key === 'mood') {
+// 		rtn = 'Powerful, spirited...';
+// 	} else {
+// 		rtn = 'Error: Invalid option selected...';
+// 	}
+
+// 	return rtn;
 	</script>
+
+
 
 </body>
 </html>

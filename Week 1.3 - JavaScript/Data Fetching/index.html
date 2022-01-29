@@ -10,8 +10,89 @@
 	<ul class="movies"></ul>
 	
 	<script>
-		// Add your code here
-	</script>
+		const endpoint = 'https://ghibliapi.herokuapp.com/films';
 
+		async function getMovietitle(endpoint) {
+			const response = await fetch(endpoint);
+
+			const movies = await response.json();
+			console.log(movies);
+		}
+
+		getMovietitle(endpoint);
+
+		function displayMovies() { 
+			const movies = getMovietitle(endpoint);
+			{
+				`<ul>
+					<li>${movies.title}</li>
+					<li>${movies.title}</li>
+					<li>${movies.title}</li>
+					<li>${movies.title}</li>
+					<li>${movies.title}</li>
+					</ul>`
+			};
+
+			document.getElementsByClassName('movies').innerhtml
+		}
+
+		// Add your code here
+
+
+		// let response = fetch('https://ghibliapi.herokuapp.com/films');
+
+		// async function displayMovie(response){
+		// 	const data = await fetch(response);
+		// 	const movie = await response.json();
+
+		// 	console.log(movie);
+		// }
+
+
+
+
+		// const endpoint = 'https://ghibliapi.herokuapp.com/films';
+
+		// fetch('https://ghibliapi.herokuapp.com/films')
+		// 	.then(response => response.json())
+		// 	.then(movies => console.log(movies));
+
+		// async function displayMovie(movies) {
+
+		// 	const html = movies.map(
+		// 		` <ul class="movies">
+		// 			<li> ${movies.title}</li>
+		// 			<li> ${movies.title}</li>
+		// 			<li> ${movies.title}</li>
+		// 			</ul>`
+		// 	)
+		// }
+		// async function displayMovie(movie) {
+		// 	const movie = await fetch(endpoint);
+		// 	const data = await response.json();
+
+		// 	console.log(movie);
+		// 	console.log(movie.title);
+
+		// 	const html = movie.map(
+		// 		title => `
+		// 		<ul class="movies">
+		// 			<li> ${movie.title}<li>
+		// 			<li> ${movie.title}<li>
+		// 			<li> ${movie.title}<li>
+		// 			</ul>
+		// 		`
+		// 	)
+
+		// }
+
+		function handleError(err) {
+			console.log('NOOOOO!');
+			console.log(err);
+		}
+
+		getMovietitle(endpoint).catch(handleError);
+		displayMovies();
+	</script>
 </body>
 </html>

@@ -24,9 +24,36 @@
 <body>
 
 	<style>
-		/* Add your code here to position the "read more" links to the bottom of their respective cards */
+		.cards {
+			display: flex;
+			align-items: stretch;
+			justify-content: space-evenly;
+			/* align-content: ; */	
+
+		}
+
+		.card img {
+			display: flex;
+			align-self: baseline;
+		}
+		
+		article.card {
+			display: flex;
+			flex-direction: column;
+			align-self: flex-end;
+									
+		}
+
+		.card a.more {
+			display: flex;
+			align-self: flex-end;
+				
+
+		}
+
 	</style>
 	
+
 	<section class="cards">
 		<article class="card">
 			<img src="https://via.placeholder.com/300x240" alt="placeholder" />

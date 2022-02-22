@@ -8,25 +8,39 @@
 <body>
 	
 	<script>
+		//Create map and set key/value pairs
+		const myMap = new Map();
+		myMap.set('date', 'October 6, 1986');
+		myMap.set('time', '21:13 PM');
+		myMap.set('mood', 'Powerful, spirited...');
+
 		const information = getInformation('date');
 		console.log(information);
 
-		// Rewrite this function to replace the if/else logic with a map lookup.
+		
+	
 		function getInformation(key) {
-			let rtn;
-
-			if (key === 'date') {
-				rtn = 'October 6, 1986';
-			} else if (key === 'time') {
-				rtn = '21:13 PM';
-			} else if (key === 'mood') {
-				rtn = 'Powerful, spirited...';
-			} else {
-				rtn = 'Error: Invalid option selected...';
-			}
-
-			return rtn;
+			//return the value of key in myMap or the error message if it is undefined(falsey)
+			return myMap.get(key) || 'Error: Invalid option selected...'
 		}
+
+
+		// // Rewrite this function to replace the if/else logic with a map lookup.
+		// function getInformation(key) {
+		// 	let rtn;
+
+		// 	if (key === 'date') {
+		// 		rtn = 'October 6, 1986';
+		// 	} else if (key === 'time') {
+		// 		rtn = '21:13 PM';
+		// 	} else if (key === 'mood') {
+		// 		rtn = 'Powerful, spirited...';
+		// 	} else {
+		// 		rtn = 'Error: Invalid option selected...';
+		// 	}
+
+		// 	return rtn;
+		// }
 	</script>
 
 </body>

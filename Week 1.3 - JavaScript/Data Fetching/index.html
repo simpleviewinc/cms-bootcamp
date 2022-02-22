@@ -12,28 +12,32 @@
 	<script>
 		const endpoint = 'https://ghibliapi.herokuapp.com/films';
 
-		async function getMovietitle(endpoint) {
+		async function getMovietitle() {
 			const response = await fetch(endpoint);
+			const data = await response.json();
 
-			const movies = await response.json();
-			console.log(movies);
+			const movies = data;
+
+
+			console.log(data);
 		}
 
-		getMovietitle(endpoint);
+		getMovietitle();
 
-		async function displayMovies() { 
-			let movies = await getMovietitle(endpoint);
+		 function displayMovies() { 
+			
+
 			{
 				`<ul>
-					<li>${movies.title}</li>
-					<li>${movies.title}</li>
-					<li>${movies.title}</li>
-					<li>${movies.title}</li>
-					<li>${movies.title}</li>
+					<li>${data.title}</li>
+					<li>${data.title}</li>
+					<li>${data.title}</li>
+					<li>${data.title}</li>
+					<li>${data.title}</li>
 					</ul>`
 			};
 
-			document.querySelector('.movies').innerhtml
+			document.querySelector('movies').innerhtml
 		}
 
 		function handleError(err) {
@@ -41,7 +45,7 @@
 			console.log(err);
 		}
 
-		getMovietitle(endpoint).catch(handleError);
+		getMovietitle().catch(handleError);
 		displayMovies();
 	</script>
 </body>

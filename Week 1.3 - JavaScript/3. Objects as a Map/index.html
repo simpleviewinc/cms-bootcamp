@@ -9,29 +9,59 @@
 	
 	<script>
 
-
-	function getInformation (keyvalue)	{	
-		let myMap = new Map( [ [ 'date', 'October 6, 1986'], ['time', '21:13 PM'], ['mood', 'Powerful, spirited...'] ]);
-
-		
-
-		myMap.set('date', 'October 6, 1986');
-		myMap.set('time', '21:13 PM');
-		myMap.set('mood', 'Powerful, spirited...');
-
-		console.log(myMap);		
-
-			
-		let date = myMap.get('date');
-		let time = myMap.get('time');
-		let mood = myMap.get('mood');
-
-		let rtn = myMap.has(keyvalue) ? myMap.get(keyvalue) : 'Error: Invalid option selected...';
-
-		return rtn;
+	function getInformation (key, value) {
+		let myMap = new Map([ ['date', 'October 6, 1986'], ['time', '21:13 PM'], ['mood', 'Powerful, spirited...'] ])
 	};
 
-	getInformation();
+	// let rtn = myMap.has(key, value) ? myMap.get(key, value) : 'Error: Invalid option selected...';
+	
+
+	 getInformation(key, value);
+
+	// const information = [{
+	// 	mood: 'Powerful, spirited...',
+	// 	time: '21:13 PM',
+	// 	date: 'October 6,1986'
+	// }];
+
+	// const myMap = information.map(item => (
+	// 	`${item.mood},
+	// 	${item.time},
+	// 	${item.date}`
+	// )
+	// );
+	// 	for (const [key, value] of myMap.entries()) {
+	// 		console.log(key, value);
+
+	// 		'mood', 'Powerful, spirited...'
+	// 		'time', '21:13 PM'
+	// 		'date', 'October 6, 1986'
+	
+	// function getInformation (key, value) {	
+	// 		return value * index
+	//  }
+
+
+
+		// myMap.set('date', 'October 6, 1986');
+		// myMap.set('time', '21:13 PM');
+		// myMap.set('mood', 'Powerful, spirited...');
+
+		// console.log(myMap);		
+
+			
+		// let date = myMap.get('date');
+		// let time = myMap.get('time');
+		// let mood = myMap.get('mood');
+
+		// console.log(dat);
+
+		// let rtn = myMap.has(key) ? myMap.get(key) : 'Error: Invalid option selected...';
+
+		// return rtn;
+	
+
+	//  getInformation(key, value);
 	
 
 	

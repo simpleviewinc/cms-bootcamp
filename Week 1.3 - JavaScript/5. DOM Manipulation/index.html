@@ -23,13 +23,13 @@
 	</main>
 
 	<script>
-		const p = document.querySelector(`[type="text/template"]`).innerHTML;
-		const container = document.querySelector('p');
+		const script = document.querySelector(`[type="text/template"]`).innerHTML;
+		const container = document.querySelector('script');
 
-		console.log(p);
+		console.log(script);
 		console.log(container);
 
-		container.insertAdjacentText('afterend', p);
+		container.insertAdjacentText('afterend', script);
 
 
 

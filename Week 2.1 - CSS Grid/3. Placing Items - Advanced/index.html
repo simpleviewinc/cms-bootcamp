@@ -1,153 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Placing Items - Advanced</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placing Items - Advanced</title>
 
-	<style>
-		.grid {
-			display: grid;
-			gap: 8px;
-			grid-template-columns: repeat(6, 100px);
-			margin: 0 auto 200vh;
-			max-width: 776px;
-		}
+    <style>
+      .grid {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(6, 100px);
+        margin: 0 auto 200vh;
+        max-width: 776px;
+      }
 
-		.grid > * {
-			grid-column: span 1;
-			grid-row: span 1;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 100px;
-			height: 100px;
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-			font-size: 3rem;
-			font-weight: 700;
-			color: #212121;
-			text-transform: uppercase;
-			border: 2px solid slategrey;
-			border-radius: 4px;
-			background-color: whitesmoke;
-		}
+      .grid > * {
+        grid-column: span 1;
+        grid-row: span 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #212121;
+        text-transform: uppercase;
+        border: 2px solid slategrey;
+        border-radius: 4px;
+        background-color: whitesmoke;
+      }
 
-		.letter {
-			grid-column: 1;
-			grid-row: 1;
-			border-color: tomato;
-			background-color: lightcoral;
-		}
+      .letter {
+        grid-column: 1;
+        grid-row: 1;
+        border-color: tomato;
+        background-color: lightcoral;
+      }
 
-		
+      .placeholder {
+        border-color: mediumslateblue;
+        background-color: lightcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      /* Add your code here */
+      .grid {
+        grid-template-areas:
+          "A B C D E F G"
+          "H I J K L M N"
+          "O P Q R S T U"
+          "V W X Y Z AA BB"
+          "CC DD EE FF GG HH II"
+          "JJ KK LL MM NN OO PP"
+          "QQ RR SS TT UU VV WW"
+          "XX YY ZZ AAA BBB CCC DDD";
+      }
 
-		.placeholder {
-			border-color: mediumslateblue;
-			background-color: lightcyan;
-		}
-	</style>
-</head>
-<body>
-	
-	<style>
-		/* Add your code here */
-		.grid {
-			grid-template-areas: "col-start col-1 col-2 col-3 col-4 col-5 col-end"
-			"col-start col-1 col-2 col-3 col-4 col-5 col-end";
-		}
+      .letter.letter-h {
+        grid-area: H;
+      }
 
-		.letter.letter-h {
-			grid-column: 1;
-			grid-row: 2;
-		}
+      .letter.letter-e {
+        grid-area: P;
+      }
 
-		.letter.letter-e {
-			grid-column: 2;
-			grid-row: 3;
-		}
+      .letter.letter-l {
+        grid-area: X;
+      }
 
-		.letter.letter-l {
-			grid-column: 3;
-			grid-row: 4;
-		}
+      .letter.letter-l:nth-child(2n) {
+        grid-area: FF;
+      }
 
-		.letter.letter-l:nth-child(2n) {
-			grid-column: 4;
-			grid-row: 5;
-		}
+      .letter.letter-o {
+        grid-area: NN;
+      }
 
-		.letter.letter-o {
-			grid-column: 5;
-			grid-row: 6;
-		}
+      .letter:nth-child(6n) {
+        grid-area: VV;
+      }
 
-		.letter:nth-child(6n) {
-			grid-column: 6;
-			grid-row: 7;
-		}
+      .letter {
+        position: sticky;
+        top: 0;
+      }
+    </style>
 
-		.letter {
-			position: sticky;
-			top: 0;
-		}
-	</style>
+    <div class="grid">
+      <li class="letter letter-h">h</li>
+      <li class="letter letter-e">e</li>
+      <li class="letter letter-l">l</li>
+      <li class="letter letter-l">l</li>
+      <li class="letter letter-o">o</li>
+      <li class="letter letter-!">!</li>
 
-	<div class="grid">
-		<li class="letter letter-h">h</li>
-		<li class="letter letter-e">e</li>
-		<li class="letter letter-l">l</li>
-		<li class="letter letter-l">l</li>
-		<li class="letter letter-o">o</li>
-		<li class="letter letter-!">!</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
 
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
 
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
 
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
 
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
 
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</div>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
 
-</body>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </div>
+  </body>
 </html>

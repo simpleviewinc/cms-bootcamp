@@ -27,7 +27,10 @@
 		let scriptHtml = document.querySelector('script').innerHTML;
 
 		//Concatentate html onto container
-		document.querySelector('main.container').innerHTML += scriptHtml;
+		//document.querySelector('main.container').innerHTML += scriptHtml;
+
+		document.querySelector('main.container').insertAdjacentHTML('beforeend', scriptHtml);
+
 	</script>
 
 </body>

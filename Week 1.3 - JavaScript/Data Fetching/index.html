@@ -19,7 +19,6 @@
 		   }
 		   return res.json();
 	   }).then(data => {
-		   console.log(data);
 		   data.forEach(movie => {
 			let title = `<li>${movie.title}</li>`;
 			myUl.innerHTML += title;

@@ -51,14 +51,13 @@
       /* Add your code here */
       .grid {
         grid-template-areas:
-          "A B C D E F G"
-          "H I J K L M N"
-          "O P Q R S T U"
-          "V W X Y Z AA BB"
-          "CC DD EE FF GG HH II"
-          "JJ KK LL MM NN OO PP"
-          "QQ RR SS TT UU VV WW"
-          "XX YY ZZ AAA BBB CCC DDD";
+          ". . . . . . ."
+          "H . . . . . ."
+          ". E . . . . ."
+          ". . L1 . . . ."
+          ". . . L2 . . ."
+          ". . . . O . ."
+          ". . . . . ECLM .";
       }
 
       .letter.letter-h {
@@ -66,23 +65,23 @@
       }
 
       .letter.letter-e {
-        grid-area: P;
+        grid-area: E;
       }
 
       .letter.letter-l {
-        grid-area: X;
+        grid-area: L1;
       }
 
       .letter.letter-l:nth-child(2n) {
-        grid-area: FF;
+        grid-area: L2;
       }
 
       .letter.letter-o {
-        grid-area: NN;
+        grid-area: O;
       }
 
       .letter:nth-child(6n) {
-        grid-area: VV;
+        grid-area: ECLM;
       }
 
       .letter {

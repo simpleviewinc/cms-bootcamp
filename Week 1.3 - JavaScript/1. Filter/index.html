@@ -14,7 +14,21 @@
 		// Modify the code in this block however you need to get the desired ending array.
 		// You must store your new array in the `endingArray` variable for it to log out properly.
 		let endingArray;
+		function removeOddValues(array){
+			endingArray = [];
+			// Looping throug array logic
+			for(i = 0 ; i < startingArray.length - 1 ; i++){
+			// Checking to see if the objects in the array are even by using the remainder
+			let arrayValue = startingArray[i];
+				if ( ( arrayValue % 2) === 0 ){
+					// Appending/Pushing new values to the ending array
+					endingArray.push(arrayValue);
+				}
+			}
+		}
 
+		//Calling the removeOddValue function
+		removeOddValues(array = startingArray);
 		// Custom Code END
 
 		console.log(endingArray);

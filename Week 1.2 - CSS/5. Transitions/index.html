@@ -13,14 +13,6 @@
 			min-height: 100vh;
 		}
 		
-		.box {
-			transition: transform 0.16s;
-		}
-
-		.box:hover {
-			transform: scale(2);
-			transition: transform 0.2s;
-		}
 
 	</style>
 </head>
@@ -32,6 +24,15 @@
 			width: 100px;
 			height: 100px;
 			background-color: rebeccapurple;
+		}
+
+		.box {
+			transition: transform 0.16s ease-in;
+		}
+
+		.box:hover {
+			transform: scale(2);
+			transition: transform 0.2s ease-out;
 		}
 	</style>
 

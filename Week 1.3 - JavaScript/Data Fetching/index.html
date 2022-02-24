@@ -8,7 +8,6 @@
 <body>
 	
 	<ul class="movies">
-		<label class="testLabel"></label>
 	</ul>
 	<!-- JQuery for now will replace with vanilla JS later -->
 	<script src="jquery-3.6.0.min.js"></script>
@@ -21,8 +20,17 @@
 			$.get(`https://ghibliapi.herokuapp.com/films` , function( data, textStatus , jqXHR){
 				console.log('status: ' + textStatus + ', data:' + data)
 				$(`.movies`).text(data[0].id)
+				listMovies(data);
 			});
 		}
+
+		function listMovies(data){
+			for(x = 0 ; x < data.length - 1; x++){
+				let dataObject = data[0].title
+				$(`.movies`).append(`<li>${ dataObject }</li>`)
+			}
+		}
+
 		getDataPopulate();
 
 	</script>

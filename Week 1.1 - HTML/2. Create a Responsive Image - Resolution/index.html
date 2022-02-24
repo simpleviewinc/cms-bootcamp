@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
 	<style>
 		*,
 		*::before,
-		*::after { box-sizing: border-box; }
+		*::after {
+			box-sizing: border-box;
+		}
 
 		html {
 			margin: 0;
@@ -22,9 +25,32 @@
 		}
 	</style>
 </head>
-<body>
-	
-	<!-- Add your code here -->
 
+<body>
+
+	<!-- Add your code here -->
+	<picture>
+		<source srcset="https://via.placeholder.com/2000x900" media="(min-width: 1800px)">
+		<source srcset="https://via.placeholder.com/1600x720" media="(min-width: 1440px)">
+		<source srcset="https://via.placeholder.com/1200x540" media="(min-width: 1024px)">
+		<source srcset="https://via.placeholder.com/800x360" media="(min-width: 640px)">
+		<img src="https://via.placeholder.com/400x180" alt="default image displaying 400 x 180" 
+		height="180" width="400">
+	</picture>
+
+
+	<img srcset="https://via.placeholder.com/800x360 640w,
+	https://via.placeholder.com/1200x540 1024w,
+	https://via.placeholder.com/1600x720 1440w,
+	https://via.placeholder.com/2000x900 1800w" src="https://via.placeholder.com/400x180"
+		alt="default image displaying 400 x 180" height="180" width="400">
+
+	<!-- Based off the name of this exercise I'll also do this for pixel density -->
+	<img src="https://via.placeholder.com/400x180" alt="default image displaying 400 x 180" height="180" width="400"
+		srcset="https://via.placeholder.com/800x360 1.5x,
+	https://via.placeholder.com/1200x540 2x,
+	https://via.placeholder.com/1600x720 3x,
+	https://via.placeholder.com/2000x900 4x">
 </body>
+
 </html>

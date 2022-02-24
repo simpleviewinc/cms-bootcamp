@@ -10,7 +10,23 @@
 	<ul class="movies"></ul>
 	
 	<script>
-		// Add your code here
+	   let movies;
+	   let myUl = document.querySelector('.movies');
+	   fetch('https://ghibliapi.herokuapp.com/films')
+	   .then(res => {
+		   if(!res.ok) {
+			   throw new Error('Error hitting endpoint')
+		   }
+		   return res.json();
+	   }).then(data => {
+		   data.forEach(movie => {
+			let title = `<li>${movie.title}</li>`;
+			myUl.innerHTML += title;
+		   });
+	   }).catch(err => {
+		   alert(err.message);
+	   })
+
 	</script>
 
 </body>

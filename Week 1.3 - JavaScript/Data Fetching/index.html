@@ -7,11 +7,24 @@
 </head>
 <body>
 	
-	<ul class="movies"></ul>
-	
+	<ul class="movies">
+		<label class="testLabel"></label>
+	</ul>
+	<!-- JQuery for now will replace with vanilla JS later -->
+	<script src="jquery-3.6.0.min.js"></script>
+
+
 	<script>
 		// Add your code here
-	</script>
 
+		function getDataPopulate(){
+			$.get(`https://ghibliapi.herokuapp.com/films` , function( data, textStatus , jqXHR){
+				console.log('status: ' + textStatus + ', data:' + data)
+				$(`.movies`).text(data)
+			});
+		}
+		getDataPopulate();
+		
+	</script>
 </body>
 </html>

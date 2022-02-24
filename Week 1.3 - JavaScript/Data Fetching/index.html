@@ -20,11 +20,11 @@
 		function getDataPopulate(){
 			$.get(`https://ghibliapi.herokuapp.com/films` , function( data, textStatus , jqXHR){
 				console.log('status: ' + textStatus + ', data:' + data)
-				$(`.movies`).text(data)
+				$(`.movies`).text(data[0].id)
 			});
 		}
 		getDataPopulate();
-		
+
 	</script>
 </body>
 </html>

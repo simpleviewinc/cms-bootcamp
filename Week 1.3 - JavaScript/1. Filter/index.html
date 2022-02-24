@@ -13,7 +13,10 @@
 		// Custom Code BEGIN 
 		// Modify the code in this block however you need to get the desired ending array.
 		// You must store your new array in the `endingArray` variable for it to log out properly.
-		let endingArray;
+
+		//Looks like I just want even numbers so ill return any element that is divisible by 2 using modulus and store new array in endingArray
+		let endingArray = startingArray.filter(el => el % 2 === 0);
+		
 
 		// Custom Code END
 

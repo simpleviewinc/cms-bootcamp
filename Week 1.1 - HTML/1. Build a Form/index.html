@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,11 @@
 	<body>
 	<!-- Add your code here -->
 	<!-- Not Completed : Rabus McCaleb -->
-		<form class="form_html" action="/login/" aria-label="Login Form">
-			<input type="email" placeholder="Enter your emaill" aria-label="Email Feild">
-			<input type="password" placeholder="Enter your password" aria-label="Password Feild">
+		<form class="form_html" method="post" action="/login/" aria-label="Login Form">
+			<label for="email">Email : </label>
+			<input type="email" placeholder="Enter your emaill" aria-label="Email Feild" id="email" required>
+			<label for="password"> Password : </label>
+			<input type="password" placeholder="Enter your password" aria-label="Password Feild" id="password" required>
 			<input type="submit" value="Submit" formmethod="post" id="submit" aria-label="Submit button for Login form">
 		</form>
 

@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Placing Items - Advanced</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placing Items - Advanced</title>
 
-	<style>
-		.cards {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			gap: 24px;
-			margin: 0 auto;
-			max-width: 1200px;
-		}
+    <style>
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
 
-		.card img {
-			display: block;
-			width: 100%;
-			height: auto;
-		}
-	</style>
-</head>
-<body>
+      .card img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
 
-	<style>
-		/* Add your code here to position the "read more" links to the bottom of their respective cards */
-	</style>
-	
-	<section class="cards">
-		<article class="card">
-			<img src="https://via.placeholder.com/300x240" alt="placeholder" />
-			<h2>Lorem Ipsum Dolor</h2>
-			<p>Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Is this my espresso machine? Wh-what is-h-how did you get my espresso machine? I was part of something special. Eventually, you do plan to have dinosaurs on your dinosaur tour, right?</p>
-			<a class="more" href="#">Read More</a>
-		</article>
-		<article class="card">
-			<img src="https://via.placeholder.com/300x240" alt="placeholder" />
-			<h2>Lorem Ipsum Dolor</h2>
-			<p>Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Is this my espresso machine? Wh-what is-h-how did you get my espresso machine? I was part of something special.</p>
-			<a class="more" href="#">Read More</a>
-		</article>
-		<article class="card">
-			<img src="https://via.placeholder.com/300x240" alt="placeholder" />
-			<h2>Lorem Ipsum Dolor</h2>
-			<p>Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Is this my espresso machine? Wh-what is-h-how did you get my espresso machine?</p>
-			<a class="more" href="#">Read More</a>
-		</article>
-		<article class="card">
-			<img src="https://via.placeholder.com/300x240" alt="placeholder" />
-			<h2>Lorem Ipsum Dolor</h2>
-			<p>Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Is this my espresso machine?</p>
-			<a class="more" href="#">Read More</a>
-		</article>
-	</section>
+      .card {
+        display: flex;
+        flex-direction: column;
+      }
 
-</body>
+      .more {
+        margin-top: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      /* Add your code here to position the "read more" links to the bottom of their respective cards */
+    </style>
+
+    <section class="cards">
+      <article class="card">
+        <img src="https://via.placeholder.com/300x240" alt="placeholder" />
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>
+          Forget the fat lady! You're obsessed with the fat lady! Drive us out
+          of here! Is this my espresso machine? Wh-what is-h-how did you get my
+          espresso machine? I was part of something special. Eventually, you do
+          plan to have dinosaurs on your dinosaur tour, right?
+        </p>
+        <a class="more" href="#">Read More</a>
+      </article>
+      <article class="card">
+        <img src="https://via.placeholder.com/300x240" alt="placeholder" />
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>
+          Forget the fat lady! You're obsessed with the fat lady! Drive us out
+          of here! Is this my espresso machine? Wh-what is-h-how did you get my
+          espresso machine? I was part of something special.
+        </p>
+        <a class="more" href="#">Read More</a>
+      </article>
+      <article class="card">
+        <img src="https://via.placeholder.com/300x240" alt="placeholder" />
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>
+          Forget the fat lady! You're obsessed with the fat lady! Drive us out
+          of here! Is this my espresso machine? Wh-what is-h-how did you get my
+          espresso machine?
+        </p>
+        <a class="more" href="#">Read More</a>
+      </article>
+      <article class="card">
+        <img src="https://via.placeholder.com/300x240" alt="placeholder" />
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>
+          Forget the fat lady! You're obsessed with the fat lady! Drive us out
+          of here! Is this my espresso machine?
+        </p>
+        <a class="more" href="#">Read More</a>
+      </article>
+    </section>
+  </body>
 </html>

@@ -15,31 +15,39 @@
 
 	<script>
 		// Add your code here
-
 		function getDataPopulate(){
-
+			// Fetched Data From URL
 			fetch(`https://ghibliapi.herokuapp.com/films`).then(function (response) {
+			// Once I got a response I converted the response data into JSON and returned it passing to the next promise
 				console.log(`Success! Data : ${ response }`); 
 				return response.json();
 			}).then(function(data){
+			// Recieved the fetched response data in the JSon format 
+			// Passe it to the List movies function to be converted into t list
 				console.log( data)
-				listMovies(data)
+				listMovies(data);;
 			}).catch(function(error){
+				// In the event of an error I appened a lable to the UL with the error
 				console.log(error);
-				$(`.movies`).text(error);
+				$(`.movies`).append(`<label style="color:red">${error}</label>`);
 			});
-
-
-			// $.get(`https://ghibliapi.herokuapp.com/films` , function( data, textStatus , jqXHR){
-			// 	console.log('status: ' + textStatus + ', data:' + data)
-			// 	listMovies(data);
-			// });
 		}
 
 		function listMovies(data){
-			for(x = 0 ; x < data.length - 1; x++){
+			for(x = 0 ; x <= data.length - 1; x++){
+				// Title for each movie
 				let dataObject = data[x].title
-				$(`.movies`).append(`<li>${ dataObject }</li>`)
+				// Get the movies Element
+				const movieUL = document.querySelector('.movies');
+				// Create <li>
+				let newLi = document.createElement('li');
+				// Add title to the new list item
+				newLi.innerHTML = dataObject
+				// Add the list item to ".movies" UL 
+				movieUL.appendChild(newLi)
+
+				// let dataObject = data[x].title
+				// $(`.movies`).append(`<li>${ dataObject }</li>`)
 			}
 		}
 

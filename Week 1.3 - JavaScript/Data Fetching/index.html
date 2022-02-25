@@ -20,7 +20,6 @@
 
 			fetch(`https://ghibliapi.herokuapp.com/films`).then(function (response) {
 				console.log(`Success! Data : ${ response }`); 
-				listMovies( response.json() );
 				return response.json();
 			}).then(function(data){
 				console.log( data)

@@ -18,9 +18,12 @@
 
 		function getDataPopulate(){
 
-			fetch(`https://ghibliapi.herokuapp.com/films`).then(function (data) {
-				console.log(`Success!`)  
-				listMovies(data);
+			fetch(`https://ghibliapi.herokuapp.com/films`).then(function (response) {
+				console.log(`Success! Data : ${ response }`); 
+				listMovies( response.json() );
+				return response.json();
+			}).then(function(data){
+				console.log( data)
 			}).catch(function(error){
 				console.log(error);
 				$(`.movies`).text(error);

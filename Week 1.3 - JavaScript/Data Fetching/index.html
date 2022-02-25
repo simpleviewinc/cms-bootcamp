@@ -23,6 +23,7 @@
 				return response.json();
 			}).then(function(data){
 				console.log( data)
+				listMovies(data)
 			}).catch(function(error){
 				console.log(error);
 				$(`.movies`).text(error);

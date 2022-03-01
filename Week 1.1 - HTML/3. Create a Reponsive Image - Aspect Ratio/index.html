@@ -23,10 +23,15 @@
 	</style>
 </head>
 <body>
-	
-	<img src="https://via.placeholder.com/540x800"
-	alt="" width="540" height="800"
-	srcset="https://via.placeholder.com/1600x720 1024w,
-			https://via.placeholder.com/1200x900 640w">
+	<picture>
+		<source media="(min-width: 1024px)"
+				srcset="https://via.placeholder.com/1600x720 1600w">
+		<source media="(min-width: 640px)"
+				scrset="https://via.placeholder.com/1200x900 1200w">
+				  
+		
+		<img src="https://via.placeholder.com/540x800"
+			 alt="" width="540" height="800">
+	</picture>
 </body>
 </html>

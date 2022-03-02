@@ -23,7 +23,14 @@
 	</main>
 
 	<script>
-		// Add you code here
+		const container = document.querySelector('.container')
+		const scriptNode = document.querySelector("script[type='text/template']")
+		console.log(scriptNode)
+		
+		container.insertAdjacentElement('afterend', scriptNode)
+		
+		
+		
 	</script>
 
 </body>

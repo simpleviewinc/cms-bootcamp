@@ -9,11 +9,14 @@
 	
 	<script>
 		const startingArray = ['Sergio', 'Keve', 'Kam', 'Bree', 'Blake'];
-		// And create the new array `[{ name: 'Sergio' }, { name: 'Keve' }, { name: 'Kam }, { name: 'Bree' }, { name: 'Blake' }]`
-	
 		
+		function addName(name) {
+			return {'name': name};
+		}
 		
-		// console.log(endingArray)
+		const endingArray = startingArray.map(addName)
+		
+		console.log(endingArray)
 	</script>
 
 </body>

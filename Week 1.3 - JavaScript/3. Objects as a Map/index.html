@@ -11,21 +11,20 @@
 		const information = getInformation('date');
 		console.log(information);
 
-		// Rewrite this function to replace the if/else logic with a map lookup.
+		
 		function getInformation(key) {
-			let rtn;
-
-			if (key === 'date') {
-				rtn = 'October 6, 1986';
-			} else if (key === 'time') {
-				rtn = '21:13 PM';
-			} else if (key === 'mood') {
-				rtn = 'Powerful, spirited...';
-			} else {
-				rtn = 'Error: Invalid option selected...';
+			const options=  {
+				date: 'October 6, 1986',
+				time: '21:13 PM',
+				mood: 'Powerful, spirited...',
 			}
 
-			return rtn;
+			let optionsArray = Object.entries(options)
+			
+			let optionsMap = new Map(optionsArray)
+			
+			return optionsMap.get(key) ? optionsMap.get(key) : 'Error: Invalid option selected...';
+			
 		}
 	</script>
 

@@ -23,7 +23,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\kate.sivy\\Documents\\GitHub\\Week 2.2 - Flexbox\\2. Placing Items\\index.html"
+            "file": "c:\\Users\\kate.sivy\\Documents\\GitHub\\Week 2.2 - Flexbox\\3. Placing Items - Advanced\\index.html"
         }
     ]
 }

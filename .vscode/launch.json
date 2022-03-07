@@ -16,7 +16,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\kate.sivy\\Documents\\GitHub\\Week 2.1 - CSS Grid\\2. Placing Items\\index.html"
+            "file": "c:\\Users\\kate.sivy\\Documents\\GitHub\\Week 2.1 - CSS Grid\\3. Placing Items - Advanced\\index.html"
         }
     ]
 }

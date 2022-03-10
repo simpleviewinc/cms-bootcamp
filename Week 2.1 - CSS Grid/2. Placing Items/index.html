@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,37 @@
 			max-width: 800px;
 		}
 
-		.photo > * { mix-blend-mode: multiply; }
+		.photo>* {
+			mix-blend-mode: multiply;
+		}
 	</style>
 </head>
+
 <body>
 
 	<style>
 		/* Add your code here */
+		.photo {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
+		.channel-cyan {
+			grid-column: 1/ span 4;
+			grid-row: 1 / span 2;
+		}
+		.channel-magenta {
+			grid-column: 1/ span 4;
+			grid-row: 1 / span 2;
+		}
+		.channel-yellow {
+			grid-column: 1/ span 4;
+			grid-row: 1 / span 2;
+		}
+		.channel-black {
+			grid-column: 1/ span 4;
+			grid-row: 1 / span 2;
+		}
 	</style>
 
 	<div class="photo">
@@ -27,6 +52,7 @@
 		<img class="channel channel-yellow" src="./yellow.png" alt="yellow" />
 		<img class="channel channel-black" src="./black.png" alt="black" />
 	</div>
-	
+
 </body>
+
 </html>

@@ -16,9 +16,10 @@
 		async function getData() {
 			const response = await fetch(endpoint);
 			const data = await response.json();
-			const ul = document.querySelector('ul')
+			const ul = document.querySelector('.movies')
 
 			let titles = data.forEach(data => ul.innerHTML += `<li>${data.title}</li>`)
+			return titles;
 		 }
 	
 
@@ -26,7 +27,17 @@
 			console.log(err)
 		}
 		
-		getData().catch(handleError);
+		function checkResponse(fn, error) {
+			return function() {
+				fn().catch(error)
+			}
+		}
+
+		const safeGetData = checkResponse(getData, handleError);
+
+		safeGetData();
+
+		// getData().catch(handleError);
 
 
 

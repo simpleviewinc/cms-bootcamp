@@ -23,7 +23,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\kate.sivy\\Documents\\GitHub\\Week 2.2 - Flexbox\\4. Flexing\\index.html"
+            "file": "c:\\Users\\kate.sivy\\Documents\\GitHub\\Week 1.3 - JavaScript\\Data Fetching\\index.html"
         }
     ]
 }

@@ -11,7 +11,7 @@
 	
 	<script>
 		
-		const endpoint = 'https://ghibliapi.herokuapp.com/films';		
+		const endpoint = 'https://ghibliapi.erokuapp.com/films';		
 		const fetchPromise = fetch(endpoint);
 		const ul = document.querySelector('.movies')
 
@@ -20,10 +20,13 @@
       			throw new Error(`Error: ${response.status}`);
     		}
     		return response.json();
-  		})
+  			})
 		  .then(data => {
 			data.forEach(data => ul.innerHTML += `<li>${data.title}</li>`)
-		  })
+			})
+		  .catch( error => {
+   			 console.error(error);
+  			});
 
 
 	</script>

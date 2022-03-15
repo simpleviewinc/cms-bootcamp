@@ -11,34 +11,19 @@
 	
 	<script>
 		
-		const endpoint = 'https://ghibliapi.herokuapp.com/films';
+		const endpoint = 'https://ghibliapi.herokuapp.com/films';		
+		const fetchPromise = fetch(endpoint);
+		const ul = document.querySelector('.movies')
 
-		async function getData() {
-			const response = await fetch(endpoint);
-			const data = await response.json();
-			const ul = document.querySelector('.movies')
-
-			let titles = data.forEach(data => ul.innerHTML += `<li>${data.title}</li>`)
-			return titles;
-		 }
-	
-
-		function handleError(err) {
-			console.log(err)
-		}
-		
-		function checkResponse(fn, error) {
-			return function() {
-				fn().catch(error)
-			}
-		}
-
-		const safeGetData = checkResponse(getData, handleError);
-
-		safeGetData();
-
-		// getData().catch(handleError);
-
+		fetchPromise.then( response => {
+    		if (!response.ok) {
+      			throw new Error(`Error: ${response.status}`);
+    		}
+    		return response.json();
+  		})
+		  .then(data => {
+			data.forEach(data => ul.innerHTML += `<li>${data.title}</li>`)
+		  })
 
 
 	</script>

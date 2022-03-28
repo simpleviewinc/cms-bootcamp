@@ -9,91 +9,24 @@
 	
 	<script>
 
-	function getInformation () {
-		let myMap = new Map([ ['date', 'October 6, 1986'], ['time', '21:13 PM'], ['mood', 'Powerful, spirited...'] ])
-	};
+		let date = {},
+		time = {},
+		mood = {};
 
-	// let rtn = myMap.has(key, value) ? myMap.get(key, value) : 'Error: Invalid option selected...';
-	
+		let myMap = new Map([ [date, 'October 6, 1986'], [time, '21:13 PM'], [mood, 'Powerful, spirited...'] ]);
 
-	 getInformation();
+		function getInformation(key) {
+			return (key ? myMap.get(date, time, mood) : 'Error: Invalid option selected...');
+		}
 
-	// const information = [{
-	// 	mood: 'Powerful, spirited...',
-	// 	time: '21:13 PM',
-	// 	date: 'October 6,1986'
-	// }];
+		getInformation();
 
-	// const myMap = information.map(item => (
-	// 	`${item.mood},
-	// 	${item.time},
-	// 	${item.date}`
-	// )
-	// );
-	// 	for (const [key, value] of myMap.entries()) {
-	// 		console.log(key, value);
-
-	// 		'mood', 'Powerful, spirited...'
-	// 		'time', '21:13 PM'
-	// 		'date', 'October 6, 1986'
-	
-	// function getInformation (key, value) {	
-	// 		return value * index
-	//  }
-
-
-
-		// myMap.set('date', 'October 6, 1986');
-		// myMap.set('time', '21:13 PM');
-		// myMap.set('mood', 'Powerful, spirited...');
-
-		// console.log(myMap);		
-
-			
-		// let date = myMap.get('date');
-		// let time = myMap.get('time');
-		// let mood = myMap.get('mood');
-
-		// console.log(dat);
-
-		// let rtn = myMap.has(key) ? myMap.get(key) : 'Error: Invalid option selected...';
-
-		// return rtn;
-	
-
-	//  getInformation(key, value);
-	
-
+		console.log(getInformation(date));
+		console.log(getInformation());
 	
 
 
-		// const information = getInformation('date');
-		// const keys = ['date: October 6, 1986', 'time: 21:13', 'mood: Powerful, spirted...', 'Error: Invalid option selected...' ];
-		// console.log(information);
-
-		// Rewrite this function to replace the if/else logic with a map lookup.
-		
-		
-		// function getInformation(key){
-		// 	return `${key}`;
-		// }
-
-		// const information = keys.map(getInformation);
-
-		// console.log(information)
-				// 	let rtn;
-
-// 	if (key === 'date') {
-// 		rtn = 'October 6, 1986';
-// 	} else if (key === 'time') {
-// 		rtn = '21:13 PM';
-// 	} else if (key === 'mood') {
-// 		rtn = 'Powerful, spirited...';
-// 	} else {
-// 		rtn = 'Error: Invalid option selected...';
-// 	}
-
-// 	return rtn;
+	
 	</script>
 
 

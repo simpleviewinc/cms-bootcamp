@@ -45,13 +45,13 @@
 		
 		form input {
 			/* All inputs should allowed to grow and shrink with a basis of 10ch */
-			flex-shrink: 10;
+			flex: 1 1 10ch;
 			/* flex-shrink: 1; */
 		}
 
 		form [type="email"] {
 			/* This should grow 3 times faster than the other inputs with a basis of 30ch */
-			flex-grow: 30;
+			flex: 3 1 30ch;
 			/* flex-shrink: 1; */
 		}
 	</style>

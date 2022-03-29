@@ -24,13 +24,16 @@
 
 	<script>
 		const script = document.querySelector(`[type="text/template"]`);
-		let container = document.querySelectorAll('.container');
-
-		// container.append(script)
+		const inner = script.innerHTML;
+		const container = document.querySelector('.container');
+		const added = document.createElement('div');
 		 
 
 		console.log(script);
 		console.log(container);
+
+		added.innerHTML = inner;
+		container.appendChild(added);
 		
 
 	

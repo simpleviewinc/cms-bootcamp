@@ -26,12 +26,11 @@
 		}).then(data => {
 			console.log(data);
 			console.log(data[0].title);
-			movieEl.innerHTML = `   <li> ${data[0].title} </li>
-									<li> ${data[1].title} </li>
-								    <li> ${data[2].title} </li>
-								    <li> ${data[3].title} </li>
-								    <li> ${data[4].title} </li> `
 
+			movieEl.innerHTML = '';
+			for (i = 0; i < data.length; i++) {
+				movieEl.innerHTML += `<li> ${data[i].title}</li>`
+			}
 		}).catch(handleError);		
 
 	</script>

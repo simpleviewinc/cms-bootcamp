@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Map</title>
+</head>
+<body>
+	
+	<script>
+		const startingArray = ['Sergio', 'Keve', 'Kam', 'Bree', 'Blake'];
+
+		// Custom Code BEGIN 
+		// Modify the code in this block however you need to get the desired ending array.
+		// You must store your new array in the `endingArray` variable for it to log out properly.
+		
+		// Rather than using JSON.parse, the solution would be to return the name - value pair.
+		let endingArray = startingArray.map(name => {
+			return {
+				'name' : name
+			};
+		});
+		console.log(endingArray);
+		
+		// Custom Code END
+
+	</script>
+
+</body>
+</html>

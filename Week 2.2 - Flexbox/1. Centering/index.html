@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Centering</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Centering</title>
 
-	<style>
-		.box {
-			width: 100px;
-			height: 100px;
-			border-radius: 4px;
-			background-color: rebeccapurple;
-		}
-	</style>
-</head>
-<body>
+		<style>
+			.box {
+				width: 100px;
+				height: 100px;
+				border-radius: 4px;
+				background-color: rebeccapurple;
+			}
+		</style>
+	</head>
+	<body>
+		<style>
+			.container {
+				width: 100%;
+				height: 600px;
+				border: 2px solid thistle;
+				border-radius: 4px;
+				background-color: whitesmoke;
 
-	<style>
-		.container {
-			width: 100%;
-			height: 600px;
-			border: 2px solid thistle;
-			border-radius: 4px;;
-			background-color: whitesmoke;
-			
-			/* Add to your code here to center the box within the container */
-		}
-	</style>
-	
-	<section class="container">
-		<div class="box"></div>
-	</section>
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
 
-</body>
+		<section class="container">
+			<div class="box"></div>
+		</section>
+	</body>
 </html>

@@ -39,14 +39,21 @@
 
 	<style>
 		form {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
 			/* Add any needed code here */
 		}
 		
 		form input {
+			flex-basis: 10ch;
+			flex-grow: 1;
 			/* All inputs should allowed to grow and shrink with a basis of 10ch */
 		}
 
 		form [type="email"] {
+			flex-basis: 30ch;
+			flex-grow: 3;
 			/* This should grow 3 times faster than the other inputs with a basis of 30ch */
 		}
 	</style>

@@ -11,6 +11,13 @@
 	
 	<script>
 		// Add your code here
+		// Endpoint 'https://ghibliapi.herokuapp.com/films'
+
+		const films = fetch('https://ghibliapi.herokuapp.com/films')
+			.then(response => response.json())
+			.then(data => console.log(data));
+
+		console.log(films[0].title);
 	</script>
 
 </body>

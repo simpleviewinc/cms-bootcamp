@@ -24,6 +24,9 @@
 
 	<script>
 		// Add you code here
+		const newText = document.querySelector('[type="text/template"]').innerHTML;
+		const containerEl = document.querySelector('.container')
+		containerEl.insertAdjacentHTML("beforeend", newText);
 	</script>
 
 </body>

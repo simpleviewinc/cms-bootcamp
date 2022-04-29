@@ -12,12 +12,26 @@
 	<script>
 		// Add your code here
 		// Endpoint 'https://ghibliapi.herokuapp.com/films'
+		const moviesEl = document.querySelector('.movies');
+		const endpoint = 'https://ghibliapi.herokuapp.com/films'
 
-		const films = fetch('https://ghibliapi.herokuapp.com/films')
+		fetch(endpoint)
 			.then(response => response.json())
-			.then(data => console.log(data));
+			.then(data => {
+				data.forEach(element => {
+					const newLi = 
+					`<li>
+						<h2 style="margin-bottom:0">${element.title}</h2><br>
+						<img src=${element.image} width="250"/>
+					</li>`; // I added more than just a simple li cause I wanted it to be more than a list
+					moviesEl.insertAdjacentHTML('beforeend', newLi)
+				});
+			})
+			.catch(err => {
+				console.log("Error: could not fetch."); 
+				console.log(err);
+			});
 
-		console.log(films[0].title);
 	</script>
 
 </body>

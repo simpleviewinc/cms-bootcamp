@@ -1,14 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Build a Form</title>
-</head>
-<body>
-	
-	<!-- Add your code here -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Fill Out Forum</title>
+        <meta name="description" content="Forum for Simpleview Bootcamp" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../SRC/CSS/Style.css" type="text/css" />
+    </head>
 
-</body>
-	
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="#">upgrade your browser</a> to improve your experience.
+            </p>
+        <![endif]-->
+
+        <form action="../SRC/PHP/formDestination.php" method="post">
+            <fieldset>
+                <div class="container">
+                    <h2>Joseph's Bootcamp Form</h2>
+                    <div class="row100">
+                        <div class="col">
+                            <div class="inputBox">
+                                <input
+                                    type="text"
+                                    name="firstname"
+                                    id="fname"
+                                    required="required"
+                                />
+                                <span class="text">First Name</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text" name="lastname" id="lname" required="required" />
+                                <span class="text">Last Name</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text" name="email" id="email" required="required" />
+                                <span class="text">Email</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="tel" name="phone" id="phone" required="required" />
+                                <span class="text">Phone</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row100">
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="password" name="Password" required="required" />
+                                <span class="text">Password</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row100">
+                        <div class="col">
+                            <div class="inputBox textarea">
+                                <textarea required="required"></textarea>
+                                <span class="text">Message Here</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row100">
+                        <div class="col">
+                            <input type="submit" value="Submit" />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <script src="" async defer></script>
+    </body>
 </html>

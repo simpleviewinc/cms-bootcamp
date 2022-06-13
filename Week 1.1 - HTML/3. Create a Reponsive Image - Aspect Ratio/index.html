@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Create a Responsive Image - Aspect Ratio</title>
 
 	<style>
@@ -23,8 +24,13 @@
 	</style>
 </head>
 <body>
-	
-	<!-- Add your code here -->
+
+    <!-- Add your code here -->
+    <picture>
+        <source media="(min-width:1024px)" srcset="http://placehold.jp/540x800.png">
+        <source media="(min-width:640px)" srcset="http://placehold.jp/540x800.png">
+        <img src="http://placehold.jp/540x800.png" alt="Box placeholder" width="540" height="800" />
+    </picture>
 
 </body>
 </html>

@@ -11,6 +11,33 @@
 	
 	<script>
 		// Add your code here
+		const moviesList = document.querySelector(".movies");
+
+		const fetchGhibliFilms = async () => {
+			const response = await fetch('https://ghibliapi.herokuapp.com/films/');
+
+			const responseData = await response.json();
+
+			return responseData;
+		}
+		
+		const createFilmElement = (film) => {
+			const filmElement = document.createElement('li');
+			filmElement.textContent = film.title;
+			return filmElement;
+		}
+		
+
+		fetchGhibliFilms().then((ghibliFilms) => {
+			const ghibliFilmListItems = ghibliFilms.map((ghibliFilm) => {
+				const ghibliFilmListItem = createFilmElement(ghibliFilm);
+				// console.log(ghibliFilmListItem);
+				return ghibliFilmListItem;
+			});
+
+			return ghibliFilmListItems;
+		}).then((ghibliFilmListItems) => moviesList.append(...ghibliFilmListItems));
+
 	</script>
 
 </body>

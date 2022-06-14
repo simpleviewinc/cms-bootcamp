@@ -22,11 +22,7 @@
 				mood: 'Powerful, spirited...',
 			};
 
-			const dataArray = Object.entries(data);
-
-			const dataMap = new Map(dataArray);
-
-			return dataMap.get(key) || 'Error: Invalid option selected...';
+			return data[key] || 'Error: Invalid option selected...';
 		}
 	</script>
 

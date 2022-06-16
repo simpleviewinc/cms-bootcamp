@@ -24,6 +24,13 @@
 
 	<script>
 		// Add you code here
+		
+		const scriptHTML = document.querySelector('script');
+		scriptHTML.setAttribute('id', 'script-html');
+		
+		const main = document.querySelector('.container');
+		main.insertAdjacentHTML('beforeend', scriptHTML.innerText);
+
 	</script>
 
 </body>

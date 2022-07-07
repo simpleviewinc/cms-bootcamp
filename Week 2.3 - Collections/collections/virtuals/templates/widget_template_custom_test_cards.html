@@ -1,0 +1,52 @@
+<!--SVMETA
+    {
+        "requireBundles" : [
+            "widget_plugins_collections_template_custom_test_cards"
+        ]
+    }
+-->
+
+    <section class="test-card" id="test-card">
+        <div class="cards-wrapper">
+            <div class="cards">
+                {{#items}}
+                    <div class="card">
+                        <div class="image">
+                            <img src="{{asset.resource.getThumbnailUrl({ height : 240, width : 360, crop : 'fill', quality: 50, sv : { gravity : "focalPoint" } })}}" alt="">
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="content">
+                            <h3 class="title">{{title}}</h3>
+                                {{:location}}
+                                    <span class="locale">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        {{location}}
+                                    </span>
+                                {{/}}
+                                {{:hasDates}}
+                                <span class="date-range">{{formattedDate("MMM DD, YYYY"," ")}}</span>
+                                {{/}}
+                            <p>
+                                {{description}}
+                                {{:address}}
+                                <span> {{address}}</span>
+                                {{/}}
+                            </p>
+                            <a href="{{link.url}}" class="btn">Read More</a>
+                            			{{:type}}
+				{{~setVar('quickview', { type: data.type, recid: data.recid })}}
+				{{~fill(helpers.partial('custom_quickview/button'), helpers.var.quickview)}}
+			{{/}}
+                        </div>
+                    </div>
+                {{/}}
+            </div>
+        </div>
+    </section>
+
+
+<script>
+    console.log({{~stringify(data)}});
+
+</script>

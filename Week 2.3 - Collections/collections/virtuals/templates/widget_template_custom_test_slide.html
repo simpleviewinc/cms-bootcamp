@@ -1,0 +1,41 @@
+<!--SVMETA
+    {
+        "requireBundles" : [
+            "widget_plugins_collections_template_custom_test_slide"
+        ]
+    }
+-->
+
+    <section class="test-slide" id="test-slide">
+        <div class="slides-wrapper">
+            <div class="slides">
+                {{#items}}
+                    <div class="slide">
+                    <!-- {{!--  <div class=slide id="{{index}}" --}} -->
+                        <div class="image">
+                            <img src="{{asset.resource.getThumbnailUrl({ height : 240, width : 360, crop : 'fill', quality: 50, sv : { gravity : "focalPoint" } })}}" alt="">
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="content">
+                            <h3 class="title">{{title}}</h3>
+                            <p>
+                            {{description}}
+                            </p>
+                            {{:address}}
+                                <span> {{address}}</span>
+                            {{/}}
+                                <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                {{/}}
+            </div>
+        </div>
+    </section>
+
+
+<script>
+    console.log({{~stringify(data)}});
+
+</script>
+

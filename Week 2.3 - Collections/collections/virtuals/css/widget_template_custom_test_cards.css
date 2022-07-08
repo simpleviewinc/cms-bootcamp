@@ -1,0 +1,99 @@
+:root{
+    --green:#27ae60;
+    --dark-color:#219150;
+    --light-color:#666;
+    --border:.1rem solid var(--black);
+    --border-hover:.2rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.test-card .cards-wrapper .cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+    gap:0.75rem;
+	margin: 0 auto;
+    padding:2rem 0;
+	max-width: 1160px;
+}
+
+.test-card .cards-wrapper .cards .card {
+    box-shadow: 0 0 15px 2px #000;
+}
+
+.test-card .cards-wrapper .cards .card:hover{
+    border:var(--border-hover);
+}
+
+.test-card .cards-wrapper .cards .card .image{
+    width: 100%;
+    overflow: hidden;
+}
+
+.test-card .cards-wrapper .cards .card .image img{
+    height: 100%;
+    width: 100%;
+    transition: all 0.8s;
+}
+
+.test-card .cards-wrapper .cards .card:hover .image img{
+    transition: all 0.8s;
+    transform: scale(1.2);
+}
+
+.test-card .cards-wrapper .cards .card .content{
+    padding:1.5rem;
+}
+
+.test-card .cards-wrapper .cards .card .content h3{
+    font-size: 1.417rem;
+    font-weight: 550;
+    color:var(--black);
+}
+
+.test-card .cards-wrapper .cards .card .content p{
+    font-size: 1.083rem;
+    font-weight: 550;
+    color:var(--light-color);
+    padding:1rem 0;
+    line-height: 1;
+}
+
+.btn{
+    margin-top: 1rem;
+    display:inline-block;
+    padding:.4rem 0.8rem;
+    border-radius: 7rem;
+    color:#fff;
+    background:var(--green);
+    font-size: .75rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background:var(--dark-color);
+}
+
+/* Media Queries  */
+@media screen and (min-device-width: 640px) and (max-width: 1023px) {
+    .test-card .cards-wrapper .cards {
+        grid-template-columns: repeat(2, 1fr);
+        overflow: hidden;
+    }
+
+
+    .test-card .cards-wrapper .cards .card .image{
+        max-height: 170px;
+    }
+}
+
+@media screen and (min-device-width: 100px) and (max-width: 639px) {
+    .test-card .cards-wrapper .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .test-card .cards-wrapper .cards .card .image{
+        max-height: 225px;
+
+    }
+}

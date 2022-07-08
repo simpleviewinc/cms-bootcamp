@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Create a Responsive Image - Resolution</title>
 
-	<style>
-		*,
-		*::before,
-		*::after { box-sizing: border-box; }
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
 
-		html {
-			margin: 0;
-			padding: 0;
-		}
-
-		img {
+        html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
 			display: block;
 			width: 100%;
 			height: auto;
 		}
-	</style>
+    </style>
 </head>
+
 <body>
-	
+
 	<!-- Add your code here -->
+    <picture>
+        <source media="(min-width:1800px)" srcset="https://image-placeholder.com/images/actual-size/2048x1536.png" />
+        <source media="(min-width:1440px)" srcset="https://image-placeholder.com/images/actual-size/1920x1080.png" />
+        <source media="(min-width:1024px)" srcset="https://image-placeholder.com/images/actual-size/1366x768.png" />
+        <source media="(min-width:640px)" srcset="https://image-placeholder.com/images/actual-size/720x486.png" />
+        <img src="https://image-placeholder.com/images/actual-size/320x200.png" alt="Box placeholder" width="320" height="200" />
+    </picture>
 
 </body>
 </html>

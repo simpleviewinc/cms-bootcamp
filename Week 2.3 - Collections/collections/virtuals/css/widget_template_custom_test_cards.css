@@ -8,12 +8,12 @@
 }
 
 .test-card .cards-wrapper .cards {
-    display: grid;
-    gap:1.5rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+    gap:0.75rem;
+	margin: 0 auto;
     padding:2rem 0;
-    margin:2rem 0;
-    grid-template-columns: repeat(3, 1fr);
-    overflow: hidden;
+	max-width: 1160px;
 }
 
 .test-card .cards-wrapper .cards .card {

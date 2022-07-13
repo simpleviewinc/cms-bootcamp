@@ -18,7 +18,7 @@
 
 		function writeToDOM(data) {
 			let movieTitles = [];
-			data.forEach((array, index, element) => movieTitles.push(element[index].title));
+			data.forEach(value => movieTitles.push(value.title));
 			let arrayOfListItems = movieTitles.map((element) => `<li>${element}</li>`).join("");
 			moviesListElement.insertAdjacentHTML("beforeend", arrayOfListItems);
 		};  

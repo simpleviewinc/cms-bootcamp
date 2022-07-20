@@ -29,10 +29,13 @@
 <body>
 
 	<!-- Add your code here -->
-	<img src="https://via.placeholder.com/400x180" alt="placeholder" width=400 height=180 srcset="https://via.placeholder.com/800x360 640w,
-				  https://via.placeholder.com/1200x540 1024w
-				  https://via.placeholder.com/1600x720 1440w,
-				  https://via.placeholder.com/2000x900 1800w">
+	<picture>
+		<source srcset="https://via.placeholder.com/2000x900" media="(min-width: 1800px)">
+		<source srcset="https://via.placeholder.com/1600x720" media="(min-width: 1440px)">
+		<source srcset="https://via.placeholder.com/1200x540" media= "(min-width: 1024px)">
+		<source srcset="https://via.placeholder.com/800x360" media= "(min-width: 640px)">
+		<img src="https://via.placeholder.com/400x180" alt="placeholder"> 
+	</picture>
 
 </body>
 

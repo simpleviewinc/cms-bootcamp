@@ -29,9 +29,12 @@
 <body>
 
 	<!-- Add your code here -->
-	<img src="https://via.placeholder.com/540x800" alt="placeholder" width="540" height="800" srcset="https://via.placeholder.com/1200x900 640w,
-				  https://via.placeholder.com/1600x720 1024w">
-
+	<picture>
+		<source srcset="https://via.placeholder.com/1600x720" media="(min-width: 1024px)">
+		<source srcset="https://via.placeholder.com/1200x900" media= "(min-width: 640px)">
+		<img src="https://via.placeholder.com/540x800" alt="placeholder">
+	</picture>
+	
 
 </body>
 

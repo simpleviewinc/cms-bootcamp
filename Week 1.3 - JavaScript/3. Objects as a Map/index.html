@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Objects as a Map</title>
 </head>
+
 <body>
-	
+
 	<script>
-		const information = getInformation('date');
-		console.log(information);
-
 		// Rewrite this function to replace the if/else logic with a map lookup.
+		let date = {}, time ={}, mood = {};
+		let info = new Map([ ['date', 'October 6, 1968'], ['time', '21:13 PM'], ['mood', 'Powerful, spirited...'] ])
+		
 		function getInformation(key) {
-			let rtn;
-
-			if (key === 'date') {
-				rtn = 'October 6, 1986';
-			} else if (key === 'time') {
-				rtn = '21:13 PM';
-			} else if (key === 'mood') {
-				rtn = 'Powerful, spirited...';
-			} else {
-				rtn = 'Error: Invalid option selected...';
-			}
-
-			return rtn;
+			return info.has(key) ? info.get(key) : 'Error: Invalid option selected...'
 		}
 	</script>
 
 </body>
+
 </html>

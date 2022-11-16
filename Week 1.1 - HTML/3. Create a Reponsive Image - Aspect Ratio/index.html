@@ -1,30 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Create a Responsive Image - Aspect Ratio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Responsive Image - Aspect Ratio</title>
 
-	<style>
-		*,
-		*::before,
-		*::after { box-sizing: border-box; }
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-		html {
-			margin: 0;
-			padding: 0;
-		}
+      html {
+        margin: 0;
+        padding: 0;
+      }
 
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
-		}
-	</style>
-</head>
-<body>
-	
-	<!-- Add your code here -->
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
 
-</body>
+      .large,
+      .medium {
+        display: none;
+      }
+
+      @media screen and (min-width: 640px) {
+        .medium {
+          display: block;
+        }
+        .large,
+        .default {
+          display: none;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .large {
+          display: block;
+        }
+        .medium,
+        .default {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img
+        class="default"
+        src="https://via.placeholder.com/540x800"
+        alt="Default image"
+      />
+      <img
+        class="medium"
+        src="https://via.placeholder.com/1200x900"
+        alt="Medium image"
+      />
+      <img
+        class="large"
+        src="https://via.placeholder.com/1600x720"
+        alt="Large image"
+      />
+    </main>
+  </body>
 </html>

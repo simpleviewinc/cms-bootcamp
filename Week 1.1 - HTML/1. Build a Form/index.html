@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Build a Form</title>
-</head>
-<body>
-	
-	<!-- Add your code here -->
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build a Form</title>
+  </head>
+  <body>
+    <main>
+      <form method="post" action="/login/">
+        <h1>Sign In</h1>
+        <fieldset>
+          <legend>Please sign in to your account.</legend>
+          <label for="email">
+            Email Address:
+            <input
+			  tabindex="1"
+              autofocus
+              required
+              id="email"
+              name="email"
+              type="email"
+              placeholder="user@example.com"
+            />
+          </label>
+		  <br>
+          <label for="password">
+            Password:
+            <input
+			  tabindex="2"
+              required
+              id="password"
+              name="password"
+              type="password"
+              placeholder="letmein"
+            />
+          </label>
+        </fieldset>
+        <button tabindex="3">Sign in</button>
+      </form>
+    </main>
+  </body>
 </html>

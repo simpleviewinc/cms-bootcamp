@@ -23,7 +23,11 @@
 	</main>
 
 	<script>
-		// Add you code here
+		const template = document.querySelector('script[type="text/template"]');
+		const parser = new DOMParser();
+		const templateHTML = parser.parseFromString(template.innerHTML, "text/html");
+		const container = document.querySelector('.container');
+		container.appendChild(templateHTML.querySelector('section'));
 	</script>
 
 </body>

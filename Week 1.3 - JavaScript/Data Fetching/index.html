@@ -10,7 +10,21 @@
 	<ul class="movies"></ul>
 	
 	<script>
-		// Add your code here
+		fetch("https://ghibliapi.herokuapp.com/films").then(res => {
+			if(res.ok){
+				return res.json();
+			} else {
+				console.error(res.statusText);
+				return [];
+			}
+		}).then(films => {
+			const moviesList = document.querySelector('.movies');
+			films.map(film => {
+				const movie = document.createElement('li');
+				movie.innerText = film.title;
+				moviesList.appendChild(movie);
+			})
+		})
 	</script>
 
 </body>

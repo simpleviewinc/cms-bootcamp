@@ -17,11 +17,17 @@
 <body>
 	
 	<style>
-		/* Modify the CSS below to add the desired hover effect and animation */
 		.box {
 			width: 100px;
 			height: 100px;
 			background-color: rebeccapurple;
+			cursor: pointer;
+			scale: 1;
+			transition: scale 160ms;
+		}
+		.box:hover {
+			scale: 2;
+			transition: scale 200ms;
 		}
 	</style>
 

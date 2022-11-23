@@ -24,7 +24,15 @@
 <body>
 
 	<style>
-		/* Add your code here to position the "read more" links to the bottom of their respective cards */
+		.card {
+			display: flex;
+			flex-direction: column;
+		}
+		.more {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column-reverse;
+		}
 	</style>
 	
 	<section class="cards">

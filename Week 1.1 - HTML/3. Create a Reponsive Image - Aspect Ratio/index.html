@@ -51,7 +51,7 @@
   </head>
   <body>
     <main>
-      <img
+      <!-- <img
         class="default"
         src="https://via.placeholder.com/540x800"
         alt="Default image"
@@ -65,7 +65,12 @@
         class="large"
         src="https://via.placeholder.com/1600x720"
         alt="Large image"
-      />
+      /> -->
+	  <picture>
+		<source media="(min-width: 640px and max-width: 640px)" srcset="https://via.placeholder.com/1200x900">
+		<source media="(min-width: 1024px)" srcset="https://via.placeholder.com/1600x720">
+		<img src="https://via.placeholder.com/540x800" alt="default image">
+	  </picture>
     </main>
   </body>
 </html>

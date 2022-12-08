@@ -1,7 +1,7 @@
 # Build a Form
 
 Build a form with the following specifications:
-- [ ] An input field to accept and validate emails
+- [ ] An input field to accept and validate emails   
 - [ ] An input field to accept a password
 - [ ] A button to submit the form
 - [ ] The form submits to the a page at `/login/`

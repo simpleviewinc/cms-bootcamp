@@ -9,7 +9,7 @@ A crash course on the basics of HTML; everything from tags and attributes to str
 
 **Estimated Time Needed:** 4 hours
 
-**Course:** https://www.linkedin.com/learning/html-essential-training-4/
+**Course:** https://web.dev/learn/html/
 
 **Assessment:**
 1. Build a form
@@ -22,7 +22,7 @@ An overview of the cascade, inheritance, specificity, RWD, all the way up to the
 
 **Estimated Time Needed:** 6 hours
 
-**Course:** https://www.linkedin.com/learning/css-essential-training-3/
+**Course:** https://web.dev/learn/css/
 
 **Assessment:**
 1. Style based on attribute

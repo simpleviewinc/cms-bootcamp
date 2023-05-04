@@ -8,14 +8,36 @@
 <body>
 	
 	<style>
-		/* Add your CSS here */
+		button {
+			border-radius: 4px;
+			padding: 12px 32px;
+		}
+
+		.primaryBtn {
+			background-color: #90CDF4;
+		}
+
+		.linkBtn {
+			background-color: transparent;
+			opacity: .33;
+		}
+
+		.uhohBtn {
+			background-color: #FEB2B2;
+			
+		}
+
+		.uhohBtn:hover {
+			border-width: 10px;
+			background-color: red;
+		}
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
 	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+	<button class="primaryBtn">Primary</button>
+	<button class="linkBtn">Link</button>
+	<button class="uhohBtn">Danger</button>
 
 </body>
 </html>

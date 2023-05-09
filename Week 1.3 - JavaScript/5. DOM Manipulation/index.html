@@ -24,6 +24,12 @@
 
 	<script>
 		// Add you code here
+		const insertText = document.querySelector('script').innerHTML; 
+
+		const mainText = document.querySelector('.container');
+
+		mainText.insertAdjacentHTML('beforeend',insertText)
+
 	</script>
 
 </body>

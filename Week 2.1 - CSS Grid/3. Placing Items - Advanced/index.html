@@ -43,63 +43,97 @@
 			border-color: mediumslateblue;
 			background-color: lightcyan;
 		}
+
 	</style>
 </head>
 <body>
 	
 	<style>
 		/* Add your code here */
+
+		.letter {
+			/*I saw it mentioned that Safari requires the position be set at -webkit-sticky, so even though you and I are using chrome I thought it best practice to put both.*/
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+		}
+
+		.letter-h {
+			grid-column-start: 1;
+			grid-row-start: 2;
+		}
+		
+		.letter-e {
+			grid-column-start: 2;
+			grid-row-start: 3;
+		}
+
+		.letter-l {
+			grid-column-start: 3;
+			grid-row-start: 4;
+		}
+		
+		.letter-ll {
+			grid-column-start: 4;
+			grid-row-start: 5;
+		}
+
+		.letter-o {
+			grid-column-start: 5;
+			grid-row-start: 6;
+		}
+
+		.letter-x {
+			grid-column-start: 6;
+			grid-row-start: 7;
+		}
+
 	</style>
 
 	<div class="grid">
 		<li class="letter letter-h">h</li>
 		<li class="letter letter-e">e</li>
 		<li class="letter letter-l">l</li>
-		<li class="letter letter-l">l</li>
+		<li class="letter letter-ll">l</li>
 		<li class="letter letter-o">o</li>
-		<li class="letter letter-!">!</li>
+		<li class="letter letter-x">!</li>
 
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>

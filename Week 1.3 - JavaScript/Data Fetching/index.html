@@ -11,9 +11,34 @@
 	
 	<script>
 		// Add your code here
-		const endpoint = 'https://ghibliapi.herokuapp.com/films';
-		const viewFilms = fetch(endpoint);
-		console.log(viewFilms)
+		function handleError(err) {
+			console.log('Whoops-a-daisy');
+			console.log(err);
+		}
+
+		const baseEndpoint = 'https://swapi.dev/api/films/';
+
+		// Basic working format
+		const viewFilms = fetch(baseEndpoint);
+
+		viewFilms.then(res => 
+			res.json()
+		).then(data => {
+			console.log(data);
+		}).catch(handleError);
+
+
+
+		// function fetchTitles() {
+		// 	const res = fetch(baseEndpoint);
+		// 	const resData = res.json();
+		// 	return resData;
+		// 	console.log(resData.title)
+			
+		// }
+
+ 
+
 	</script>
 
 </body>

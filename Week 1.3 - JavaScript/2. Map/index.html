@@ -13,7 +13,24 @@
 		// Custom Code BEGIN 
 		// Modify the code in this block however you need to get the desired ending array.
 		// You must store your new array in the `endingArray` variable for it to log out properly.
+
+		// Completed: Rabus McCaleb
 		let endingArray;
+		function createMapFromArray(array){
+			endingArray = [];
+			// Looping throug array logic
+			for(let i = 0 ; i <= startingArray.length - 1 ; i++){
+				// Making a let variable of the array value
+				let StartingArrayValue = startingArray[i];
+				// Creating a Map with vallye in the starting array
+				let arrayObject = {"name" : StartingArrayValue}
+				// Appending/Pushing new values to the ending array
+				endingArray.push(arrayObject);
+			}
+		}
+
+		//Calling the createMapFromArray function
+		createMapFromArray(array = startingArray);
 
 		// Custom Code END
 

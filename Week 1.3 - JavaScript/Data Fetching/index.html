@@ -7,11 +7,49 @@
 </head>
 <body>
 	
-	<ul class="movies"></ul>
-	
-	<script>
-		// Add your code here
-	</script>
+	<ul class="movies">
+	</ul>
 
+	<script>
+
+		// Complete : Rabus McCaleb
+		// Add your code here
+		function getDataPopulate(){
+			// Fetched Data From URL
+			fetch(`https://ghibliapi.herokuapp.com/films`).then(function (response) {
+			// Once I got a response I converted the response data into JSON and returned it passing to the next promise
+				console.log(`Success! Data : ${ response }`); 
+				return response.json();
+			}).then(function(data){
+			// Recieved the fetched response data in the JSon format 
+			// Passe it to the List movies function to be converted into t list
+				console.log( data)
+				listMovies(data);;
+			}).catch(function(error){
+				// In the event of an error I appened a lable to the UL with the error
+				console.log(error);
+				$(`.movies`).append(`<label style="color:red">${error}</label>`);
+			});
+		}
+
+		function listMovies(data){
+			for(let x = 0 ; x <= data.length - 1; x++){
+				// Title for each movie
+				let dataObject = data[x].title
+				// Get the movies Element
+				const movieUL = document.querySelector('.movies');
+				// Create <li>
+				let newLi = document.createElement('li');
+				// Add title to the new list item
+				newLi.innerHTML = dataObject
+				// Add the list item to ".movies" UL 
+				movieUL.appendChild(newLi)
+			}
+		}
+
+		// Called the getDataPopulate function 
+		getDataPopulate();
+
+	</script>
 </body>
 </html>

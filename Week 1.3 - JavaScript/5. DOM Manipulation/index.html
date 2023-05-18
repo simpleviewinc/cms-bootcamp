@@ -7,7 +7,8 @@
 </head>
 <body>
 	
-	<script type="text/template">
+	<!-- Inserted ID On the Script Template-->
+	<script type="text/template" id="pageTemplate">
 		<section>
 			<h2>Hello, world!</h2>
 			<p>This block as been inserted via JS, isn't that cool!</p>
@@ -24,6 +25,19 @@
 
 	<script>
 		// Add you code here
+
+		// Grabing Container Element
+		let container = document.querySelector('.container'); 
+		//   Grabbing template 
+		let template = document.getElementById("pageTemplate");
+		// Get the contents of the template
+		let templateHtml = template.innerHTML;
+		// Function Inserts the HTML Tmeplate in the DOM
+		function appendTextTempleate(){
+			container.insertAdjacentHTML('beforeend', templateHtml);
+		}
+		// Calling the appendTextTempleate function
+		appendTextTempleate();
 	</script>
 
 </body>

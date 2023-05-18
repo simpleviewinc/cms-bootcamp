@@ -24,7 +24,29 @@
 </head>
 <body>
 	
+	
 	<!-- Add your code here -->
+	<!-- Completed : Rabus McCaleb -->
+	<!--The image is responsive. If there is an issue.
+		The browser has the image in the cache, And when a large file is downloaded 
+		if your resize the window image doesn't resize 
+		The browser doesn't see a use in downloading a lower resolution image
+		If there are any concerns check the responisiveness in dev tool by changing the device or resizing the window and loading the page incognito
+	  -->
+	<img src="https://via.placeholder.com/400x180" 
+	alt="Image of an image at different sizes" 
+	width="400" 
+	height="180" 
+	srcset="https://via.placeholder.com/2000x900 2000w,
+	https://via.placeholder.com/1600x720 1600w,
+	https://via.placeholder.com/1200x540 1200w,
+	https://via.placeholder.com/800x360 800w"
+    
+    sizes="(max-width: 800px) 400px,
+           (max-width: 1600px) 800px,
+           (max-width: 1600px) 2000px,
+           2000px"
+	>
 
 </body>
 </html>

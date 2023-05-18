@@ -6,16 +6,77 @@
 	<title>Inheritance and Systems</title>
 </head>
 <body>
-	
+
 	<style>
 		/* Add your CSS here */
+		button{
+			/* Colors */
+			color: black;
+			background-color: #f5f5f5;
+			/* Insets */
+			padding-top: 12px;
+			padding-bottom: 12px;
+			padding-left: 32px;
+			padding-right: 32px;
+			/* Border Information */
+			border-radius: 4px;
+			border: 0.5px solid rgba(0, 0, 0 , 0.1);
+			/* msic. */
+			box-shadow: 0px 2px 3px rgba(0, 0, 0 , 0.15);
+
+		}
+
+
+		.primary{
+			font-weight : 700;
+			background-color: #90CDF4;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0 , 0.25);
+
+		}
+
+		.link{
+			/* Colors */
+			color: black;
+			background-color: transparent;
+			/* Insets */
+			padding: 0px;
+            margin:0px;
+			/* Border stuff */
+			border: none;
+            border-radius : 0px;
+			/* misc. */
+            box-shadow : none;
+		}
+        
+        .link:hover{
+			color: #90CDF4;
+		}
+        
+        .link:active{
+			color: #3d8ab6;
+		}
+
+		.danger{
+			background-color: #FEB2B2;
+            border: 1px solid #f55353;
+			box-shadow: none;
+		}
+        
+        .danger:hover{
+        	background-color : #fa3333;
+			
+        }
+
+
+
+
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+	<button class="default" >Default</button>
+	<button class="primary" >Primary</button>
+	<button class="link" >Link</button>
+	<button class="danger" >Danger</button>
 
 </body>
 </html>

@@ -24,20 +24,12 @@
 		viewFilms.then(res => 
 			res.json()
 		).then(data => {
-			console.log(data);
+			const dataArr = data.results;
+			dataArr.forEach(elem => {
+				const filmItem = `<li>${elem.title}</li>`;
+				document.querySelector('.movies').innerHTML += filmItem;
+			})
 		}).catch(handleError);
-
-
-
-		// function fetchTitles() {
-		// 	const res = fetch(baseEndpoint);
-		// 	const resData = res.json();
-		// 	return resData;
-		// 	console.log(resData.title)
-			
-		// }
-
- 
 
 	</script>
 

@@ -35,11 +35,9 @@ An overview of the cascade, inheritance, specificity, RWD, all the way up to the
 ### JavaScript
 A complete beginners course that focuses on the fundamentals of JavaScript with practical, real world examples.
 
-You should have an email containing a link to access this course. If not, please reach out to Amir to get that corrected.
+**Estimated Time Needed:** ~46 hours
 
-**Estimated Time Needed:** 30 hours
-
-**Course:** https://beginnerjavascript.com/
+**Course:** https://levelup.video/tutorials/better-javascript
 
 **Assessment:**
 1. Create a new array that is a subset of a bigger array based on some criteria

@@ -24,6 +24,10 @@
 
 	<script>
 		// Add you code here
+		const sectionEl = document.querySelector('script[type="text/template"]');
+		const containerEl = document.querySelector('.container')
+
+		containerEl.insertAdjacentHTML('beforeend', sectionEl.innerHTML)
 	</script>
 
 </body>

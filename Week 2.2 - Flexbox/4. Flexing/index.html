@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Flexing</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexing</title>
 
-	<style>
-		*,
-		*::before,
-		*::after { box-sizing: border-box; }
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-		body {
-			display: grid;
-			align-items: center;
-			min-height: 100vh;
-			font-family: sans-serif;
-		}
+      body {
+        display: grid;
+        align-items: center;
+        min-height: 100vh;
+        font-family: sans-serif;
+      }
 
-		form input {
-			margin: .5rem;
-		}
+      form input {
+        margin: 0.5rem;
+      }
 
-		input {
-			padding: .75rem 1rem;
-			border: none;
-			background: hsl(0 0% 93%);
-			border-radius: .25rem;
-		}
+      input {
+        padding: 0.75rem 1rem;
+        border: none;
+        background: hsl(0 0% 93%);
+        border-radius: 0.25rem;
+      }
 
-		form [type="submit"] {
-			color: white;
-			box-shadow: 0 .75rem .5rem -.5rem hsl(0 50% 80%);
-			background: hotpink;
-		}
-	</style>
-</head>
-<body>
+      form [type="submit"] {
+        color: white;
+        box-shadow: 0 0.75rem 0.5rem -0.5rem hsl(0 50% 80%);
+        background: hotpink;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      form {
+        display: flex;
+        flex-wrap: wrap;
+      }
 
-	<style>
-		form {
-			/* Add any needed code here */
-		}
-		
-		form input {
-			/* All inputs should allowed to grow and shrink with a basis of 10ch */
-		}
+      form input {
+        flex: 1;
+        flex-basis: 10ch;
+      }
 
-		form [type="email"] {
-			/* This should grow 3 times faster than the other inputs with a basis of 30ch */
-		}
-	</style>
+      form [type="email"] {
+        flex: 4;
+        flex-basis: 30ch;
+      }
+    </style>
 
-	<form>
-		<input type="text" placeholder="Name">
-		<input type="email" placeholder="Email Address">
-		<input type="submit" value="Subscribe">
-	</form>
-	
-</body>
+    <form>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email Address" />
+      <input type="submit" value="Subscribe" />
+    </form>
+  </body>
 </html>

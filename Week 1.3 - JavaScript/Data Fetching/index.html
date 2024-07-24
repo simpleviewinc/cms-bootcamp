@@ -11,6 +11,26 @@
 	
 	<script>
 		// Add your code here
+		const movieList = document.querySelector('.movies')
+		async function allMovies(){
+			let res = await fetch('https://ghibliapi.herokuapp.com/films');
+			const movies = await res.json();
+			mapAllMovies(movies)
+		}
+
+		function mapAllMovies(movies){
+			(movies).forEach(function(movie){
+				newLi = document.createElement('li');
+				newLi.textContent = movie.title;
+				movieList.append(newLi)
+			})
+		}
+
+		function handleError(err){
+			console.log(`There's a problem: ${err}`)
+		}
+		allMovies().catch(handleError)
+		
 	</script>
 
 </body>

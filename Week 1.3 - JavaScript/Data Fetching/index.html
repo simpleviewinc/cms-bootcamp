@@ -6,11 +6,29 @@
 	<title>Data Fetching</title>
 </head>
 <body>
-	
+
 	<ul class="movies"></ul>
-	
+
 	<script>
-		// Add your code here
+
+      function handleError(err) {
+        console.log("Oh no!");
+        console.log(err);
+      }
+
+      const movieContainer = document.querySelector(".movies");
+      const fetchMovies = fetch("https://ghibliapi.herokuapp.com/films");
+
+      fetchMovies.then((data) => {
+        return data.json();
+      })
+        .then((data) => {
+          data.forEach(({title}) => {
+            movieContainer.innerHTML += `<li>${title}</li>`;
+          });
+        }).catch((err) =>
+          handleError(err));
+
 	</script>
 
 </body>

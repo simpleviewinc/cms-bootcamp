@@ -6,8 +6,24 @@
 	<title>Build a Form</title>
 </head>
 <body>
-	
-	<!-- Add your code here -->
+    <!-- Add your code here -->
+    <!--The form submits to the a page at `/login/`
+        The form uses POST to submit the form data-->
+    <form action="/login/" method="post">
+
+        <!--An input field to accept and validate emails-->
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" required>
+
+        <!--An input field to accept a password-->
+        <label for="pass">Enter your password:</label>
+        <input type="password" id="pass" name="password" required>
+
+        <!--A button to submit the form-->
+        <button type="submit">Submit</button>
+    </form>
+    <!--Form is accessible to a screen reader
+        Form is keyboard navigable-->
 
 </body>
 </html>

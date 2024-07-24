@@ -9,13 +9,57 @@
 	
 	<style>
 		/* Add your CSS here */
+        /*Common styling for all the buttons as per the requirement that
+        Each button should have the following:
+        - [ ] Border Radius of 4px
+        - [ ] Padding of 12px above and below with 32px of padding on the sides
+        - [ ] Text color should be black*/
+        .button {
+            display: block;
+            width: 100%;
+            max-width: 150px;
+            border-radius: 4px;
+            color: #000;
+            padding: 12px 32px;
+            margin: 0 0 30px;
+            cursor: pointer;
+            font-weight: 800;
+        }
+        
+        /*Default button background color - A Default button style for general use around the site*/
+        .buttonDefault {
+            background: #f5f5f5;
+        }
+        
+        /*Primary button background color - A Primary button style used to directing a users attention to the action we want them to take*/
+        .buttonPrimary {
+            background: #90CDF4;
+        }
+        
+        /*Link button background color - A Link button style that doesn't appear to have any of the typical button chrome and is just text*/
+        .buttonLink {
+			background-color: transparent;
+			border: none;
+		}
+        
+        /*Danger button background color - A Danger button style that indicates that clicking it will cause a destructive action*/
+        .buttonDanger {
+            background: #FEB2B2;
+        }
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+    <!--Default button elements-->
+    <button class="button buttonDefault">Default</button>
+    
+    <!--Primary button elements-->
+    <button class="button buttonPrimary">Primary</button>
+    
+    <!--Link button style elements-->
+    <button class="button buttonLink">Link</button>
+    
+    <!--Danger button elements-->
+    <button class="button buttonDanger">Danger</button>
 
 </body>
 </html>

@@ -39,15 +39,20 @@
 
 	<style>
 		form {
-			/* Add any needed code here */
+		/* Add any needed code here */
+			display: flex;
+			flex-wrap: wrap;
 		}
-		
+
 		form input {
-			/* All inputs should allowed to grow and shrink with a basis of 10ch */
+		/* All inputs should allowed to grow and shrink with a basis of 10ch */
+			flex-basis: 10ch;
+			flex-grow: 1;
 		}
 
 		form [type="email"] {
-			/* This should grow 3 times faster than the other inputs with a basis of 30ch */
+		/* This should grow 3 times faster than the other inputs with a basis of 30ch */
+			flex-grow: 3;
 		}
 	</style>
 

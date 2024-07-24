@@ -10,7 +10,33 @@
 	<ul class="movies"></ul>
 	
 	<script>
-		// Add your code here
+
+		const endpoint = 'https://ghibliapi.herokuapp.com';
+		const filmsEndpoint = `${endpoint}/films`;
+		const moviesList = document.querySelector('.movies');
+
+		const fetchHerokuData = fetch(filmsEndpoint);
+
+		fetchHerokuData.then(response => {
+			return response.json();
+		})
+		.then(data => {
+			data.forEach(film => {
+				moviesList.insertAdjacentElement('beforeEnd', buildTitle(film));
+			});
+		})
+		.catch(handleError);
+
+		// Creates <li> and populates with film's title
+		function buildTitle(film) {
+			let title = document.createElement('li');
+			title.innerHTML = film.title;
+			return title;
+		}
+		
+		function handleError(err) {
+			console.log(err);
+		}
 	</script>
 
 </body>

@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Data Fetching</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Fetching</title>
 </head>
 <body>
-	
-	<ul class="movies"></ul>
-	
-	<script>
-		// Add your code here
-	</script>
-
+    <ul class="movies"></ul>
+    <script>
+        const api_url = "https://ghibliapi.herokuapp.com/films";
+        let movieList = document.querySelector("ul.movies")
+        function getApi(url) {
+            fetch(url, {
+                method: "GET",
+                headers: {}
+            })
+                .then(response => { return response.json() })
+                .then((data) => {
+                    console.log(data)
+                    data.map((movie)=>{
+                        let li = document.createElement("li");
+                        li.textContent = movie.title;
+                        movieList.append(li)
+                    });
+                })
+                .catch(err => console.log(err))
+        }
+        getApi(api_url);
+    </script>
 </body>
 </html>

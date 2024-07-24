@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
 			max-width: 776px;
 		}
 
-		.grid > * {
+		.grid>* {
 			grid-column: span 1;
 			grid-row: span 1;
 			display: flex;
@@ -45,19 +46,47 @@
 		}
 	</style>
 </head>
+
 <body>
-	
+
 	<style>
 		/* Add your code here */
+		.letter-h {
+			grid-row: 2;
+		}
+		.letter-e {
+			grid-row: 3;
+			grid-column: 2;
+		}
+		.letter-l {
+			grid-row: 4;
+			grid-column: 3;
+		}
+		.letter-l1 {
+			grid-row: 5;
+			grid-column: 4;
+		}
+		.letter-o {
+			grid-row: 6;
+			grid-column: 5;
+		}
+		.letter-1 {
+			grid-row: 7;
+			grid-column: 6;
+		}
+		.letter {
+			top: 0;
+			position: sticky;
+		}
 	</style>
 
 	<div class="grid">
 		<li class="letter letter-h">h</li>
 		<li class="letter letter-e">e</li>
 		<li class="letter letter-l">l</li>
-		<li class="letter letter-l">l</li>
+		<li class="letter letter-l1">l</li>
 		<li class="letter letter-o">o</li>
-		<li class="letter letter-!">!</li>
+		<li class="letter letter-1">!</li>
 
 		<li></li>
 		<li></li>
@@ -109,4 +138,5 @@
 	</div>
 
 </body>
+
 </html>

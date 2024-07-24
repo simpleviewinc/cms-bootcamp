@@ -23,7 +23,10 @@
 	</main>
 
 	<script>
-		// Add you code here
+		const container = document.querySelector(".container");
+		const content = document.querySelector("[type='text/template']").innerHTML;
+
+		container.insertAdjacentHTML("beforeend", content);
 	</script>
 
 </body>

@@ -11,6 +11,11 @@
 	
 	<script>
 		// Add your code here
+		fetch('https://ghibliapi.herokuapp.com')
+			.then((response) => response.json())
+			.then((data) =>console.log(data))
+
+			//API seems to be down
 	</script>
 
 </body>

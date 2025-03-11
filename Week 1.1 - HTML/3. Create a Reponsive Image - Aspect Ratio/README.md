@@ -6,8 +6,8 @@ Create a responsive image that will swap between different image resources based
 
 | Size | Resource                              |
 |------|---------------------------------------|
-| LG   | https://via.placeholder.com/1600x720 |
-| M    | https://via.placeholder.com/1200x900 |
+| LG   | https://placehold.co/1600x720 |
+| M    | https://placehold.co/1200x900 |
 
 The default image resource is: https://via.placeholder.com/540x800
 

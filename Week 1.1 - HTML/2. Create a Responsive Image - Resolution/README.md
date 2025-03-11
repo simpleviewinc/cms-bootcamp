@@ -6,10 +6,10 @@ Create a responsive image that will swap between different image resources based
 
 | Size | Resource                              |
 |------|---------------------------------------|
-| XL   | https://via.placeholder.com/2000x900 |
-| LG   | https://via.placeholder.com/1600x720 |
-| M    | https://via.placeholder.com/1200x540 |
-| S    | https://via.placeholder.com/800x360  |
+| XL   | https://placehold.co/2000x900 |
+| LG   | https://placehold.co/1600x720 |
+| M    | https://placehold.co/1200x540 |
+| S    | https://placehold.co/800x360  |
 
 The default image resource is: https://via.placeholder.com/400x180
 

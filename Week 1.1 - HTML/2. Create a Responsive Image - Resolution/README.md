@@ -11,7 +11,7 @@ Create a responsive image that will swap between different image resources based
 | M    | https://placehold.co/1200x540 |
 | S    | https://placehold.co/800x360  |
 
-The default image resource is: https://via.placeholder.com/400x180
+The default image resource is: https://placehold.co/400x180
 
 ## Breakpoints
 

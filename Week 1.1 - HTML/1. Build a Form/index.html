@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Build a Form</title>
 </head>
+
 <body>
-	
 	<!-- Add your code here -->
+	<form action='/login/' method='post'>
+		<label>Email:
+			<input name='email' type='email' required placeholder='name@mail.com'>
+		</label>
+		<label>Password:
+			<input name='password' type='password' required>
+		</label>
+		<button type='submit'>Submit</button>
+	</form>
+
 
 </body>
+
 </html>

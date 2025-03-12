@@ -20,6 +20,11 @@
 		}
 
 		// Add your code here to make clicking the button run the increment function
+		const button = document.querySelector('[data-action]');
+		
+		button.addEventListener("click", function() {
+			increment();
+		});
 	</script>
 
 </body>

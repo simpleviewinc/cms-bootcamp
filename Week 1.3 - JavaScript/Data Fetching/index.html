@@ -10,7 +10,15 @@
 	<ul class="movies"></ul>
 	
 	<script>
-		// Add your code here
+		// since provided api is not longer available, i'll be using pokeapi
+		async function fetchData() {
+			const movies = await fetch('https://pokeapi.co/api/v2/pokemon/'); 
+			const {results} = await movies.json();
+			const container = document.querySelector('.movies');
+			const listItems = results.reduce((acc, pokemon) => acc += `<li>${pokemon.name}</li>`, '');
+			container.innerHTML = listItems;
+		}
+		fetchData();
 	</script>
 
 </body>

@@ -12,6 +12,13 @@
 	
 	<script>
 		const counterEl = document.querySelector('[data-counter]');
+		const btn = document.querySelector('button[data-action="increment-counter"]')
+		btn.addEventListener('click', (e) => {
+			e.stopPropagation();
+			e.preventDefault();
+
+			increment();
+		})
 		let counter = 0;
 
 		function increment() {

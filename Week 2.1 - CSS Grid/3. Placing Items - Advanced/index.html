@@ -33,10 +33,37 @@
 		}
 
 		.letter {
-			grid-column: 1;
-			grid-row: 1;
+			grid-row-start: 2;
 			border-color: tomato;
 			background-color: lightcoral;
+			/* 2 lines of CSS below to ensure letters stick to the top*/
+			position: sticky;
+			top: 0;
+		}
+
+		.letter-e {
+			grid-row: 3;
+			grid-column: 2;
+		}
+
+		.letter-l {
+			grid-row: 4;
+			grid-column: 3;
+		}
+
+		.letter-l + .letter-l {
+			grid-row: 5;
+			grid-column: 4;
+		}
+
+		.letter-o {
+			grid-row: 6;
+			grid-column: 5;
+		}
+
+		.letter-o + li {
+			grid-row: 7;
+			grid-column: 6;
 		}
 
 		.placeholder {
@@ -64,42 +91,42 @@
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<!-- <li class="placeholder"></li> -->
 		<li></li>
 		<li></li>
 		<li></li>

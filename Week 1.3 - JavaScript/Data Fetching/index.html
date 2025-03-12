@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Data Fetching</title>
 </head>
+
 <body>
-	
+
 	<ul class="movies"></ul>
-	
+
 	<script>
 		// Add your code here
+
+		const handleError = (err) => {
+			console.log('Error encountered:');
+			console.log(err);
+		};
+
+		const moviesList = document.querySelector('.movies');
+		const endpoint = 'https://ghibliapi.herokuapp.com/films';
+
+		const displayMovieTitles = async () => {
+			const res = await fetch(endpoint);
+			const data = await res.json();
+
+			data.forEach(movie => {
+				moviesList.insertAdjacentHTML('afterbegin', `<li>${movie.title}</li>`)
+			});
+		};
+
+		displayMovieTitles().catch(handleError);
+
 	</script>
 
 </body>
+
 </html>

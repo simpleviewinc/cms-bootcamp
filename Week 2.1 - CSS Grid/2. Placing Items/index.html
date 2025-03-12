@@ -10,6 +10,7 @@
 			display: grid;
 			margin: 0 auto;
 			max-width: 800px;
+			grid-template-areas: 'photoStack';
 		}
 
 		.photo > * { mix-blend-mode: multiply; }
@@ -19,6 +20,9 @@
 
 	<style>
 		/* Add your code here */
+		.channel {
+			grid-area: photoStack;
+		}
 	</style>
 
 	<div class="photo">

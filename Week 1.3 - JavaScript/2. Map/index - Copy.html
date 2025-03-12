@@ -13,14 +13,17 @@
 		// Custom Code BEGIN 
 		// Modify the code in this block however you need to get the desired ending array.
 		// You must store your new array in the `endingArray` variable for it to log out properly.
-		let endingArray = startingArray.map(function(name) {
-			return JSON.parse(`{"name": "${name}"}`)
-		});
 		
-
+		// Rather than using JSON.parse, the solution would be to return the name - value pair.
+		let endingArray = startingArray.map(name => {
+			return {
+				'name' : name
+			};
+		});
+		console.log(endingArray);
+		
 		// Custom Code END
 
-		console.log(endingArray);
 	</script>
 
 </body>

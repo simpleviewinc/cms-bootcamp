@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tricks - Click Passthrough</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tricks - Click Passthrough</title>
 
-	<style>
-		.container {
-			position: relative;
-		}
+    <style>
+      .container {
+        position: relative;
+      }
 
-		.container img {
-			display: block;
-			width: 100%;
-			height: auto;
-		}
-	</style>
-</head>
-<body>
+      .container img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      /* Add 1 line to the CSS below to make the link clickable without changing the design */
+      .overlay {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, transparent, black);
+        pointer-events: none;
+      }
+    </style>
 
-	<style>
-		/* Add 1 line to the CSS below to make the link clickable without changing the design */
-		.overlay {
-			position: absolute;
-			z-index: 1;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-image: linear-gradient(to bottom, transparent, black);
-		}
-	</style>
-	
-	<div class="container">
-		<a href="https://simpleviewinc.com" target="_blank" rel="noopener">
-			<img src="https://via.placeholder.com/800x360" alt="A placeholder image" />
-		</a>
-		<div class="overlay"></div>
-	</div>
-
-</body>
+    <div class="container">
+      <a href="https://simpleviewinc.com" target="_blank" rel="noopener">
+        <img
+          src="https://via.placeholder.com/800x360"
+          alt="A placeholder image"
+        />
+      </a>
+      <div class="overlay"></div>
+    </div>
+  </body>
 </html>

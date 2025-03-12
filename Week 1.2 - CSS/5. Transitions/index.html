@@ -12,6 +12,19 @@
 			justify-content: center;
 			min-height: 100vh;
 		}
+
+		.box {
+			transition: transform 200ms ease-out;
+		}
+
+		.box:hover {
+			transform: scale(2);
+			transition: transform 200ms ease-out;
+		}
+
+		.box:not(:hover) {
+			transition: transform 160ms ease-in;
+		}
 	</style>
 </head>
 <body>

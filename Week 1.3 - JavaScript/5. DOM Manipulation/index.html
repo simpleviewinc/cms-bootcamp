@@ -26,7 +26,7 @@
 		const container = document.querySelector('.container');
 		const template = document.querySelector('script[type="text/template"]');
 
-		container.innerHTML += template.innerHTML;
+		container.insertAdjacentHTML('afterend', template.innerHTML);
 	</script>
 
 </body>

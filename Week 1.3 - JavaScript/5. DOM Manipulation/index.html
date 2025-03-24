@@ -14,6 +14,7 @@
 		</section>
 	</script>
 
+
 	<main class="container">
 		<h1>Lorem Ipsum Dolor Sit Amet</h1>
 		<section>
@@ -23,7 +24,10 @@
 	</main>
 
 	<script>
-		// Add you code here
+		let template = document.querySelector('script[type="text/template"]').innerHTML;
+		let container = document.querySelector('.container');
+
+		container.insertAdjacentHTML('beforeend', template);
 	</script>
 
 </body>

@@ -1,58 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Placing Items - Advanced</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placing Items - Advanced</title>
 
-	<style>
-		.cards {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			gap: 24px;
-			margin: 0 auto;
-			max-width: 1200px;
-		}
+    <style>
+      .links a {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 6px 16px;
+        text-decoration: none;
+        color: black;
+      }
+      .links a:last-child {
+        margin-right: 0;
+      }
 
-		.card img {
-			display: block;
-			width: 100%;
-			height: auto;
-		}
-	</style>
-</head>
-<body>
+      .navbar {
+        padding: 12px 24px;
+        min-height: 100px;
+        box-shadow: 0px 3px 6px rgba(45, 35, 66, 0.102);
+        background-color: #fff;
 
-	<style>
-		/* Add your code here to position the "read more" links to the bottom of their respective cards */
-	</style>
-	
-	<section class="cards">
-		<article class="card">
-			<img src="https://via.placeholder.com/300x240" alt="placeholder" />
-			<h2>Lorem Ipsum Dolor</h2>
-			<p>Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Is this my espresso machine? Wh-what is-h-how did you get my espresso machine? I was part of something special. Eventually, you do plan to have dinosaurs on your dinosaur tour, right?</p>
-			<a class="more" href="#">Read More</a>
-		</article>
-		<article class="card">
-			<img src="https://via.placeholder.com/300x240" alt="placeholder" />
-			<h2>Lorem Ipsum Dolor</h2>
-			<p>Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Is this my espresso machine? Wh-what is-h-how did you get my espresso machine? I was part of something special.</p>
-			<a class="more" href="#">Read More</a>
-		</article>
-		<article class="card">
-			<img src="https://via.placeholder.com/300x240" alt="placeholder" />
-			<h2>Lorem Ipsum Dolor</h2>
-			<p>Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Is this my espresso machine? Wh-what is-h-how did you get my espresso machine?</p>
-			<a class="more" href="#">Read More</a>
-		</article>
-		<article class="card">
-			<img src="https://via.placeholder.com/300x240" alt="placeholder" />
-			<h2>Lorem Ipsum Dolor</h2>
-			<p>Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Is this my espresso machine?</p>
-			<a class="more" href="#">Read More</a>
-		</article>
-	</section>
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-</body>
+      .logo {
+        max-height: 80px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #ddd;
+        padding: 16px;
+        border-radius: 8px;
+        background-color: #fff;
+      }
+
+      .card img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .more {
+        margin-top: auto;
+        text-align: center;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <img class="logo" src="https://via.placeholder.com/80" alt="logo" />
+      <nav class="links">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </nav>
+    </header>
+
+    <section class="cards">
+      <article class="card">
+        <img src="https://via.placeholder.com/300x240" alt="placeholder" />
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>
+          Forget the fat lady! You're obsessed with the fat lady! Drive us out
+          of here!
+        </p>
+        <a class="more" href="#">Read More</a>
+      </article>
+      <article class="card">
+        <img src="https://via.placeholder.com/300x240" alt="placeholder" />
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>
+          Forget the fat lady! You're obsessed with the fat lady! Drive us out
+          of here! Is this my espresso machine? Wh-what is-h-how did you get my
+          espresso machine?
+        </p>
+        <a class="more" href="#">Read More</a>
+      </article>
+      <article class="card">
+        <img src="https://via.placeholder.com/300x240" alt="placeholder" />
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>Forget the fat lady! You're obsessed with the fat lady!</p>
+        <a class="more" href="#">Read More</a>
+      </article>
+      <article class="card">
+        <img src="https://via.placeholder.com/300x240" alt="placeholder" />
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>
+          Forget the fat lady! You're obsessed with the fat lady! Drive us out
+          of here! Is this my espresso machine?
+        </p>
+        <a class="more" href="#">Read More</a>
+      </article>
+    </section>
+  </body>
 </html>

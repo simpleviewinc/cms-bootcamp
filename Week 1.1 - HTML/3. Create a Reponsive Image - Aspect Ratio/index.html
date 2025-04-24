@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,38 @@
 	<style>
 		*,
 		*::before,
-		*::after { box-sizing: border-box; }
+		*::after {
+			box-sizing: border-box;
+		}
 
 		html {
 			margin: 0;
 			padding: 0;
 		}
 
-		img {
-			display: block;
+		.image-container {
+			aspect-ratio: 16 / 9;
 			width: 100%;
-			height: auto;
+		}
+
+		picture,
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
 		}
 	</style>
 </head>
-<body>
-	
-	<!-- Add your code here -->
 
+<body>
+	<div class="image-container">
+		<picture>
+			<source media="(min-width: 1024px)" srcset="https://placehold.co/1600x720">
+			<source media="(min-width: 640px)" srcset="https://placehold.co/1200x900">
+			<img src="https://placehold.co/540x800" alt="Responsive image">
+		</picture>
+	</div>
 </body>
+
 </html>

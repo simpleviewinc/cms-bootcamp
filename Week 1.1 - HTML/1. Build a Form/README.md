@@ -7,6 +7,6 @@ Build a form with the following specifications:
 - [ ] The form submits to the a page at `/login/`
 - [ ] The form uses POST to submit the form data
 - [ ] Form is accessible to a screen reader
-- [ ] Form is keyboard navigable
+- [ ] Form is keyboard navigable  
 
 Build your form in designated area in the provided HTML file.

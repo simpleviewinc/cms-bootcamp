@@ -4,10 +4,65 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Build a Form</title>
+	<style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        form {
+            background: #fff;
+            padding: 20px 30px; /* Increased padding on the sides */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        input, select, textarea, button {
+            width: calc(100% - 20px); /* Added space inside the elements */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
 	
-	<!-- Add your code here -->
+	<form action="#" method="POST">
+        <h2>Contact Us</h2>
+        <!-- Name Field -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <!-- Email Field -->
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- Phone Number Field -->
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+        <!-- Subject Dropdown -->
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="inquiry">General Inquiry</option>
+            <option value="support">Support</option>
+            <option value="feedback">Feedback</option>
+        </select>
+
+        <!-- Message Field -->
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here" required></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
 
 </body>
 </html>

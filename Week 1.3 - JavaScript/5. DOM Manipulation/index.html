@@ -23,7 +23,17 @@
 	</main>
 
 	<script>
-		// Add you code here
+		// Select the <script> element with the template
+			const template = document.querySelector('script[type="text/template"]');
+
+		// Get the inner HTML of the template
+		const templateContent = template.innerHTML;
+
+		// Select the .container element
+		const container = document.querySelector('.container');
+
+		// Append the template content to the .container element
+		container.innerHTML += templateContent;
 	</script>
 
 </body>

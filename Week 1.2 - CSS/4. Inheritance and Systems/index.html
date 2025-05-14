@@ -9,13 +9,39 @@
 	
 	<style>
 		/* Add your CSS here */
+		
+		button {
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		.default {
+			background-color: #f0f0f0;
+			color: #000;
+		}
+		.primary {
+			background-color: #007bff;
+			color: #fff;
+		}
+		.link {
+			background-color: transparent;
+			color: #007bff;
+			text-decoration: underline;
+		}
+		.danger {
+			background-color: #dc3545;
+			color: #fff;
+		}
+
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+	<button class="default">Default</button>
+	<button class="primary">Primary</button>
+	<button class="link">Link</button>
+	<button class="danger">Danger</button>
 
 </body>
 </html>

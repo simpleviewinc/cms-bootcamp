@@ -18,7 +18,16 @@
 <body>
 
 	<style>
-		/* Add your code here */
+		.photo {
+        display: grid;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+		.photo > * {
+			grid-area: 1 / 1; /* Place all images in the same grid cell */
+			mix-blend-mode: multiply;
+		}
 	</style>
 
 	<div class="photo">

@@ -13,11 +13,22 @@
 		// Custom Code BEGIN 
 		// Modify the code in this block however you need to get the desired ending array.
 		// You must store your new array in the `endingArray` variable for it to log out properly.
-		let endingArray;
+		
+		//Old ES5
+		/*let endingArray = startingArray.filter(
+			function(number){
+				return number % 2 === 0;
+			}
+		);*/
 
+		//ES6
+		let endingArray = startingArray.filter(
+			number => number % 2 === 0
+		);
 		// Custom Code END
 
 		console.log(endingArray);
+		
 	</script>
 
 </body>

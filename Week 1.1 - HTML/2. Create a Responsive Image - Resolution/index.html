@@ -1,30 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Create a Responsive Image - Resolution</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Responsive Image - Resolution</title>
 
-	<style>
-		*,
-		*::before,
-		*::after { box-sizing: border-box; }
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
 
-		html {
-			margin: 0;
-			padding: 0;
-		}
+        html {
+            margin: 0;
+            padding: 0;
+        }
 
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
-		}
-	</style>
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-	
-	<!-- Add your code here -->
 
+<!-- Add your code here -->
+<picture>
+    <source
+            src="https://placehold.co/2000x900"
+            srcset="https://placehold.co/2000x900"
+            media="(min-width: 1441px) and (max-width: 1800px)"
+            width="900"
+            height="2000"/>
+    <source
+            src="https://placehold.co/1600x720"
+            srcset="https://placehold.co/1600x720"
+            media="(min-width: 1025px) and (max-width: 1440px)"
+            width="720"
+            height="1600"/>
+    <source
+            src="https://placehold.co/1200x540"
+            srcset="https://placehold.co/1200x540"
+            media="(min-width: 641px) and (max-width: 1024px)"
+            width="540"
+            height="1200"/>
+    <source
+            src="https://placehold.co/800x360"
+            srcset="https://placehold.co/800x360"
+            media="(max-width: 640px)"
+            width="360"
+            height="800"/>
+    <img
+            src="https://placehold.co/400x180"
+            alt="Image used when the browser does not support the sources"
+            width="500"
+            height="400"/>
+</picture>
 </body>
 </html>

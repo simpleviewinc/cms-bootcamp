@@ -44,31 +44,12 @@
 		}
 	
 		form input {
-			flex: 1 1 100%; /* Default: stack items vertically */
+			flex: 1 1 10ch; /* Allow inputs to grow and shrink with a basis of 10ch */
 			margin: 0.5rem; /* Provides spacing between inputs */
 		}
 	
-		/* Middle stage: Name on top, Email and Submit side by side */
-		@media (min-width: 480px) {
-			form input[type="text"] {
-				flex: 1 1 100%; /* Name takes full width */
-			}
-	
-			form input[type="email"],
-			form input[type="submit"] {
-				flex: 1 1 calc(50% - 1rem); /* Email and Submit share the row */
-			}
-		}
-	
-		/* Largest stage: All inputs side by side */
-		@media (min-width: 600px) {
-			form input {
-				flex: 1 1 10ch; /* All items side by side */
-			}
-	
-			form [type="email"] {
-				flex: 3 1 30ch; /* Email grows faster */
-			}
+		form [type="email"] {
+			flex: 3 1 30ch; /* Grow 3 times faster than other inputs with a basis of 30ch */
 		}
 	</style>
 

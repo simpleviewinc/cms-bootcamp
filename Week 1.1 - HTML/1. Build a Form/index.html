@@ -4,10 +4,68 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Build a Form</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			background-color: #f4f4f4;
+		}
+		form {
+			background: white;
+			padding: 20px;
+			border-radius: 5px;
+			width: 300px;
+			text-align: center;
+		}
+		fieldset {
+			border: none;
+		}
+		label {
+			display: block;
+			padding: 8px;
+			margin-bottom: 10px;
+		}
+		input {
+			margin-bottom: 30px;
+		}
+		button {
+			width: 75px;
+			padding: 8px;
+			margin: 0 auto;
+			background: green;
+			color: white;
+			border-radius: 4px;
+			cursor: pointer;
+			display: block;
+		}
+	</style>
 </head>
 <body>
-	
-	<!-- Add your code here -->
 
+	<div id="title">
+		<h1>Emilio's Form</h1>
+	</div>
+	
+	<form action="/login/" method="POST" for="login-form">
+		<fieldset>
+		<!--Email field-->	
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required placeholder="Enter your email">
+		<!--Email field Ends-->	
+
+		<!--Password field-->
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required placeholder="Enter your password">
+		<!--Password field Ends-->
+
+		<!--Submit Button-->
+			<button type="submit">Submit</button>
+		<!--Submit Button Ends-->
+		</fieldset>
+	</form>
 </body>
 </html>

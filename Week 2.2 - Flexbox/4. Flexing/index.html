@@ -15,6 +15,9 @@
 			align-items: center;
 			min-height: 100vh;
 			font-family: sans-serif;
+			margin: 0;
+			padding: 0;
+			justify-content: center;
 		}
 
 		form input {
@@ -39,16 +42,31 @@
 
 	<style>
 		form {
-			/* Add any needed code here */
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+			width: 100%;
+			max-width: 600px;
+			padding: 1rem;
+			flex-wrap: wrap;
 		}
 		
 		form input {
-			/* All inputs should allowed to grow and shrink with a basis of 10ch */
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 10ch;
+			padding: .75rem 1rem;
+			border: none;
+			background: hsl(0, 0%, 93%);
+			border-radius: 25rem;
+			margin-bottom: 1rem;
 		}
 
 		form [type="email"] {
-			/* This should grow 3 times faster than the other inputs with a basis of 30ch */
+			flex-grow: 3;
+			flex-basis: 30ch;
 		}
+
 	</style>
 
 	<form>

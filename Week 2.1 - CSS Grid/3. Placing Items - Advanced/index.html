@@ -33,8 +33,6 @@
 		}
 
 		.letter {
-			grid-column: 1;
-			grid-row: 1;
 			border-color: tomato;
 			background-color: lightcoral;
 		}
@@ -48,16 +46,27 @@
 <body>
 	
 	<style>
-		/* Add your code here */
+		.letter-h {	grid-column: 1; grid-row:1;	}
+		.letter-e {	grid-column: 2; grid-row:2;	}
+		.letter-l1 {	grid-column: 3; grid-row:3;	}
+		.letter-l2 {	grid-column: 4; grid-row:4;	}
+		.letter-o {	grid-column: 5; grid-row:5;	}
+		.letter-sp { grid-column: 6; grid-row:6; }
+
+		.letter {
+			position: sticky;
+			top: 0;
+		}
+
 	</style>
 
 	<div class="grid">
 		<li class="letter letter-h">h</li>
 		<li class="letter letter-e">e</li>
-		<li class="letter letter-l">l</li>
-		<li class="letter letter-l">l</li>
+		<li class="letter letter-l1">l</li>
+		<li class="letter letter-l2">l</li>
 		<li class="letter letter-o">o</li>
-		<li class="letter letter-!">!</li>
+		<li class="letter letter-sp">!</li>
 
 		<li></li>
 		<li></li>

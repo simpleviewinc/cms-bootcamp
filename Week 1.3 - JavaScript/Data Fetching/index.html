@@ -10,7 +10,23 @@
 	<ul class="movies"></ul>
 	
 	<script>
-		// Add your code here
+		async function catchMovies() {
+			try {
+				const response = await fetch('https://ghibliapi.vercel.app/films');
+				const movies = await response.json();
+
+				const allMovies = document.querySelector(".movies");
+				movies.forEach(movie => {
+					const list = document.createElement("li");
+					list.textContent = movie.title;
+					allMovies.appendChild(list);
+				});
+			} catch (error){
+				console.error("something went wrong",error);
+			}
+		}
+
+		catchMovies();
 	</script>
 
 </body>

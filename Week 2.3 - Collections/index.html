@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Collections</title>
+</head>
+<body>
+
+    <style>
+        /* Base styles for the collection */
+        .collection {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            justify-content: space-evenly; /* Ensure equal spacing around all cards, including edges */
+        }
+
+        /* Individual card styles */
+        .collection-item {
+            flex: 0 0 calc(33.333% - 16px); /* Force each card to take up exactly 1/3 of the row */
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    </style>
+
+    <section class="collection">
+        <div class="collection-item">
+            <h3>Card 1</h3>
+            <p>Description for card 1.</p>
+        </div>
+        <div class="collection-item">
+            <h3>Card 2</h3>
+            <p>Description for card 2.</p>
+        </div>
+        <div class="collection-item">
+            <h3>Card 3</h3>
+            <p>Description for card 3.</p>
+        </div>
+    </section>
+
+</body>
+</html>

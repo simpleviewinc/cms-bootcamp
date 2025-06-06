@@ -24,7 +24,15 @@
 <body>
 
 	<style>
-		/* Add your code here to position the "read more" links to the bottom of their respective cards */
+		.card {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+	
+		.card .more {
+			margin-top: auto; /* Push the "Read More" link to the bottom of the card */
+		}
 	</style>
 	
 	<section class="cards">

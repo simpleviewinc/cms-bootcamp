@@ -28,16 +28,29 @@
 
 				The `.logo` and `.links` should also be center aligned with each other.
 			*/
+			display: flex;
 		}
+
+		.right-nav-wrapper, .left-nav-wrapper { 
+			display: flex;
+			align-items: center;
+			flex-grow: 1;
+		}
+		.left-nav-wrapper { justify-content: left; }
+		.right-nav-wrapper { justify-content: right; }
 	</style>
 	
 	<header class="navbar">
-		<img class="logo" src="https://via.placeholder.com/80" alt="logo" />
-		<nav class="links">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		</nav>
+		<div class="left-nav-wrapper">
+			<img class="logo" src="https://via.placeholder.com/80" alt="logo" />
+		</div>
+		<div class="right-nav-wrapper">
+			<nav class="links">
+				<a href="#">Link 1</a>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
+			</nav>
+		</div>
 	</header>
 
 </body>

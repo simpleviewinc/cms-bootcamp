@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Transitions</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions</title>
 
-	<style>
-		body {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			min-height: 100vh;
-		}
-	</style>
-</head>
-<body>
-	
-	<style>
-		/* Modify the CSS below to add the desired hover effect and animation */
-		.box {
-			width: 100px;
-			height: 100px;
-			background-color: rebeccapurple;
-		}
-	</style>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
 
-	<div class="box"></div>
+      /* Modified CSS */
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: rebeccapurple;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+      }
 
-</body>
+      .box:hover {
+        transform: scale(2);
+        background-color: mediumpurple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
 </html>

@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objects as a Map</title>
+</head>
+<body>
+	
+	<script>
+		// let date = {},
+		// time = {},
+		// mood = {};
+		// This console.log shows the keys are actually empty objects https://www.screencast.com/t/ExFFZn8W7
+		let myMap = new Map([ ['date', 'October 6, 1986'], ['time', '21:13 PM'], ['mood', 'Powerful, spirited...'] ]);
+
+		function getInformation(key) {
+			return (myMap.has(key) ? myMap.get(key) : 'Error: Invalid option selected...');
+		}
+		console.log(getInformation('date'));
+		console.log(getInformation('time'));
+		console.log(getInformation('mood'));
+		console.log(getInformation('badkey'));
+		console.log(getInformation());
+	</script>
+</body>
+</html>

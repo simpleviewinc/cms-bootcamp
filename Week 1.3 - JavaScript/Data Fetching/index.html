@@ -11,6 +11,33 @@
 	
 	<script>
 		// Add your code here
+		async function dataFetch() {
+			try {
+				const response = await fetch('https://ghibliapi.vercel.app/films');
+
+				if (!response.ok) {
+				throw new Error(`HTTP error! status: ${response.status}`);
+				}
+
+				const data = await response.json();
+				console.log(data);
+				
+				const moviesList = document.querySelector('.movies');
+				
+				// Display data
+				data.forEach(item => {
+					moviesList.innerHTML += `
+					<li>
+						<strong>Name:</strong> ${item.title}<br>
+					</li>
+					`;
+				});
+			} catch (error) {
+				console.error('Error :c fetching data :', error);
+			}
+		}
+
+		dataFetch();
 	</script>
 
 </body>

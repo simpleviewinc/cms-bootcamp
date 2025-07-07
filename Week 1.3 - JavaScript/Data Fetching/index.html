@@ -11,6 +11,17 @@
 	
 	<script>
 		// Add your code here
+		fetch("https://ghibliapi.vercel.app/films")
+			.then((res) => res.json())
+			.then((data) => {
+				const list = document.querySelector(".movies")
+				data.forEach(movie => {
+					const li = document.createElement('li');
+					li.textContent = movie.title;
+					list.appendChild(li);
+				})
+			}
+			).catch((e) => console.log(e));
 	</script>
 
 </body>

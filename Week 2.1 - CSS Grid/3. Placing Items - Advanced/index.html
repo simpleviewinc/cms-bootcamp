@@ -10,8 +10,13 @@
 			display: grid;
 			gap: 8px;
 			grid-template-columns: repeat(6, 100px);
-			margin: 0 auto 200vh;
+			margin: 0 auto;
 			max-width: 776px;
+			min-height: 1200px;
+			position: sticky;
+			top: 0;
+			background-color: #fff;
+			z-index: 999;
 		}
 
 		.grid > * {
@@ -37,11 +42,38 @@
 			grid-row: 1;
 			border-color: tomato;
 			background-color: lightcoral;
+			position: sticky;
+			top: 27px;
 		}
 
 		.placeholder {
 			border-color: mediumslateblue;
 			background-color: lightcyan;
+		}
+
+		.letter-h{
+			grid-column: 1;
+			grid-row: 2;
+		}
+		.letter-e{
+			grid-column: 2;
+			grid-row: 3;
+		}
+		.letter-l{
+			grid-column: 3;
+			grid-row: 4;
+		}
+		.letter-l2{
+			grid-column: 4;
+			grid-row: 5;
+		}
+		.letter-o{
+			grid-column: 5;
+			grid-row: 6;
+		}
+		.letter-i{
+			grid-column: 6;
+			grid-row:7;
 		}
 	</style>
 </head>
@@ -49,15 +81,16 @@
 	
 	<style>
 		/* Add your code here */
+
 	</style>
 
 	<div class="grid">
 		<li class="letter letter-h">h</li>
 		<li class="letter letter-e">e</li>
 		<li class="letter letter-l">l</li>
-		<li class="letter letter-l">l</li>
+		<li class="letter letter-l2">l</li>
 		<li class="letter letter-o">o</li>
-		<li class="letter letter-!">!</li>
+		<li class="letter letter-i">!</li>
 
 		<li></li>
 		<li></li>

@@ -8,18 +8,12 @@
 <body>
 	
 	<!-- Add your code here -->
-	 <form action="/submit" method="post">
-		<label for="name">Name</label>
-		<input type="text" name="name" required>
-
+	 <form action="/login" method="post">
 		<label for="email">Email</label>
-		<input type="email" name="email" required>
+		<input type="email" name="email" id="email" required>
 
-		<label for="phone">Phone</label>
-		<input type="text" name="phone" required>
-
-		<label for="message">Message</label>
-		<input type="text" name="message" required>
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" required>
 
 		<button type="submit">Submit</button>
 	 </form>

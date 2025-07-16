@@ -12,6 +12,7 @@
 	
 	<script>
 		const counterEl = document.querySelector('[data-counter]');
+		const buttonEl = document.querySelector('[data-action="increment-counter"]')
 		let counter = 0;
 
 		function increment() {
@@ -20,6 +21,7 @@
 		}
 
 		// Add your code here to make clicking the button run the increment function
+		buttonEl.addEventListener('click', increment)
 	</script>
 
 </body>

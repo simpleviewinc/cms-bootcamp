@@ -20,11 +20,37 @@
 			width: 100%;
 			height: auto;
 		}
+		@media (max-width : 600px) {
+			.responsive-image{
+				aspect-ratio: 1/1;
+			}
+		}
+
+		@media (min-width:601px){
+			.responsive-image{
+				aspect-ratio: 10/8;
+			}
+		}
+
 	</style>
 </head>
 <body>
 	
 	<!-- Add your code here -->
+	 <img 
+	 src="https://placehold.co/540x800" 
+	 alt="developer Responsive image" 
+	 class="responsive-image"
+	 srcset="
+	 https://placehold.co/1200x900 640w,
+	 https://placehold.co/1600x720 1024w
+	 "
+
+	 sizes="
+	 (min-width: 1024px)  1600px,
+	 (min-width: 640px) 1200px
+	 "
+	 >
 
 </body>
 </html>

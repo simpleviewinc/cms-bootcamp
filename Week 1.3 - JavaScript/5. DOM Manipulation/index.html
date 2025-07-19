@@ -23,7 +23,9 @@
 	</main>
 
 	<script>
-		// Add you code here
+		let myScript = document.querySelector('script[type="text/template"]').innerHTML
+        let textContainer = document.querySelector('main.container')
+        textContainer.insertAdjacentHTML("beforeend",myScript);
 	</script>
 
 </body>

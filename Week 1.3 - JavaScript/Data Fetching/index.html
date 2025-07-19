@@ -11,6 +11,29 @@
 	
 	<script>
 		// Add your code here
+		const ghibliAPI = 'https://ghibliapi.herokuapp.com/films';
+		const movieEl = document.querySelector('.movies');
+
+		async function fetchTitles() {
+			const response = await fetch(ghibliAPI)
+			const data = await response.json();
+			displayTitles(data);
+		}
+			
+		function displayTitles(data) {
+			data.forEach(movie => {
+				const liEl = document.createElement('li');
+				liEl.innerHTML = movie.title;
+				movieEl.appendChild(liEl);
+			});
+		}
+		
+		function handleError(err) {
+			console.log('U MESSED UP DAWG!');
+		}
+
+		fetchTitles().catch(handleError);
+
 	</script>
 
 </body>

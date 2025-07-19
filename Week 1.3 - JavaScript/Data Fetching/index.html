@@ -11,6 +11,33 @@
 	
 	<script>
 		// Add your code here
+        const apiUrl = "https://ghibliapi.herokuapp.com/films";
+        const movieList = document.querySelector('ul.movies');
+        async function handlePromise(promise) {
+            let data, err;
+
+            try {
+                const res = await promise;
+                data = await fetch(`${promise}`);
+                return data.json();
+            } catch (error) {
+                console.log('error');
+            }
+            return data;
+        }
+
+        const data = handlePromise(apiUrl);
+        
+        async function filmHTMLList() {
+			const filmsList = await data;
+			return filmsList.map(film => `<li>${film.title}</li>`).join('');
+		}
+
+		async function populateMovies() {
+			movieList.innerHTML = await filmHTMLList();
+		}
+		populateMovies();
+        
 	</script>
 
 </body>

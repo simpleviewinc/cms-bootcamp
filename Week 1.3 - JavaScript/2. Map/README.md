@@ -1,5 +1,5 @@
 # Map
-
+ 
 Take that starting array `['Sergio', 'Keve', 'Kam', 'Bree', 'Blake']`...
 
 And create the new array `[{ name: 'Sergio' }, { name: 'Keve' }, { name: 'Kam }, { name: 'Bree' }, { name: 'Blake' }]`...

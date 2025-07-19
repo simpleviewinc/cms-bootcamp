@@ -24,6 +24,17 @@
 
 	<script>
 		// Add you code here
+		const mySection = `
+		<section>
+			<h2>Hello, world!</h2>
+			<p>This block as been inserted via JS, isn't that cool!</p>
+		</section>
+		`
+
+	const myFragment = document.createRange().createContextualFragment(mySection);
+
+	document.body.appendChild(myFragment)
+
 	</script>
 
 </body>

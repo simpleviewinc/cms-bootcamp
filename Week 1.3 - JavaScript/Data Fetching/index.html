@@ -10,7 +10,22 @@
 	<ul class="movies"></ul>
 	
 	<script>
-		// Add your code here
+		
+		// Fetch data from the Ghibli API
+		fetch('https://ghibliapi.vercel.app/films').then(response => response.json())
+		.then(films => {
+			const moviesList = document.querySelector('.movies');
+			films.forEach(film => {
+				const li = document.createElement('li');
+				li.textContent = film.title;
+				moviesList.appendChild(li);
+				console.log(film);
+				});
+			})
+			.catch(error => {
+			console.error('Error fetching films:', error);
+		});
+
 	</script>
 
 </body>

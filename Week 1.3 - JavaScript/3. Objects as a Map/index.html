@@ -8,11 +8,12 @@
 <body>
 	
 	<script>
-		const information = getInformation('date');
-		console.log(information);
+
+		//const information = getInformation('date');
+		//console.log(information);
 
 		// Rewrite this function to replace the if/else logic with a map lookup.
-		function getInformation(key) {
+		/*function getInformation(key) {
 			let rtn;
 
 			if (key === 'date') {
@@ -26,8 +27,31 @@
 			}
 
 			return rtn;
+		}*/
+
+		//Option 1
+		const map = {
+				date: 'October 6, 1986',
+				time: '21:13 PM',
+				mood:'Powerful, spirited...',
+			};
+
+		const getInformation = function (key) {
+			return map[key] || 'Error: Invalid option selected...';
 		}
+
+		// Option 2. Arrow Functions. 
+		// This function should be placed on the bottom: const information = getInformation('date');
+		/*const getInformation = (key) => {	
+			return map[key] || 'Error: Invalid option selected...';
+		};*/
+
+		const information = getInformation('date');
+		console.log(information);
+
 	</script>
+
+
 
 </body>
 </html>

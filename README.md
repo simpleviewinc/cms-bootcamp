@@ -7,7 +7,7 @@ Each module will come with a training course and series of assessments to be com
 ### HTML
 A crash course on the basics of HTML; everything from tags and attributes to structured content and accessibility.
 
-**Estimated Time Needed:** 4 hours
+**Estimated Time Needed:** 4-6 hours
 
 **Course:** https://web.dev/learn/html/
 

@@ -11,6 +11,26 @@
 	
 	<script>
 		// Add your code here
+		function handleError(err) {
+			console.log('Whoops-a-daisy');
+			console.log(err);
+		}
+
+		const baseEndpoint = 'https://swapi.dev/api/films/';
+
+		// Basic working format
+		const viewFilms = fetch(baseEndpoint);
+
+		viewFilms.then(res => 
+			res.json()
+		).then(data => {
+			const dataArr = data.results;
+			dataArr.forEach(elem => {
+				const filmItem = `<li>${elem.title}</li>`;
+				document.querySelector('.movies').innerHTML += filmItem;
+			})
+		}).catch(handleError);
+
 	</script>
 
 </body>

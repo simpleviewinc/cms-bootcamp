@@ -11,6 +11,23 @@
 	
 	<script>
 		// Add your code here
+		const movieList = document.querySelector('ul.movies')
+		fetch('https://ghibliapi.herokuapp.com/films',{
+			method:"GET",
+			headers:{}
+		})
+		.then(response=>{return response.json()})
+		.then(data=>{
+			console.log(data)
+			data.map(movie=>{
+				let li = document.createElement('li');
+				li.textContent = `${movie.title} - ${movie.original_title}`;
+				movieList.appendChild(li);
+			})	
+		})
+		.catch(err=>{console.log(err)})
+
+
 	</script>
 
 </body>

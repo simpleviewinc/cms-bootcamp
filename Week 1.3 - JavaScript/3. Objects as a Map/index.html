@@ -12,21 +12,22 @@
 		console.log(information);
 
 		// Rewrite this function to replace the if/else logic with a map lookup.
+
 		function getInformation(key) {
-			let rtn;
 
-			if (key === 'date') {
-				rtn = 'October 6, 1986';
-			} else if (key === 'time') {
-				rtn = '21:13 PM';
-			} else if (key === 'mood') {
-				rtn = 'Powerful, spirited...';
-			} else {
-				rtn = 'Error: Invalid option selected...';
+			let data = new Map();
+			data.set('date','October 6, 1986')
+				.set('time','21:13 PM')
+				.set('mood','Powerful, spirited...')
+
+			if(data.has(key)){
+				let rtn = data.get(key);
+				return rtn;
+			}else{
+				return 'Error: Invalid option selected...'
 			}
-
-			return rtn;
 		}
+
 	</script>
 
 </body>

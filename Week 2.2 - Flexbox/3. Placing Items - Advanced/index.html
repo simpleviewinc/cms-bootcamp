@@ -13,18 +13,31 @@
 			margin: 0 auto;
 			max-width: 1200px;
 		}
-
 		.card img {
 			display: block;
 			width: 100%;
 			height: auto;
 		}
+
 	</style>
 </head>
 <body>
 
 	<style>
 		/* Add your code here to position the "read more" links to the bottom of their respective cards */
+		.card{
+			display:flex;
+			flex-direction:column;
+		}
+		.card > * {
+			flex:1;
+		}
+		.card a{
+			display:flex;
+			flex-direction:column;
+			justify-content:end;
+		}
+
 	</style>
 	
 	<section class="cards">

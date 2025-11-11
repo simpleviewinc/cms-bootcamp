@@ -18,9 +18,12 @@
 			counter++;
 			counterEl.innerText = counter;
 		}
-
+		
 		// Add your code here to make clicking the button run the increment function
-	</script>
+		const buttonEl = document.querySelector('[data-action="increment-counter"]');
+		buttonEl.addEventListener('click', increment);
+
+		</script>
 
 </body>
 </html>

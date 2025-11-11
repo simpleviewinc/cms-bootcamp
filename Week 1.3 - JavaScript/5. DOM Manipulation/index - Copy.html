@@ -23,23 +23,9 @@
 	</main>
 
 	<script>
-		const script = document.querySelector(`[type="text/template"]`);
-		const inner = script.innerHTML;
+		const template = document.querySelector(`[type="text/template"]`).innerHTML;
 		const container = document.querySelector('.container');
-		const added = document.createElement('div');
-		 
-
-		console.log(script);
-		console.log(container);
-
-		added.innerHTML = inner;
-		container.appendChild(added);
-		
-
-	
-
-
-
+		container.insertAdjacentHTML('beforeend', template)
 	</script>
 
 </body>

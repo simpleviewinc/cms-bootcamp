@@ -6,12 +6,33 @@
 	<title>Data Fetching</title>
 </head>
 <body>
-	
+	<h1> Movies </h1>
 	<ul class="movies"></ul>
 	
 	<script>
-		// Add your code here
-	</script>
 
+		function handleError(err) {
+			console.log('NOOOOO!');
+			console.log(err);
+
+}	
+		const endpoint = 'https://ghibliapi.herokuapp.com/films';
+		const movieEl = document.querySelector('.movies');
+
+		movieEl.textContent = 'loading...';
+		const titlePromise = fetch(endpoint);
+		titlePromise.then(response => {
+			return response.json();
+		}).then(data => {
+			console.log(data);
+			console.log(data[0].title);
+
+			movieEl.innerHTML = '';
+			for (i = 0; i < data.length; i++) {
+				movieEl.innerHTML += `<li> ${data[i].title}</li>`
+			}
+		}).catch(handleError);		
+
+	</script>
 </body>
 </html>

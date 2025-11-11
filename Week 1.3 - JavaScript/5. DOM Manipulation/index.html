@@ -23,7 +23,12 @@
 	</main>
 
 	<script>
-		// Add you code here
+		const scriptTag = document.querySelector('script[type="text/template"]');
+		const scriptHTML = scriptTag.innerHTML;
+		const container = document.querySelector('main.container');
+
+		container.insertAdjacentHTML('beforeend',scriptHTML);
+		
 	</script>
 
 </body>

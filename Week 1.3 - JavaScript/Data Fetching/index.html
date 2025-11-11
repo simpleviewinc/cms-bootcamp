@@ -10,8 +10,17 @@
 	<ul class="movies"></ul>
 	
 	<script>
-		// Add your code here
-	</script>
+		const movieList = document.querySelector('.movies');
+
+		fetch('https://ghibliapi.herokuapp.com/films')
+		.then((response) => response.json())
+		.then((data) => {
+			data.forEach(film => {
+				movieList.insertAdjacentHTML('beforeend', `<li>${film.title}</li>`)
+			})
+		});
+
+	</script> 
 
 </body>
 </html>

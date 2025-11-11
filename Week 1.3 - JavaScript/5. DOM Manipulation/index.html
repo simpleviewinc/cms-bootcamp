@@ -12,7 +12,7 @@
 			<h2>Hello, world!</h2>
 			<p>This block as been inserted via JS, isn't that cool!</p>
 		</section>
-	</script>
+	</script> 
 
 	<main class="container">
 		<h1>Lorem Ipsum Dolor Sit Amet</h1>
@@ -24,6 +24,11 @@
 
 	<script>
 		// Add you code here
+		const scriptText = document.querySelector('script').innerHTML;
+		const mainText = document.querySelector('.container');
+
+		mainText.insertAdjacentHTML('beforeend', scriptText);
+		
 	</script>
 
 </body>

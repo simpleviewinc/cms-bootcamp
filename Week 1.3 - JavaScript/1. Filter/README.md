@@ -6,4 +6,4 @@ End with the array `[2,4,6,8,10]`...
 
 Write some code that will take the starting array and generate the desired end results.
 
-Add your code to the provided HTML file.
+Add your code to the provided HTML file. 

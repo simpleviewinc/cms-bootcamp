@@ -23,7 +23,9 @@
 	</main>
 
 	<script>
-		// Add you code here
+		const container = document.querySelector('.container')
+		const sectionHTML = document.querySelector("script[type='text/template']").innerHTML
+		container.insertAdjacentHTML('afterend', sectionHTML)
 	</script>
 
 </body>

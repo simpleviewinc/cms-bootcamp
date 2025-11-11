@@ -40,14 +40,30 @@
 	<style>
 		form {
 			/* Add any needed code here */
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			max-width: 800px;
+			width: 100%;
+			margin: 0 auto;
 		}
 		
 		form input {
 			/* All inputs should allowed to grow and shrink with a basis of 10ch */
+			margin: .5rem;
+			padding: .75rem 1rem;
+			border: none;
+			background: hsl(0 0% 93%);
+			border-radius: .25rem;
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 10ch;
 		}
 
 		form [type="email"] {
 			/* This should grow 3 times faster than the other inputs with a basis of 30ch */
+			flex-grow: 3;
+			flex-basis: 30ch;
 		}
 	</style>
 

@@ -19,6 +19,18 @@
 
 	<style>
 		/* Add your code here */
+		.photo {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+			place-items: center;
+		}
+
+		.photo > * {
+			grid-column: 1;
+			grid-row: 1;
+			mix-blend-mode: multiply;
+		}
 	</style>
 
 	<div class="photo">

@@ -24,6 +24,13 @@
 
 	<script>
 		// Add you code here
+		const template = document.querySelector('script[type = "text/template"]');
+		const container = document.querySelector('.container');
+
+		const newWrapper = document.createElement('div');
+		newWrapper.innerHTML = template.innerHTML.trim();
+
+		container.appendChild(newWrapper.firstElementChild)
 	</script>
 
 </body>

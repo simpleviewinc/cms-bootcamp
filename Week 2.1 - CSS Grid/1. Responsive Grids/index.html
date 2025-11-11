@@ -22,6 +22,8 @@
 			margin: 0 auto;
 			padding: 0 20px;
 			max-width: 1200px;
+			/* Needed to add display grid */
+			display: grid;
 		}
 	</style>
 </head>
@@ -30,6 +32,7 @@
 	<style>
 		.cards {
 			/* Add your code here */
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 		}
 	</style>
 	

@@ -9,13 +9,42 @@
 	
 	<style>
 		/* Add your CSS here */
+		/* Base button style: common to all buttons */
+		.btn {
+			border-radius: 4px;
+			padding: 12px 32px; /* 12px top/bottom and 32px on the sides */
+			color: black;
+			border: none;
+			cursor: pointer;
+			font-family: inherit;
+			font-size: inherit;
+		}
+
+		/* Specific styles for each button type */
+		.btn-default {
+			background-color: #f5f5f5;
+		}
+
+		.btn-primary {
+			background-color: #90CDF4;
+		}
+
+		.btn-link {
+			background-color: transparent;
+			/* Remove any default button styling if needed */
+			text-decoration: underline;
+		}
+
+		.btn-danger {
+			background-color: #FEB2B2;
+		}
 	</style>
 
 	<!-- Add as many or as few classes as needed to accomplish the goal to the buttons below -->
-	<button>Default</button>
-	<button>Primary</button>
-	<button>Link</button>
-	<button>Danger</button>
+	<button class="btn btn-default">Default</button>
+	<button class="btn btn-primary">Primary</button>
+	<button class="btn btn-link">Link</button>
+	<button class="btn btn-danger">Danger</button>
 
 </body>
 </html>

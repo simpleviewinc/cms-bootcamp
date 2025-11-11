@@ -8,12 +8,12 @@
 <body>
 	
 	<script>
-		const information = getInformation('date');
+		const information = getInformation("date");
 		console.log(information);
 
 		// Rewrite this function to replace the if/else logic with a map lookup.
 		function getInformation(key) {
-			let rtn;
+			/*let rtn;
 
 			if (key === 'date') {
 				rtn = 'October 6, 1986';
@@ -23,9 +23,17 @@
 				rtn = 'Powerful, spirited...';
 			} else {
 				rtn = 'Error: Invalid option selected...';
-			}
+			}*/
 
-			return rtn;
+			const myMap = new Map();
+			myMap.set("date", "October 6, 1986");
+			myMap.set("time", "21:13pm");
+			myMap.set("mood", "Powerful, spirited...");
+
+			if (!myMap.has(key)) {
+				return "Error: Invalid option selected...";
+			}
+			return myMap.get(key);
 		}
 	</script>
 

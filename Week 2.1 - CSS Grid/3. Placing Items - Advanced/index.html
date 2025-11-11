@@ -33,8 +33,8 @@
 		}
 
 		.letter {
-			grid-column: 1;
-			grid-row: 1;
+			/* grid-column: 1;
+			grid-row: 1; */
 			border-color: tomato;
 			background-color: lightcoral;
 		}
@@ -49,6 +49,19 @@
 	
 	<style>
 		/* Add your code here */
+		.letter { 
+			--i: 0;
+			grid-area: calc(var(--i) + 2) / calc(var(--i) + 1);
+			position: sticky;
+			top: 8px;
+		}
+
+		.letter:nth-child(1) { --i: 0; }
+		.letter:nth-child(2) { --i: 1; }
+		.letter:nth-child(3) { --i: 2; }
+		.letter:nth-child(4) { --i: 3; }
+		.letter:nth-child(5) { --i: 4; }
+		.letter:nth-child(6) { --i: 5; }
 	</style>
 
 	<div class="grid">
@@ -64,42 +77,37 @@
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
-		<li class="placeholder"></li>
+		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>

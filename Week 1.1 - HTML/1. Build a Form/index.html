@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
+	
+	<!--  Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="title" content="Login Form">
+	<meta name="description" content="A simple login form with email and password fields.">
+
 	<title>Build a Form</title>
 </head>
+
 <body>
-	
+
 	<!-- Add your code here -->
+	<div class="form-wrapper">
+		<form method="POST" action="/login/">
+
+			<h3>Login Form</h3>
+
+			<!-- Email -->
+			<div class="form-field">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required aria-label="Email" aria-required="true" />
+			</div>
+
+			<!-- Password -->
+			<div class="form-field">
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required aria-label="Password"
+					aria-required="true" />
+			</div>
+
+			<!-- Submit -->
+			<input type="submit" value="Submit" />
+
+		</form>
+	</div>
 
 </body>
+
 </html>

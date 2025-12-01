@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
+	<!-- Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="title" content="Responsive Image">
+	<meta name="description" content="A responsive image that adjusts resolution based on screen size.">
+
 	<title>Create a Responsive Image - Aspect Ratio</title>
 
 	<style>
 		*,
 		*::before,
-		*::after { box-sizing: border-box; }
+		*::after {
+			box-sizing: border-box;
+		}
 
 		html {
 			margin: 0;
@@ -22,9 +29,17 @@
 		}
 	</style>
 </head>
-<body>
-	
-	<!-- Add your code here -->
 
+<body>
+
+	<!-- Add your code here -->
+	<picture>
+		<source srcset="https://placehold.co/1600x720" media="(min-width: 1024px)">
+		<source srcset="https://placehold.co/1200x900" media="(min-width: 640px)">
+
+		<!-- Default -->
+		<img src="https://placehold.co/540x800" alt="Responsive Placeholder Image">
+	</picture>
 </body>
+
 </html>

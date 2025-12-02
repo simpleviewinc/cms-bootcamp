@@ -24,6 +24,9 @@
 
 	<script>
 		// Add you code here
+		const template = document.querySelector('script[type="text/template"]');
+		const mainContainer = document.querySelector('main.container');
+		mainContainer.insertAdjacentHTML('beforeend', template.innerHTML);
 	</script>
 
 </body>
